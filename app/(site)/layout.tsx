@@ -1,13 +1,17 @@
 "use client";
 
 import Footer from "@/components/Footer";
+import { Montserrat } from "next/font/google";
 import Header from "@/components/Header";
 import Lines from "@/components/Lines";
 import ScrollToTop from "@/components/ScrollToTop";
 import { ThemeProvider } from "next-themes";
-import { Inter } from "next/font/google";
 import "../globals.css";
-const inter = Inter({ subsets: ["latin"] });
+const inter = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-montserrat",
+});
 
 import ToasterContext from "../context/ToastContext";
 
