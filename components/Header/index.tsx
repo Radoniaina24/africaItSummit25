@@ -38,8 +38,8 @@ const Header = () => {
         showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
-        <div className="flex w-full items-center justify-between xl:w-1/4">
+      <div className="container relative mx-auto items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
+        <div className="flex  items-center justify-between sm:justify-between">
           <a href="/">
             <Image
               src="/images/logo/logo.png"
@@ -59,18 +59,30 @@ const Header = () => {
             <span className="relative block h-5.5 w-5.5 cursor-pointer">
               <span className="absolute right-0 block h-full w-full">
                 <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black transition-all duration-200 dark:bg-white ${
-                    !navigationOpen ? "w-full" : "w-0"
+                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white ${
+                    !navigationOpen ? "!w-full delay-300" : "w-0"
                   }`}
                 ></span>
                 <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black transition-all duration-200 dark:bg-white ${
-                    !navigationOpen ? "w-full" : "w-0"
+                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-150 duration-200 ease-in-out dark:bg-white ${
+                    !navigationOpen ? "delay-400 !w-full" : "w-0"
                   }`}
                 ></span>
                 <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black transition-all duration-200 dark:bg-white ${
-                    !navigationOpen ? "w-full" : "w-0"
+                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-200 duration-200 ease-in-out dark:bg-white ${
+                    !navigationOpen ? "!w-full delay-500" : "w-0"
+                  }`}
+                ></span>
+              </span>
+              <span className="du-block absolute right-0 h-full w-full rotate-45">
+                <span
+                  className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black delay-300 duration-200 ease-in-out dark:bg-white ${
+                    !navigationOpen ? "!h-0 delay-[0]" : "h-full"
+                  }`}
+                ></span>
+                <span
+                  className={`delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white ${
+                    !navigationOpen ? "!h-0 delay-200" : "h-0.5"
                   }`}
                 ></span>
               </span>
@@ -124,21 +136,25 @@ const Header = () => {
                   ) : (
                     <Link
                       href={`${menuItem.path}`}
-                      className={` animation-hover relative inline-block px-2 py-2 ${
+                      className={` animation-hover relative inline-block bg-gradient-to-r from-blue-700 to-purple-600 bg-clip-text px-2 py-2 text-transparent ${
                         pathUrl === menuItem.path
-                          ? "animation-active text-primary"
-                          : "hover:text-primary"
+                          ? "animation-active bg-gradient-to-r from-blue-700 to-purple-600 bg-clip-text px-2 py-2 text-transparent"
+                          : "hover:from-blue-700 hover:to-purple-500"
                       }`}
                     >
-                      {menuItem.title.toUpperCase()}
+                      {menuItem.title}
                     </Link>
                   )}
                 </li>
               ))}
             </ul>
           </nav>
-          <div className="mt-7 flex items-center justify-center gap-6 xl:mt-0">
-            <Button>Connexion</Button>
+          <div className="flex items-center justify-center xl:mt-0">
+            <button className="group relative  inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-purple-200 group-hover:from-purple-500 group-hover:to-pink-500 dark:text-white dark:focus:ring-purple-800">
+              <span className="relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-transparent dark:bg-gray-900 group-hover:dark:bg-transparent">
+                Contact us
+              </span>
+            </button>
           </div>
         </div>
       </div>
