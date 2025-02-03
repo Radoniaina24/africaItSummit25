@@ -136,9 +136,9 @@ const Header = () => {
                   ) : (
                     <Link
                       href={`${menuItem.path}`}
-                      className={` animation-hover relative inline-block bg-gradient-to-r from-blue-700 to-purple-600 bg-clip-text px-2 py-2 text-transparent ${
+                      className={` animation-hover relative inline-block bg-gradient-to-r from-blue-700 to-blue-700 bg-clip-text px-2 py-2 text-transparent ${
                         pathUrl === menuItem.path
-                          ? "animation-active bg-gradient-to-r from-blue-700 to-purple-600 bg-clip-text px-2 py-2 text-transparent"
+                          ? "animation-active bg-gradient-to-r from-blue-700 to-blue-700 bg-clip-text px-2 py-2 text-transparent"
                           : "hover:from-blue-700 hover:to-purple-500"
                       }`}
                     >
