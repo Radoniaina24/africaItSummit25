@@ -14,6 +14,7 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showHeader, setShowHeader] = useState(true);
   const pathUrl = usePathname();
+  const [stickyMenu, setStickyMenu] = useState(false);
 
   // Handle scroll behavior
   const handleScroll = () => {
@@ -21,6 +22,11 @@ const Header = () => {
       setShowHeader(false); // Hide header on scroll down
     } else {
       setShowHeader(true); // Show header on scroll up
+    }
+    if (window.scrollY >= 80) {
+      setStickyMenu(true);
+    } else {
+      setStickyMenu(false);
     }
     setLastScrollY(window.scrollY);
   };
@@ -34,12 +40,16 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 z-99999 w-full bg-white py-2 shadow transition-transform duration-300 ${
+      className={`fixed left-0 top-0 z-99999 w-full  py-2  transition-transform duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
+      } ${
+        stickyMenu
+          ? "shadow-sticky z-[9999] bg-white !bg-opacity-80 backdrop-blur-sm transition"
+          : ""
       }`}
     >
       <div className="container relative mx-auto items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
-        <div className="flex  items-center justify-between sm:justify-between">
+        <div className="flex items-center justify-between sm:justify-between">
           <a href="/">
             <Image
               src="/images/logo/logo.png"
