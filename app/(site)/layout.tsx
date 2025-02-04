@@ -32,8 +32,8 @@ export default function RootLayout({
           <Header />
           <ToasterContext />
           {children}
-          {/* <Footer />
-          <ScrollToTop /> */}
+          {/* <Footer /> */}
+          {/* <ScrollToTop /> */}
         </ThemeProvider>
       </body>
     </html>
