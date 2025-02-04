@@ -40,11 +40,11 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 z-99999 w-full  py-2  transition-transform duration-300 ${
+      className={`fixed left-0 top-0 z-99999 w-full  transition-transform duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       } ${
         stickyMenu
-          ? "shadow-sticky z-[9999] bg-white !bg-opacity-80 backdrop-blur-sm transition"
+          ? "shadow-sticky z-[9999] bg-black !bg-opacity-80 backdrop-blur-sm transition"
           : ""
       }`}
     >
@@ -69,29 +69,29 @@ const Header = () => {
             <span className="relative block h-5.5 w-5.5 cursor-pointer">
               <span className="absolute right-0 block h-full w-full">
                 <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white ${
+                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-white delay-[0] duration-200 ease-in-out  ${
                     !navigationOpen ? "!w-full delay-300" : "w-0"
                   }`}
                 ></span>
                 <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-150 duration-200 ease-in-out dark:bg-white ${
+                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-white delay-150 duration-200 ease-in-out  ${
                     !navigationOpen ? "delay-400 !w-full" : "w-0"
                   }`}
                 ></span>
                 <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-200 duration-200 ease-in-out dark:bg-white ${
+                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-white delay-200 duration-200 ease-in-out  ${
                     !navigationOpen ? "!w-full delay-500" : "w-0"
                   }`}
                 ></span>
               </span>
               <span className="du-block absolute right-0 h-full w-full rotate-45">
                 <span
-                  className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black delay-300 duration-200 ease-in-out dark:bg-white ${
+                  className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-white delay-300 duration-200 ease-in-out  ${
                     !navigationOpen ? "!h-0 delay-[0]" : "h-full"
                   }`}
                 ></span>
                 <span
-                  className={`delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white ${
+                  className={`delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-white duration-200 ease-in-out  ${
                     !navigationOpen ? "!h-0 delay-200" : "h-0.5"
                   }`}
                 ></span>
@@ -102,9 +102,9 @@ const Header = () => {
 
         {/* Nav Menu Start */}
         <div
-          className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
+          className={`invisible h-0 w-auto items-center justify-between overflow-hidden xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
-            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+            "navbar !visible mt-4 h-auto max-h-[400px]  w-full overflow-hidden rounded-md xl:h-auto xl:p-0 xl:shadow-none"
           }`}
         >
           <nav>
@@ -146,10 +146,10 @@ const Header = () => {
                   ) : (
                     <Link
                       href={`${menuItem.path}`}
-                      className={` animation-hover relative inline-block bg-gradient-to-r from-blue-700 to-blue-700 bg-clip-text px-2 py-2 text-transparent ${
+                      className={` animation-hover relative inline-block px-2 py-2 text-transparent text-white ${
                         pathUrl === menuItem.path
-                          ? "animation-active bg-gradient-to-r from-blue-700 to-blue-700 bg-clip-text px-2 py-2 text-transparent"
-                          : "hover:from-blue-700 hover:to-purple-500"
+                          ? "animation-active bg-gradient-to-r px-2 py-2 text-white"
+                          : ""
                       }`}
                     >
                       {menuItem.title}
@@ -160,7 +160,7 @@ const Header = () => {
             </ul>
           </nav>
           <div className="flex items-center justify-center xl:mt-0">
-            <button className="group relative  inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-purple-200 group-hover:from-purple-500 group-hover:to-pink-500 dark:text-white dark:focus:ring-purple-800">
+            <button className="group relative mb-2 me-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-purple-200 group-hover:from-purple-500 group-hover:to-pink-500 dark:text-white dark:focus:ring-purple-800">
               <span className="relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-transparent dark:bg-gray-900 group-hover:dark:bg-transparent">
                 Contact us
               </span>
