@@ -33,8 +33,8 @@ const Hero = () => {
                   "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738657222/Africa_IT_Summit_Logo-blac_texte-06_xvd7my.png"
                 }
                 alt={"logo"}
-                width={300}
-                height={300}
+                width={350}
+                height={350}
                 className="bg-transparent opacity-95"
               />
 
