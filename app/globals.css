@@ -142,3 +142,19 @@ pre {
 .animation-hover:hover:after {
   @apply left-0 w-full;
 }
+
+@keyframes borderAnimation {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+.animate-border {
+  animation: borderAnimation 2s infinite;
+}
