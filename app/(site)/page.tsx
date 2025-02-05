@@ -24,9 +24,9 @@ export default function Home() {
     <main>
       <Hero />
       {/* Explication Africa IT Summit */}
-      <AboutUs />
+
       {/* <Brands /> */}
-      <Feature />
+      {/* <Feature />
       <About />
       <FeaturesTab />
       <FunFact />
@@ -35,7 +35,7 @@ export default function Home() {
       <FAQ />
       <Testimonial />
       <Pricing />
-      <Contact />
+      <Contact /> */}
       {/* <Blog /> */}
     </main>
   );
