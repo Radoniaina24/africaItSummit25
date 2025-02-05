@@ -12,6 +12,7 @@ import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
+import AboutUs from "@/components/AboutUs";
 
 export const metadata: Metadata = {
   title: "Africa It Summit",
@@ -22,16 +23,18 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      {/* Explication Africa IT Summit */}
+      <AboutUs />
       {/* <Brands /> */}
-      {/* <Feature /> */}
-      {/* <About /> */}
-      {/* <FeaturesTab />
+      <Feature />
+      <About />
+      <FeaturesTab />
       <FunFact />
       <Integration />
       <CTA />
       <FAQ />
       <Testimonial />
-      <Pricing /> */}
+      <Pricing />
       <Contact />
       {/* <Blog /> */}
     </main>

@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     // Contenu de l'email
     const mailOptions = {
       from: `"From Africa IT Summit" <${process.env.EMAIL_USER}>`,
-      to: "andriambolaradoniainamichael@gmail.com", // Destinataire
+      to: "contact@africaitsummit.com", // Destinataire
       subject: `Subject: ${subject}`,
       html: `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border-radius: 8px; background: #f4f4f4; color: #333;">

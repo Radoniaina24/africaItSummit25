@@ -15,7 +15,7 @@ const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
   const pathUrl = usePathname();
   const [stickyMenu, setStickyMenu] = useState(false);
-
+  const fond = "bg-black !bg-opacity-10 backdrop-blur-sm";
   // Handle scroll behavior
   const handleScroll = () => {
     if (window.scrollY > lastScrollY) {
@@ -40,7 +40,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 z-99999 w-full bg-black !bg-opacity-95 backdrop-blur-sm transition-transform duration-300 ${
+      className={`fixed left-0 top-0 z-99999 w-full  transition-transform duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       } ${
         stickyMenu

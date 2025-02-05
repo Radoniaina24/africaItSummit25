@@ -33,8 +33,8 @@ const Hero = () => {
                   "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738657222/Africa_IT_Summit_Logo-blac_texte-06_xvd7my.png"
                 }
                 alt={"logo"}
-                width={500}
-                height={500}
+                width={700}
+                height={700}
                 className="bg-transparent opacity-95"
               />
             </div>
@@ -43,9 +43,7 @@ const Hero = () => {
                 {tech.toUpperCase()}
               </p>
             </div>
-            <div className="">
-              <ProfessionalDesign />
-            </div>
+
             {/* <div>
               <Image
                 src={"/images/logo/logo.png"}
