@@ -30,24 +30,62 @@ const Contact = () => {
   const formik = useFormik({
     initialValues: initialValues,
     validationSchema: contactAfricaItSummitSchema,
-    onSubmit,
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
+      setSubmitting(true); // Désactive le bouton
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(values),
+        });
+        const result = await response.json();
+        if (result.success) {
+          Swal.fire({
+            title: "Great!",
+            text: "Your message has been sent successfully.",
+            icon: "success",
+            showConfirmButton: false,
+            timer: 3000, // Disparition automatique après 3 sec
+            background: "#f4f4f4",
+            color: "#333",
+            customClass: {
+              popup: "rounded-xl shadow-lg",
+            },
+          });
+          resetForm();
+        } else {
+          Swal.fire({
+            title: "Error!",
+            text: "Failed to send message.",
+            icon: "error",
+            showConfirmButton: false,
+            timer: 3000, // Disparition automatique après 3 sec
+            background: "#f4f4f4",
+            color: "#333",
+            customClass: {
+              popup: "rounded-xl shadow-lg",
+            },
+          });
+        }
+      } catch (error) {
+        Swal.fire({
+          title: "Error!",
+          text: "An unexpected error occurred.",
+          icon: "error",
+          showConfirmButton: false,
+          timer: 3000, // Disparition automatique après 3 sec
+          background: "#f4f4f4",
+          color: "#333",
+          customClass: {
+            popup: "rounded-xl shadow-lg",
+          },
+        });
+      } finally {
+        setSubmitting(false); // Réactiver le bouton après réponse
+      }
+    },
   });
-  async function onSubmit(values: any) {
-    console.log(values);
-    // resetForm();
-    Swal.fire({
-      title: "Great!",
-      text: "Your message has been sent successfully.",
-      icon: "success",
-      showConfirmButton: false,
-      timer: 3000, // Disparition automatique après 3 sec
-      background: "#f4f4f4",
-      color: "#333",
-      customClass: {
-        popup: "rounded-xl shadow-lg",
-      },
-    });
-  }
+
   const { values, handleChange, touched, errors, handleSubmit, resetForm } =
     formik;
 
@@ -174,47 +212,59 @@ const Contact = () => {
                   />
                 </div>
 
-                <div className="flex flex-wrap gap-4 xl:justify-between ">
-                  <div className="mb-4 flex items-center">
-                    <input
-                      type="checkbox"
-                      checked={isChecked}
-                      onChange={() => {
-                        setIsChecked(!isChecked);
-                      }}
-                      className="h-4 w-4 rounded-sm border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500"
-                    />
-                    <label
-                      htmlFor="default-checkbox"
-                      className="ms-2 text-sm font-medium text-gray-900 "
-                    >
-                      I have read and understand the privacy policy.
-                    </label>
-                  </div>
-
+                <div className="flex flex-wrap justify-end gap-4  ">
                   <button
                     type="submit"
-                    disabled={!isChecked}
-                    className={`inline-flex items-center gap-2.5 rounded-full px-6 py-3 font-medium text-white duration-300 ease-in-out ${
-                      isChecked
-                        ? "bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl"
-                        : "cursor-not-allowed bg-gray-400"
+                    disabled={formik.isSubmitting}
+                    className={`inline-flex items-center gap-2.5 rounded-full px-6 py-3 font-medium text-white duration-300 ease-in-out
+                    ${
+                      formik.isSubmitting
+                        ? "cursor-not-allowed bg-gray-400"
+                        : "bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl"
                     }`}
                   >
-                    Send Message
-                    <svg
-                      className="fill-white"
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z"
-                        fill=""
-                      />
-                    </svg>
+                    {formik.isSubmitting ? (
+                      <>
+                        Sending
+                        <svg
+                          className=" ml-2 h-5 w-5 animate-spin text-white"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          ></circle>
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8v8H4z"
+                          ></path>
+                        </svg>
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <svg
+                          className="fill-white"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z"
+                            fill=""
+                          />
+                        </svg>
+                      </>
+                    )}
                   </button>
                 </div>
               </form>
@@ -268,6 +318,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
       {/* <!-- ===== Contact End ===== --> */}
     </>
   );
