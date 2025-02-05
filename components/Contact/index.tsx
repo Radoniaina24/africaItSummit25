@@ -1,5 +1,6 @@
 "use client";
 import ContactAfricaItSummit from "@/app/interface/contactAfricaItSummit";
+import Swal from "sweetalert2";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -33,8 +34,21 @@ const Contact = () => {
   });
   async function onSubmit(values: any) {
     console.log(values);
+    // resetForm();
+    Swal.fire({
+      title: "Great!",
+      text: "Your message has been sent successfully.",
+      icon: "success",
+      showConfirmButton: false,
+      timer: 3000, // Disparition automatique après 3 sec
+      background: "#f4f4f4",
+      color: "#333",
+      customClass: {
+        popup: "rounded-xl shadow-lg",
+      },
+    });
   }
-  const { values, handleChange, touched, errors, handleSubmit, setFieldValue } =
+  const { values, handleChange, touched, errors, handleSubmit, resetForm } =
     formik;
 
   return (
