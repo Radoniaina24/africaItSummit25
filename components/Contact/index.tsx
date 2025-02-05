@@ -1,20 +1,41 @@
 "use client";
+import ContactAfricaItSummit from "@/app/interface/contactAfricaItSummit";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
-
+import React, { useState } from "react";
+import * as yup from "yup";
+import { string } from "yup";
+import { useFormik } from "formik";
+export const contactAfricaItSummitSchema = yup.object({
+  fullname: string().required("This fullname is required"),
+  email: string()
+    .email("Invalid email format")
+    .required("This field is required"),
+  subject: string().required("This email is required"),
+  phone: string().required("This phone is required"),
+  message: string().required("This message is required"),
+});
+const initialValues: ContactAfricaItSummit = {
+  fullname: "",
+  email: "",
+  subject: "",
+  phone: "",
+  message: "",
+};
 const Contact = () => {
-  /**
-   * Source: https://www.joshwcomeau.com/react/the-perils-of-rehydration/
-   * Reason: To fix rehydration error
-   */
-  const [hasMounted, setHasMounted] = React.useState(false);
-  React.useEffect(() => {
-    setHasMounted(true);
-  }, []);
-  if (!hasMounted) {
-    return null;
+  // state checkbox
+  const [isChecked, setIsChecked] = useState(false);
+  //Utilisation de formik
+  const formik = useFormik({
+    initialValues: initialValues,
+    validationSchema: contactAfricaItSummitSchema,
+    onSubmit,
+  });
+  async function onSubmit(values: any) {
+    console.log(values);
   }
+  const { values, handleChange, touched, errors, handleSubmit, setFieldValue } =
+    formik;
 
   return (
     <>
@@ -60,48 +81,93 @@ const Contact = () => {
                 Send a message
               </h2>
 
-              <form action="" method="">
+              <form onSubmit={handleSubmit} autoComplete="off">
                 <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
-                  <input
-                    type="text"
-                    placeholder="Full name"
-                    className="animation-hover w-full border-b border-stroke bg-transparent pb-3.5 focus:border-fuchsia-400 focus:placeholder:text-black focus-visible:outline-none  lg:w-1/2"
-                  />
-
-                  <input
-                    type="email"
-                    placeholder="Email address"
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-fuchsia-400 focus:placeholder:text-black focus-visible:outline-none  lg:w-1/2"
-                  />
+                  <div className="w-full">
+                    <input
+                      onChange={handleChange}
+                      value={values.fullname}
+                      name="fullname"
+                      type="text"
+                      placeholder="Full name"
+                      className="animation-hover w-full border-b border-stroke bg-transparent pb-3.5 focus:border-fuchsia-400 focus:placeholder:text-black focus-visible:outline-none  "
+                    />
+                    <ErrorMessage
+                      touched={touched.fullname}
+                      error={errors.fullname}
+                    />
+                  </div>
+                  <div className="w-full">
+                    <input
+                      onChange={handleChange}
+                      value={values.email}
+                      name="email"
+                      type="email"
+                      placeholder="Email address"
+                      className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-fuchsia-400 focus:placeholder:text-black focus-visible:outline-none  "
+                    />
+                    <ErrorMessage
+                      touched={touched.email}
+                      error={errors.email}
+                    />
+                  </div>
                 </div>
 
                 <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
-                  <input
-                    type="text"
-                    placeholder="Subject"
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:focus:border-fuchsia-400 focus:placeholder:text-black focus-visible:outline-none  lg:w-1/2"
-                  />
+                  <div className="w-full">
+                    <input
+                      value={values.subject}
+                      onChange={handleChange}
+                      name="subject"
+                      type="text"
+                      placeholder="Subject"
+                      className="w-full border-b border-stroke bg-transparent pb-3.5 focus:focus:border-fuchsia-400 focus:placeholder:text-black focus-visible:outline-none "
+                    />
+                    <ErrorMessage
+                      touched={touched.subject}
+                      error={errors.subject}
+                    />
+                  </div>
 
-                  <input
-                    type="text"
-                    placeholder="Phone number"
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-fuchsia-400 focus:placeholder:text-black focus-visible:outline-none  lg:w-1/2"
-                  />
+                  <div className="w-full">
+                    <input
+                      value={values.phone}
+                      onChange={handleChange}
+                      name="phone"
+                      type="text"
+                      placeholder="Phone number"
+                      className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-fuchsia-400 focus:placeholder:text-black focus-visible:outline-none"
+                    />
+                    <ErrorMessage
+                      touched={touched.phone}
+                      error={errors.phone}
+                    />
+                  </div>
                 </div>
 
-                <div className="mb-11.5 flex">
+                <div className="mb-11.5 flex flex-col">
                   <textarea
+                    value={values.message}
+                    onChange={handleChange}
+                    name="message"
                     placeholder="Message"
                     rows={4}
                     className="w-full border-b border-stroke bg-transparent focus:border-fuchsia-400 focus:placeholder:text-black focus-visible:outline-none"
                   ></textarea>
+                  <ErrorMessage
+                    touched={touched.message}
+                    error={errors.message}
+                  />
                 </div>
 
                 <div className="flex flex-wrap gap-4 xl:justify-between ">
                   <div className="mb-4 flex items-center">
                     <input
                       type="checkbox"
-                      value=""
+                      checked={isChecked}
+                      onChange={() => {
+                        setIsChecked(!isChecked);
+                      }}
                       className="h-4 w-4 rounded-sm border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500"
                     />
                     <label
@@ -113,8 +179,13 @@ const Contact = () => {
                   </div>
 
                   <button
-                    type="button"
-                    className="inline-flex items-center gap-2.5 rounded-full bg-gradient-to-br from-purple-600 to-blue-500 px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-gradient-to-bl"
+                    type="submit"
+                    disabled={!isChecked}
+                    className={`inline-flex items-center gap-2.5 rounded-full px-6 py-3 font-medium text-white duration-300 ease-in-out ${
+                      isChecked
+                        ? "bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl"
+                        : "cursor-not-allowed bg-gray-400"
+                    }`}
                   >
                     Send Message
                     <svg
@@ -189,3 +260,12 @@ const Contact = () => {
 };
 
 export default Contact;
+
+const ErrorMessage = ({ touched, error }: { touched?: any; error?: any }) => {
+  if (!touched || !error) return null;
+  return (
+    <p className="mt-2 text-sm text-red-600 dark:text-red-500">
+      <span className="font-medium">{error}</span>
+    </p>
+  );
+};

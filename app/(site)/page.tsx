@@ -22,10 +22,10 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      {/* <Brands />
-      <Feature />
-      <About />
-      <FeaturesTab />
+      {/* <Brands /> */}
+      {/* <Feature /> */}
+      {/* <About /> */}
+      {/* <FeaturesTab />
       <FunFact />
       <Integration />
       <CTA />
