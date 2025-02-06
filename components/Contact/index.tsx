@@ -11,8 +11,8 @@ export const contactAfricaItSummitSchema = yup.object({
   fullname: string().required("This fullname is required"),
   email: string()
     .email("Invalid email format")
-    .required("This field is required"),
-  subject: string().required("This email is required"),
+    .required("This email is required"),
+  subject: string().required("This subject is required"),
   phone: string().required("This phone is required"),
   message: string().required("This message is required"),
 });

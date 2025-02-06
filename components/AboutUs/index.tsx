@@ -31,10 +31,27 @@ export default function AboutUs() {
 }
 
 const images = [
-  ["image.jpg", "image-1.jpg", "image-2.jpg"],
-  ["image-3.jpg", "image-4.jpg", "image-5.jpg"],
-  ["image-6.jpg", "image-7.jpg", "image-8.jpg"],
-  ["image-9.jpg", "image-10.jpg", "image-11.jpg"],
+  [
+    "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738812347/13311391_v617-bb-04-technology_vqi0n4.jpg",
+
+    "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738810941/mathew-schwartz-c5sTal8LQyo-unsplash_acia6w.jpg",
+    "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738811786/dose-media-DiTiYQx0mh4-unsplash_me7zto.jpg",
+  ],
+  [
+    "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738810181/pexels-pixabay-257699_j7vmuw.jpg",
+    "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738759222/129790_djgsuw.jpg",
+    "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738811305/florian-olivo-diN3KIGHcO8-unsplash_bgdeaf.jpg",
+  ],
+  [
+    "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738809914/pexels-kindelmedia-8566474_vjstdp.jpg",
+    "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738812020/2150041867_baabzu.jpg",
+    "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738810955/possessed-photography-YKW0JjP7rlU-unsplash_bgencj.jpg",
+  ],
+  [
+    "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738810584/uriel-soberanes-MxVkWPiJALs-unsplash_hrq2ho.jpg",
+    "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738809913/pexels-alxs-919734_sdbpbs.jpg",
+    "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738809918/pexels-hyundaimotorgroup-19319639_yqjhjy.jpg",
+  ],
 ];
 
 const MasonryGrid = () => {
@@ -46,7 +63,7 @@ const MasonryGrid = () => {
             <img
               key={imgIndex}
               className="h-auto max-w-full rounded-lg"
-              src={`https://flowbite.s3.amazonaws.com/docs/gallery/masonry/${img}`}
+              src={img}
               alt="Gallery Image"
             />
           ))}
