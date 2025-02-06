@@ -1,5 +1,9 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
 
 export default function AboutUs() {
   const texts = [
@@ -9,10 +13,32 @@ export default function AboutUs() {
     "This global platform will unite leaders, innovators, and investors to drive forward the continent’s digital future and foster collaboration across the region. Stay tuned for more details about this groundbreaking event. If you’re interested in participating or learning more, reach out to us today!",
   ];
 
+  const particlesInit = useCallback(async (engine) => {
+    console.log("Particles Engine Loaded", engine);
+    await loadSlim(engine); // Charge la version légère
+  }, []);
   return (
-    <section className="bg-gray-100 py-12">
-      <div className="container mx-auto grid grid-cols-1 items-center gap-8 px-4 md:grid-cols-2">
-        {/* Texte attractif */}
+    <section className="relative py-12">
+      {/* Effet de particules */}
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        options={{
+          fullScreen: { enable: false },
+          background: { color: "#f3f4f6" },
+          particles: {
+            number: { value: 50 },
+            color: { value: "#1d4ed8" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5 },
+            size: { value: 4 },
+            move: { enable: true, speed: 2 },
+          },
+        }}
+        className="absolute inset-0 -z-10 h-full w-full"
+      />
+
+      <div className="container relative mx-auto grid grid-cols-1 items-center gap-8 px-4 md:grid-cols-2">
         <div>
           <h2 className="mb-4 text-3xl font-bold text-gray-800">
             Africa IT Summit
@@ -23,7 +49,6 @@ export default function AboutUs() {
             </p>
           ))}
         </div>
-        {/* Galerie d'images */}
         <MasonryGrid />
       </div>
     </section>
