@@ -48,8 +48,8 @@ const images = [
     "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738810955/possessed-photography-YKW0JjP7rlU-unsplash_bgencj.jpg",
   ],
   [
-    "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738810584/uriel-soberanes-MxVkWPiJALs-unsplash_hrq2ho.jpg",
     "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738809913/pexels-alxs-919734_sdbpbs.jpg",
+    "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738810584/uriel-soberanes-MxVkWPiJALs-unsplash_hrq2ho.jpg",
     "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738809918/pexels-hyundaimotorgroup-19319639_yqjhjy.jpg",
   ],
 ];
@@ -60,9 +60,11 @@ const MasonryGrid = () => {
       {images.map((column, colIndex) => (
         <div key={colIndex} className="grid gap-4">
           {column.map((img, imgIndex) => (
-            <img
+            <Image
               key={imgIndex}
-              className="h-auto max-w-full rounded-lg"
+              width={500}
+              height={500}
+              className="rounded-lg"
               src={img}
               alt="Gallery Image"
             />
