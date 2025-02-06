@@ -3,7 +3,6 @@ import { Blog } from "@/types/blog";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-
 const BlogItem = ({ blog }: { blog: Blog }) => {
   const { mainImage, title, metadata } = blog;
 
@@ -43,5 +42,4 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
     </>
   );
 };
-
 export default BlogItem;
