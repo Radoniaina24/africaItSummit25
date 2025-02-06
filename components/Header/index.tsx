@@ -2,11 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import menuData from "./menuData";
-import Button from "../Button";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -15,7 +14,8 @@ const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
   const pathUrl = usePathname();
   const [stickyMenu, setStickyMenu] = useState(false);
-  const fond = "bg-black !bg-opacity-10 backdrop-blur-sm";
+  const fond = "bg-black !bg-opacity-80 backdrop-blur-sm";
+
   // Handle scroll behavior
   const handleScroll = () => {
     if (window.scrollY > lastScrollY) {
@@ -40,7 +40,9 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 z-99999 w-full  transition-transform duration-300 ${
+      className={`fixed left-0 top-0 z-99999 w-full ${
+        pathUrl === "blog" || "blog/blog-details" ? fond : ""
+      }  transition-transform duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       } ${
         stickyMenu

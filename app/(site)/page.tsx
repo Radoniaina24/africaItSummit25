@@ -14,31 +14,38 @@ import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
 import AboutUs from "@/components/AboutUs";
 import Designing from "@/components/Designing";
+import dynamic from "next/dynamic";
 
 export const metadata: Metadata = {
   title: "Africa It Summit",
-  // other metadata
 };
-
+const ParticleAnimation = dynamic(
+  () => import("../../components/Particles/index"),
+  {
+    ssr: false, // This is crucial for client-side rendering
+  },
+);
 export default function Home() {
   return (
     <main>
       <Hero />
       {/* Explication Africa IT Summit */}
-      <AboutUs />
-      <Designing />
-      {/* <Brands /> */}
-      {/* <Feature /> */}
-      {/* <About /> */}
-      {/* <FeaturesTab /> */}
-      {/* <FunFact /> */}
-      {/* <Integration /> */}
-      {/* <CTA /> */}
-      {/* <FAQ /> */}
-      {/* <Testimonial /> */}
-      <Pricing />
-      <Contact />
-      {/* <Blog /> */}
+      <ParticleAnimation>
+        <AboutUs />
+        <Designing />
+        <Blog />
+        {/* <Brands /> */}
+        {/* <Feature /> */}
+        {/* <About /> */}
+        {/* <FeaturesTab /> */}
+        {/* <FunFact /> */}
+        {/* <Integration /> */}
+        {/* <CTA /> */}
+        {/* <FAQ /> */}
+        {/* <Testimonial /> */}
+        <Pricing />
+        <Contact />
+      </ParticleAnimation>
     </main>
   );
 }

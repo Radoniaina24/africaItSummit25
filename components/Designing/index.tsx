@@ -9,21 +9,24 @@ export default function Designin() {
   const data = [
     {
       _id: 1,
-      mainImage: "/images/blog/blog-01.png",
+      mainImage:
+        "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738837183/marvin-meyer-SYTO3xs06fU-unsplash_hmtxu7.jpg",
       title: "STARTUP PARADISE",
       metadata:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
       _id: 2,
-      mainImage: "/images/blog/blog-02.png",
+      mainImage:
+        "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738837341/microsoft-365-nhBYukjZg_I-unsplash_dqt73c.jpg",
       title: "GET BUSINESS DONE",
       metadata:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
       _id: 2,
-      mainImage: "/images/blog/blog-03.png",
+      mainImage:
+        "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738837186/austin-distel-mpN7xjKQ_Ns-unsplash_nybgq7.jpg",
       title: "LEAD THE FUTURE.",
       metadata:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
