@@ -17,20 +17,57 @@ export default function ParticleAnimation({ children }) {
   }, []);
 
   return (
-    <div>
+    <div className="">
       <Particles
         id="tsparticles"
-        init={particlesInit} // Passer la fonction asynchrone
+        init={particlesInit}
         options={{
-          fullScreen: { enable: false },
-          background: { color: "#f3f4f6" },
+          fullScreen: { enable: true, zIndex: -1 }, // Fond plein écran
+          background: {
+            // color: "#0e0c29", // Fond sombre pour un effet futuriste
+            // image: "linear-gradient(45deg, #28313b 0%, #485461 100%)", // Dégradé dynamique pour le fond
+          },
           particles: {
-            number: { value: 50 },
-            color: { value: "#D34FAC" },
-            shape: { type: "circle" },
-            opacity: { value: 0.5 },
-            size: { value: 4 },
-            move: { enable: true, speed: 2 },
+            number: {
+              value: 100, // Plus de particules pour un effet plus dense
+              density: {
+                enable: true,
+                value_area: 800, // Zone d'effet de particules
+              },
+            },
+            color: {
+              value: "#00FFB3", // Couleur moderne de particules (cyanine)
+            },
+            shape: {
+              type: "circle", // Garde les particules sous forme de cercles
+            },
+            opacity: {
+              value: 0.6, // Opacité des particules
+              random: true, // Rendre l'opacité un peu aléatoire pour plus de fluidité
+            },
+            size: {
+              value: 6, // Taille des particules augmentée pour plus de visibilité
+              random: true, // Aléatoire pour un effet dynamique
+            },
+            move: {
+              enable: true,
+              speed: 3, // Vitesse des particules pour un mouvement plus fluide
+              direction: "none", // Direction aléatoire pour un mouvement naturel
+              out_mode: "out", // Les particules disparaissent lorsqu'elles sortent de l'écran
+            },
+          },
+          interactivity: {
+            detect_on: "canvas", // Détecte les interactions sur le canvas
+            events: {
+              onhover: {
+                enable: true, // Activé lors du survol
+                mode: "repulse", // Les particules s'éloignent lorsque la souris passe
+              },
+              onclick: {
+                enable: true, // Activé lors du clic
+                mode: "push", // Ajoute des particules supplémentaires lors du clic
+              },
+            },
           },
         }}
         className="absolute inset-0 -z-10 h-full w-full"
