@@ -15,6 +15,7 @@ import Testimonial from "@/components/Testimonial";
 import AboutUs from "@/components/AboutUs";
 import Designing from "@/components/Designing";
 import dynamic from "next/dynamic";
+import AnimatedCardCarousel from "@/components/TestCard";
 
 export const metadata: Metadata = {
   title: "Africa It Summit",
@@ -34,10 +35,11 @@ export default function Home() {
         <AboutUs />
         <Designing />
         <Blog />
+        <FeaturesTab />
         {/* <Brands /> */}
         {/* <Feature /> */}
         {/* <About /> */}
-        {/* <FeaturesTab /> */}
+
         {/* <FunFact /> */}
         {/* <Integration /> */}
         {/* <CTA /> */}

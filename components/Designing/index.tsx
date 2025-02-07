@@ -81,7 +81,7 @@ const DesignItem = ({ data }) => {
         className="animate_top mt-7.5 flex flex-col gap-5  p-4 pb-9 shadow-solid-8 "
       >
         <div className="">
-          <h3 className=" line-clamp-2 inline-block text-lg font-bold uppercase text-black duration-300 hover:text-primary   xl:text-itemtitle2">
+          <h3 className=" line-clamp-2 inline-block text-lg font-bold uppercase text-[#0796F5] duration-300 hover:text-primary   xl:text-itemtitle2">
             {title}
           </h3>
         </div>

@@ -3,27 +3,45 @@ import { FeatureTab } from "@/types/featureTab";
 const featuresTabData: FeatureTab[] = [
   {
     id: "tabOne",
-    title: "Solid Has Neat & Clean User Interface.",
-    desc1: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.`,
-    desc2: `    Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.`,
-    image: "/images/features/features-light-01.png",
-    imageDark: "/images/features/features-dark-01.svg",
+    label: "CONCEPT AND OBJECTIVES",
+    title: "Accelerate Africa’s digital transformation",
+    desc1: `Africa is undergoing a rapid digital transformation, with a fast-growing digital economy.
+However, major challenges remain: limited
+infrastructure, unequal access to the internet,
+lack of funding, shortage of skilled talent, and
+fragmented policies. These obstacles hinder
+technological development and innovation. `,
+    desc2: ` By launching this initiative in Mauritius, we strive
+to deliver an event that embodies the country’s
+innovation, excellence, and forward-thinking vision.`,
+    image:
+      "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738923493/74_bu0blp.jpg",
   },
   {
     id: "tabTwo",
-    title: "Ready to Use Pages You Need for a SaaS Business.",
-    desc1: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.`,
-    desc2: `    Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.`,
-    image: "/images/features/features-light-01.png",
-    imageDark: "/images/features/features-dark-01.svg",
+    label: "EVENT FORMAT",
+    title: " Interactive and strategic sessions.",
+    desc1: `Conferences & Panels: In-depth discussions on the impact of digital transformation in key sectors such as health, education, and agriculture, featuring experts,
+decision-makers, and innovators.`,
+    desc2: `B2B Meetings & Networking: Dedicated sessions to foster strategic collaborations
+between stakeholders in tech, film, and various industries, strengthening Africa’s
+digital ecosystem. `,
+    image:
+      "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738923492/129016_s0cdl8.jpg",
   },
   {
     id: "tabThree",
-    title: "Functional Blog, DB, Auth and Many More",
-    desc1: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.`,
-    desc2: `Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.`,
-    image: "/images/features/features-light-01.png",
-    imageDark: "/images/features/features-dark-01.svg",
+    label: "KEY TOPICS COVERED",
+    title: "Africa’s digital landscape",
+    desc1: `Analyzing emerging technologies in
+content production and distribution,
+fostering cultural diversity and the growth
+of Africa’s creative industry. `,
+    desc2: `Discussing digital sovereignty, critical
+infrastructure protection, and cybersecurity awareness to safeguard Africa’s digital
+transformation. `,
+    image:
+      "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738923492/47500_bj48kc.jpg",
   },
 ];
 
