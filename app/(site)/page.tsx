@@ -39,12 +39,12 @@ export default function Home() {
         {/* <Brands /> */}
         {/* <Feature /> */}
         {/* <About /> */}
-
-        {/* <FunFact /> */}
+        <FAQ />
+        <FunFact />
         {/* <Integration /> */}
         {/* <CTA /> */}
-        {/* <FAQ /> */}
-        {/* <Testimonial /> */}
+
+        <Testimonial />
         <Pricing />
         <Contact />
       </ParticleAnimation>
