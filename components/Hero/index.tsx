@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const Hero = () => {
+export const Hero = () => {
   const tech = "technology";
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -44,14 +44,7 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* <div>
-              <Image
-                src={"/images/logo/logo.png"}
-                alt={"logo"}
-                width={300}
-                height={300}
-              />
-            </div> */}
+            <div>{/* <ProfessionalDesign /> */}</div>
           </div>
         </div>
       </div>
@@ -59,20 +52,39 @@ const Hero = () => {
   );
 };
 
-export default Hero;
-const ProfessionalDesign = () => {
+export const ProfessionalDesign = () => {
   const items = [
     {
-      text: "Innovation",
+      text: "Santé numérique",
       gradient: "from-blue-500 via-purple-500 to-pink-500",
     },
     {
-      text: "Opportunities",
+      text: "Cinématographie et Audiovisuel",
       gradient: "from-green-500 via-teal-500 to-blue-500",
     },
     {
-      text: "Leadership",
+      text: "Intelligence Artificielle et Automatisation",
       gradient: "from-yellow-500 via-orange-500 to-red-500",
+    },
+    {
+      text: "Développement Web et Mobile",
+      gradient: "from-indigo-500 via-blue-500 to-teal-500",
+    },
+    {
+      text: "Cybersécurité et Protection des Données",
+      gradient: "from-pink-500 via-red-500 to-yellow-500",
+    },
+    {
+      text: "Fintech et Inclusion Financière",
+      gradient: "from-teal-500 via-blue-500 to-indigo-500",
+    },
+    {
+      text: "Villes Intelligentes et Infrastructures Connectées",
+      gradient: "from-purple-500 via-pink-500 to-indigo-500",
+    },
+    {
+      text: "Technologies Numériques Durables",
+      gradient: "from-green-600 via-green-400 to-green-200",
     },
   ];
 
@@ -82,13 +94,13 @@ const ProfessionalDesign = () => {
         {items.map((item, index) => (
           <div
             key={index}
-            className={`text-md relative flex h-32 w-32 items-center justify-center rounded-full bg-transparent p-4 font-bold text-white shadow-lg md:h-40 md:w-40 md:text-xl`}
+            className={`relative flex h-32 w-56 items-center justify-center rounded-lg bg-transparent p-4 text-sm font-bold text-white shadow-lg md:h-40 md:w-64 md:text-xl`}
           >
             <span className="absolute left-1/2 top-1/2 z-99999 -translate-x-1/2 -translate-y-1/2 transform text-center">
               {item.text}
             </span>
             <div
-              className={`absolute inset-0 rounded-full border-4 border-transparent bg-gradient-to-r ${item.gradient} animate-border`}
+              className={`absolute inset-0 rounded-lg border-4 border-transparent bg-gradient-to-r ${item.gradient} animate-border`}
             ></div>
           </div>
         ))}

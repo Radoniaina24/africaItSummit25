@@ -4,10 +4,10 @@ import React from "react";
 
 export default function AboutUs() {
   const texts = [
-    "Let’s start building the future of Africa’s digital revolution together",
-    "Africa, the promised land of digital technology, is positioning itself as the world’s next technological hub. With its rapidly growing ecosystem and a vibrant, connected youth, the continent is ready to embrace the immense opportunities of the digital era.",
-    "The Africa IT Summit 2025 will be one of the most prestigious and transformative events connecting Africa and the Indian Ocean region.",
-    "This global platform will unite leaders, innovators, and investors to drive forward the continent’s digital future and foster collaboration across the region. Stay tuned for more details about this groundbreaking event. If you’re interested in participating or learning more, reach out to us today!",
+    "L’Afrique est la terre promise de l’IT ! Avec une adoption fulgurante des technologies, une jeunesse hyperconnectée et des investissements records dans le numérique, le continent est en pleine révolution technologique.",
+    "Le plus grand événement panafricain dédié aux technologies de l’information se tiendra à l’île Maurice !L’Africa IT Summit 2025 réunira les leaders de l’innovation, les plus grandes entreprises du numérique, les startups les plus prometteuses et les investisseurs visionnaires pour façonner ensemble l’avenir digital du continent.",
+    "Un événement à ne pas manquer : keynotes percutantes, expositions de technologies de pointe, opportunités de business et networking de haut niveau. L’Afrique numérique se construit maintenant – soyez au cœur de cette transformation !",
+    "Building the Future of Africa’s Digital Revolution Together",
   ];
 
   return (

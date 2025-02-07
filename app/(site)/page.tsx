@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Hero from "@/components/Hero";
 import Brands from "@/components/Brands";
 import Feature from "@/components/Features";
 import About from "@/components/About";
@@ -16,6 +15,7 @@ import AboutUs from "@/components/AboutUs";
 import Designing from "@/components/Designing";
 import dynamic from "next/dynamic";
 import AnimatedCardCarousel from "@/components/TestCard";
+import { Hero, ProfessionalDesign } from "@/components/Hero";
 
 export const metadata: Metadata = {
   title: "Africa It Summit",
@@ -30,6 +30,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <ProfessionalDesign />
       {/* Explication Africa IT Summit */}
       <ParticleAnimation>
         <AboutUs />
