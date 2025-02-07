@@ -28,11 +28,12 @@ const Blog = async () => {
   };
 
   return (
-    <section className="bg-gray-100 py-10 lg:py-10 xl:py-10">
+    <section className="bg-gradient-to-br from-[#42A9F5] via-[#7B42A6] to-[#E05CBB] py-10 lg:py-10 xl:py-10">
       <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
         {/* <!-- Section Title Start --> */}
         <div className="animate_top mx-auto text-center">
           <SectionHeader
+            descriptionColor="white"
             headerInfo={{
               title: ``,
               subtitle: `Latest News & Blogs`,
@@ -62,7 +63,7 @@ const Blog = async () => {
           dotListClass="custom-dot-list-style" // Personnalisation des indicateurs de pagination (optionnel)
         >
           {BlogData.map((blog, key) => (
-            <BlogItem blog={blog} key={key} />
+            <BlogItem textColor="white" blog={blog} key={key} />
           ))}
         </Carousel>
 
