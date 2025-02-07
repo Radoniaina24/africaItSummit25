@@ -1,6 +1,6 @@
 "use client";
-
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export const Hero = () => {
   const tech = "technology";
@@ -30,19 +30,19 @@ export const Hero = () => {
             <div className="">
               <Image
                 src={
-                  "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738657222/Africa_IT_Summit_Logo-blac_texte-06_xvd7my.png"
+                  "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738935304/Untitled-6_u9du1q.png"
                 }
                 alt={"logo"}
-                width={700}
-                height={700}
+                width={1000}
+                height={1000}
                 className="bg-transparent opacity-95"
               />
             </div>
-            <div>
+            {/* <div>
               <p className=" -ml-5 bg-transparent text-4xl font-extrabold text-gray-300 drop-shadow-md">
                 {tech.toUpperCase()}
               </p>
-            </div>
+            </div> */}
 
             <div>{/* <ProfessionalDesign /> */}</div>
           </div>
@@ -89,21 +89,57 @@ export const ProfessionalDesign = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center p-6">
-      <div className="flex flex-wrap justify-center gap-10">
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className={`relative flex h-32 w-56 items-center justify-center rounded-lg bg-transparent p-4 text-sm font-bold text-white shadow-lg md:h-40 md:w-64 md:text-xl`}
-          >
-            <span className="absolute left-1/2 top-1/2 z-99999 -translate-x-1/2 -translate-y-1/2 transform text-center">
-              {item.text}
-            </span>
-            <div
-              className={`absolute inset-0 rounded-lg border-4 border-transparent bg-gradient-to-r ${item.gradient} animate-border`}
-            ></div>
-          </div>
-        ))}
+    <div className="relative flex h-screen w-screen items-center justify-center overflow-hidden ">
+      {/* Planète Terre animée en grand format */}
+      <motion.div
+        // animate={{ rotate: 360 }}
+        // transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+        className="absolute z-10 flex h-[50vw] max-h-[500px] 
+                   w-[50vw] max-w-[500px] items-center justify-center 
+                   md:h-[40vw] md:max-h-[600px] md:w-[40vw] md:max-w-[600px]"
+      >
+        <Image
+          src="https://res.cloudinary.com/dx3xhdaym/image/upload/v1738935304/Untitled-6_u9du1q.png"
+          alt="Planète Terre"
+          width={400}
+          height={400}
+          className="drop-shadow-lg"
+        />
+      </motion.div>
+
+      {/* Thèmes en cercle autour de la planète */}
+      <div className="relative flex h-full w-full items-center justify-center">
+        {items.map((item, index) => {
+          // Ajuster le rayon en fonction de l'écran
+          const isMobile =
+            typeof window !== "undefined" && window.innerWidth < 768;
+          const radius = isMobile ? 180 : 320; // Plus petit rayon sur mobile
+          const angle = (index / items.length) * 2 * Math.PI;
+          const x = Math.cos(angle) * radius;
+          const y = Math.sin(angle) * radius;
+
+          return (
+            <motion.div
+              key={index}
+              className="absolute flex h-28 w-28 
+                         transform items-center justify-center text-center
+                         font-bold text-white shadow-xl
+                         transition-transform hover:scale-110 md:h-40 md:w-40 lg:h-40 lg:w-40"
+              style={{
+                top: `calc(50% + ${y}px - 50px)`,
+                left: `calc(50% + ${x}px - 50px)`,
+              }}
+              whileHover={{ scale: 1.1 }}
+            >
+              <span className="z-10 text-xs md:text-sm lg:text-base">
+                {item.text}
+              </span>
+              <div
+                className={`absolute inset-0 bg-gradient-to-r ${item.gradient} rounded-xl`}
+              ></div>
+            </motion.div>
+          );
+        })}
       </div>
     </div>
   );

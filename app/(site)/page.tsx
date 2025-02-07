@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <ProfessionalDesign />
+      {/* <ProfessionalDesign/> */}
       {/* Explication Africa IT Summit */}
       <ParticleAnimation>
         <AboutUs />
