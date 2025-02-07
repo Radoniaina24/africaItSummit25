@@ -26,6 +26,7 @@ const Blog = async () => {
       items: 1,
     },
   };
+
   return (
     <section className="bg-gray-100 py-10 lg:py-10 xl:py-10">
       <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
@@ -67,7 +68,7 @@ const Blog = async () => {
 
         {/* See All Articles Button */}
         <div className="mt-5 flex justify-end">
-          <Link
+          {/* <Link
             href="/blog" // Mettez ici le lien vers la page où tous les articles sont listés
             className="border-1 inline-flex items-center gap-2 rounded-full  bg-purple-400 px-4 py-1.5 font-medium text-white shadow-lg transition-all duration-300 hover:shadow-xl"
           >
@@ -83,7 +84,7 @@ const Blog = async () => {
                 fill="currentColor"
               />
             </svg>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>

@@ -25,7 +25,7 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
         <div className="mt-6 ">
           <Link
             href={`/blog/blog-details`}
-            className="font-small inline-flex transform items-center gap-2 rounded-full bg-primary px-4 py-1.5 text-sm text-white shadow-lg transition-all duration-300  hover:shadow-xl"
+            className="font-small inline-flex transform items-center gap-2 rounded-full bg-gradient-to-r from-[#D34FAC] to-[#562196] px-4 py-1.5 text-sm text-white shadow-lg transition-all duration-300 hover:shadow-xl"
           >
             <span className="duration-300 group-hover/btn:pr-2">Read More</span>
           </Link>
