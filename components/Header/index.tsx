@@ -37,12 +37,12 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
+  const addBg =
+    pathUrl === "/blog" || pathUrl === "/blog/blog-details" ? fond : "";
 
   return (
     <header
-      className={`fixed left-0 top-0 z-99999 w-full ${
-        pathUrl === "blog" || "blog/blog-details" ? fond : ""
-      }  transition-transform duration-300 ${
+      className={`fixed left-0 top-0 z-99999 w-full ${addBg}  transition-transform duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       } ${
         stickyMenu

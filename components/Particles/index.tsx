@@ -6,8 +6,6 @@ import React from "react";
 export default function ParticleAnimation({ children }) {
   // Utilisation de particlesInit asynchrone pour initialiser le moteur
   const particlesInit = useCallback(async (engine) => {
-    console.log("Particles Engine Loaded", engine);
-
     // Vérification de la validité de l'objet engine avant d'appeler loadSlim
     if (engine && typeof engine.addShape === "function") {
       await loadSlim(engine); // Charge la version légère de tsparticles
