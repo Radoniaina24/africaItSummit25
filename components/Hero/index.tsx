@@ -30,11 +30,11 @@ export const Hero = () => {
             <div className="">
               <Image
                 src={
-                  "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738935304/Untitled-6_u9du1q.png"
+                  "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738935960/FOREIGNArtboard_2_300x-8_boi3aj.png"
                 }
                 alt={"logo"}
-                width={1000}
-                height={1000}
+                width={1200}
+                height={1200}
                 className="bg-transparent opacity-95"
               />
             </div>
