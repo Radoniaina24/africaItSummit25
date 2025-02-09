@@ -13,6 +13,7 @@ const inter = Montserrat({
 });
 
 import ToasterContext from "../context/ToastContext";
+import { LanguageProvider } from "../context/LanguageContext";
 
 export default function RootLayout({
   children,
@@ -27,12 +28,14 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="light"
         >
-          {/* <Lines /> */}
-          <Header />
-          <ToasterContext />
-          {children}
-          {/* <Footer /> */}
-          {/* <ScrollToTop /> */}
+          <LanguageProvider>
+            {/* <Lines /> */}
+            <Header />
+            <ToasterContext />
+            {children}
+            {/* <Footer /> */}
+            {/* <ScrollToTop /> */}
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -5,9 +5,13 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import menuData from "./menuData";
+import LanguageSelect from "../Language/LanguageSelect";
+import { useLanguageContext } from "@/app/context/LanguageContext";
+import { menuDataEn, menuDataFr } from "./menuData";
 
 const Header = () => {
+  const { language } = useLanguageContext();
+  const menuData = language === "en" ? menuDataEn : menuDataFr;
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -162,11 +166,7 @@ const Header = () => {
             </ul>
           </nav>
           <div className="flex items-center justify-center xl:mt-0">
-            <button className="group relative mb-2 me-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-purple-200 group-hover:from-purple-500 group-hover:to-pink-500 dark:text-white dark:focus:ring-purple-800">
-              <span className="relative rounded-md px-5 py-2.5 text-white transition-all duration-75 ease-in group-hover:bg-transparent dark:bg-gray-900 group-hover:dark:bg-transparent">
-                Contact us
-              </span>
-            </button>
+            <LanguageSelect sticky={stickyMenu} />
           </div>
         </div>
       </div>
