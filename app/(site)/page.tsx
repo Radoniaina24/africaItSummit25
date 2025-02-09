@@ -16,6 +16,7 @@ import Designing from "@/components/Designing";
 import dynamic from "next/dynamic";
 import AnimatedCardCarousel from "@/components/TestCard";
 import { Hero, ProfessionalDesign } from "@/components/Hero";
+import ThemeAfricaSummit from "@/components/ThemeAfricaSummit/ThemeAfricaSummit";
 
 export const metadata: Metadata = {
   title: "Africa It Summit",
@@ -34,6 +35,7 @@ export default function Home() {
       {/* Explication Africa IT Summit */}
       <ParticleAnimation>
         <AboutUs />
+        <ThemeAfricaSummit />
         {/* <Designing />
         <Blog />
         <FeaturesTab /> */}
