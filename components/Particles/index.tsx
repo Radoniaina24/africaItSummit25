@@ -34,7 +34,7 @@ export default function ParticleAnimation({ children }) {
               },
             },
             color: {
-              value: "#00FFB3", // Couleur moderne de particules (cyanine)
+              value: "#D34FAC", // Couleur moderne de particules (cyanine)
             },
             shape: {
               type: "circle", // Garde les particules sous forme de cercles
