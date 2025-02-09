@@ -34,19 +34,19 @@ export default function Home() {
       {/* Explication Africa IT Summit */}
       <ParticleAnimation>
         <AboutUs />
-        <Designing />
+        {/* <Designing />
         <Blog />
-        <FeaturesTab />
+        <FeaturesTab /> */}
         {/* <Brands /> */}
         {/* <Feature /> */}
         {/* <About /> */}
-        <FAQ />
-        <FunFact />
+        {/* <FAQ />
+        <FunFact /> */}
         {/* <Integration /> */}
         {/* <CTA /> */}
 
-        <Testimonial />
-        <Pricing />
+        {/* <Testimonial />
+        <Pricing /> */}
         <Contact />
       </ParticleAnimation>
     </main>

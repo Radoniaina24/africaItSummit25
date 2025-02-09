@@ -15,7 +15,7 @@ export const Hero = () => {
         playsInline
       >
         <source
-          src="https://res.cloudinary.com/dx3xhdaym/video/upload/v1738653259/Projection_Num%C3%A9rique_De_Lignes_G%C3%A9om%C3%A9triques_Abstraites_Vid%C3%A9o_gratuite_2_wmrwt9.mp4"
+          src="https://res.cloudinary.com/dx3xhdaym/video/upload/v1738653263/3129595-hd_1920_1080_30fps_pzyb2d.mp4"
           type="video/mp4"
         />
       </video>
