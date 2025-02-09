@@ -1,14 +1,24 @@
 "use client";
+import { useLanguageContext } from "@/app/context/LanguageContext";
 import Image from "next/image";
 import React from "react";
 
 export default function AboutUs() {
-  const texts = [
-    "L’Afrique est la terre promise de l’IT ! Avec une adoption fulgurante des technologies, une jeunesse hyperconnectée et des investissements records dans le numérique, le continent est en pleine révolution technologique.",
-    "Le plus grand événement panafricain dédié aux technologies de l’information se tiendra à l’île Maurice !L’Africa IT Summit 2025 réunira les leaders de l’innovation, les plus grandes entreprises du numérique, les startups les plus prometteuses et les investisseurs visionnaires pour façonner ensemble l’avenir digital du continent.",
-    "Un événement à ne pas manquer : keynotes percutantes, expositions de technologies de pointe, opportunités de business et networking de haut niveau. L’Afrique numérique se construit maintenant – soyez au cœur de cette transformation !",
-    "Building the Future of Africa’s Digital Revolution Together",
-  ];
+  const { language } = useLanguageContext();
+  const texts = {
+    fr: [
+      "L’Afrique est la terre promise de l’IT ! Avec une adoption fulgurante des technologies, une jeunesse hyperconnectée et des investissements records dans le numérique, le continent est en pleine révolution technologique.",
+      "Le plus grand événement panafricain dédié aux technologies de l’information se tiendra à l’île Maurice !L’Africa IT Summit 2025 réunira les leaders de l’innovation, les plus grandes entreprises du numérique, les startups les plus prometteuses et les investisseurs visionnaires pour façonner ensemble l’avenir digital du continent.",
+      "Un événement à ne pas manquer : keynotes percutantes, expositions de technologies de pointe, opportunités de business et networking de haut niveau. L’Afrique numérique se construit maintenant – soyez au cœur de cette transformation !",
+      "Building the Future of Africa’s Digital Revolution Together",
+    ],
+    en: [
+      "Africa is the promised land of IT! With a rapid adoption of technologies, a hyperconnected youth, and record investments in digital, the continent is undergoing a technological revolution.",
+      "The largest pan-African event dedicated to information technologies will be held in Mauritius! The Africa IT Summit 2025 will bring together innovation leaders, the largest digital companies, the most promising startups, and visionary investors to shape the continent's digital future together.",
+      "An event not to be missed: impactful keynotes, cutting-edge technology exhibitions, business opportunities, and high-level networking. The digital Africa is being built now – be at the heart of this transformation!",
+      "Building the Future of Africa’s Digital Revolution Together",
+    ],
+  };
 
   return (
     <section className="relative py-12">
@@ -18,7 +28,7 @@ export default function AboutUs() {
           <h2 className="mb-4 text-3xl font-bold text-gray-800">
             Africa IT Summit
           </h2>
-          {texts.map((item, index) => (
+          {texts[language].map((item, index) => (
             <p key={index} className="mb-4 text-gray-600">
               {item}
             </p>

@@ -15,8 +15,10 @@ import AboutUs from "@/components/AboutUs";
 import Designing from "@/components/Designing";
 import dynamic from "next/dynamic";
 import AnimatedCardCarousel from "@/components/TestCard";
-import { Hero, ProfessionalDesign } from "@/components/Hero";
+import { Hero } from "@/components/Hero";
 import ThemeAfricaSummit from "@/components/ThemeAfricaSummit/ThemeAfricaSummit";
+import HeroBanner from "@/components/HeroBanner";
+import InfoAfricaItSummit from "../features/Information";
 
 export const metadata: Metadata = {
   title: "Africa It Summit",
@@ -49,6 +51,7 @@ export default function Home() {
 
         {/* <Testimonial />
         <Pricing /> */}
+        <InfoAfricaItSummit />
         <Contact />
       </ParticleAnimation>
     </main>

@@ -35,8 +35,8 @@ const LanguageSelect: React.FC<LanguageSelectProps> = ({ sticky }) => {
           <span
             className={`font-medium ${
               language === "fr" || language === "en"
-                ? `${sticky ? "text-gray-dark" : "text-white"}`
-                : "text-gray-800"
+                ? `${sticky ? "text-white" : "text-white"}`
+                : "text-white"
             }`}
           >
             {languages.find((lang) => lang.code === language)?.name}
