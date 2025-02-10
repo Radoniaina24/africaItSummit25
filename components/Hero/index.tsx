@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 
 export const Hero = () => {
   const tech = "technology";
+  const texte =
+    "Let’s start building the future of Africa’s digital revolution together.";
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Video Background */}
@@ -30,11 +32,11 @@ export const Hero = () => {
             <div className="">
               <Image
                 src={
-                  "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739168355/475892725_1587693195199403_382944860538321196_n_ntvyna.jpg"
+                  "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739173274/476430444_1721693348767771_2325540913444564809_n_pvbsfp.jpg"
                 }
                 alt={"logo"}
-                width={1200}
-                height={1200}
+                width={600}
+                height={600}
                 className="bg-transparent opacity-60"
               />
             </div>
@@ -44,7 +46,9 @@ export const Hero = () => {
               </p>
             </div> */}
 
-            <div>{/* <ProfessionalDesign /> */}</div>
+            <div className="max-xl: container mx-auto mt-10 text-center text-4xl font-bold uppercase">
+              {texte}
+            </div>
           </div>
         </div>
       </div>
