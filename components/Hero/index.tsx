@@ -47,7 +47,7 @@ export const Hero = () => {
             </div> */}
             <div className="flex  items-center justify-center px-4">
               <div className="w-full max-w-4xl">
-                <p className="mx-auto mt-10 text-center text-4xl font-bold uppercase">
+                <p className="mx-auto mt-10 bg-gradient-to-r from-[#0796F5] via-[#D34FAC] to-[#562196] bg-clip-text text-center text-4xl font-bold uppercase text-transparent">
                   <ReactTyped
                     strings={[
                       "Let’s start building the future of Africa’s digital revolution together.",

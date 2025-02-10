@@ -16,7 +16,6 @@ export default function AboutUs() {
       "Africa is the promised land of IT! With a rapid adoption of technologies, a hyperconnected youth, and record investments in digital, the continent is undergoing a technological revolution.",
       "The largest pan-African event dedicated to information technologies will be held in Mauritius! The Africa IT Summit 2025 will bring together innovation leaders, the largest digital companies, the most promising startups, and visionary investors to shape the continent's digital future together.",
       "An event not to be missed: impactful keynotes, cutting-edge technology exhibitions, business opportunities, and high-level networking. The digital Africa is being built now – be at the heart of this transformation!",
-      "Building the Future of Africa’s Digital Revolution Together",
     ],
   };
 
@@ -29,10 +28,13 @@ export default function AboutUs() {
             Africa IT Summit
           </h2> */}
           {texts[language].map((item, index) => (
-            <p key={index} className="mb-4 text-white">
+            <p key={index} className="text-md mb-4 text-white">
               {item}
             </p>
           ))}
+          <p className="mb-4 bg-gradient-to-r from-[#0796F5] via-[#D34FAC] to-[#562196] bg-clip-text text-xl text-transparent sm:text-2xl md:text-3xl">
+            Building the Future of Africa&apos;s Digital Revolution Together
+          </p>
         </div>
         {/* <MasonryGrid /> */}
         <div>
