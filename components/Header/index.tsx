@@ -41,7 +41,7 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
-  const addBg = pathUrl === "/blog" || pathUrl === "/themes/health" ? fond : "";
+  const addBg = pathUrl === "/blog" || pathUrl === "/themes/s" ? fond : "";
 
   return (
     <header

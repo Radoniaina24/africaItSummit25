@@ -30,7 +30,7 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center px-6 text-white">
         <div className="container">
-          <div className="flex flex-col items-center gap-1">
+          <div className="gap-10² flex flex-col items-center">
             <div className="flex items-center justify-center px-4">
               <div className="mb-1 w-full max-w-4xl md:mb-5">
                 <h2 className="mb-5 text-center text-lg font-bold">
@@ -68,7 +68,7 @@ export const Hero = () => {
                     strings={[
                       "Let’s start building the future of Africa’s digital revolution together.",
                     ]}
-                    typeSpeed={40}
+                    typeSpeed={30}
                     showCursor={false}
                   />
                 </p>
