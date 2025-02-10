@@ -44,6 +44,7 @@ export const Hero = () => {
                       alt={`Image ${index + 1}`}
                       height={50}
                       width={150}
+                      className="rounded-2xl"
                     />
                   ))}
                 </div>
@@ -57,7 +58,7 @@ export const Hero = () => {
                 alt={"logo"}
                 width={600}
                 height={600}
-                className="bg-transparent opacity-60"
+                className="rounded-2xl bg-transparent opacity-60"
               />
             </div>
 
