@@ -38,12 +38,12 @@ export default function AboutUs() {
         <div>
           <Image
             src={
-              "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739174756/476595911_988727906456870_5707031821633252420_n_vp3fi1.jpg"
+              "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739175777/476406364_2921882331310647_8948184695053280722_n_zak4pm.jpg"
             }
             alt={""}
-            width={500}
-            height={500}
-            className="h-full w-full"
+            width={1200}
+            height={1200}
+            // className="h-full w-full"
           />
         </div>
       </div>

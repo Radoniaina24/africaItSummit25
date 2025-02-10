@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { ReactTyped } from "react-typed";
 
 export const Hero = () => {
   const tech = "technology";
@@ -46,8 +46,14 @@ export const Hero = () => {
               </p>
             </div> */}
 
-            <div className="max-xl: container mx-auto mt-10 text-center text-4xl font-bold uppercase">
-              {texte}
+            <div className="max-xl container mx-auto mt-10 text-center text-4xl font-bold uppercase">
+              <ReactTyped
+                strings={[
+                  "Let’s start building the future of Africa’s digital revolution together.",
+                ]}
+                typeSpeed={40}
+                showCursor={false}
+              />
             </div>
           </div>
         </div>
