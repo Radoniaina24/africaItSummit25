@@ -32,7 +32,7 @@ export default function AboutUs() {
               {item}
             </p>
           ))}
-          <p className="mb-4 bg-gradient-to-r from-[#0796F5] via-[#D34FAC] to-[#562196] bg-clip-text text-xl text-transparent sm:text-2xl md:text-3xl">
+          <p className="mb-4 bg-gradient-to-r from-[#0796F5] via-[#D34FAC] to-[#562196] bg-clip-text text-lg text-transparent sm:text-2xl md:text-3xl">
             Building the Future of Africa&apos;s Digital Revolution Together
           </p>
         </div>
