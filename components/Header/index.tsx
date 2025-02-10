@@ -22,11 +22,11 @@ const Header = () => {
 
   // Handle scroll behavior
   const handleScroll = () => {
-    if (window.scrollY > lastScrollY) {
-      setShowHeader(false); // Hide header on scroll down
-    } else {
-      setShowHeader(true); // Show header on scroll up
-    }
+    // if (window.scrollY > lastScrollY) {
+    //   setShowHeader(false); // Hide header on scroll down
+    // } else {
+    //   setShowHeader(true); // Show header on scroll up
+    // }
     if (window.scrollY >= 80) {
       setStickyMenu(true);
     } else {

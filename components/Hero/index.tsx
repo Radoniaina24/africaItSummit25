@@ -30,26 +30,33 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center px-6 text-white">
         <div className="container">
-          <div className="gap-10² flex flex-col items-center">
+          <div className="flex flex-col items-center gap-2">
+            {/* Organisateur */}
             <div className="flex items-center justify-center px-4">
-              <div className="mb-1 w-full max-w-4xl md:mb-5">
+              <div className="mb-1 w-full md:mb-5">
                 <h2 className="mb-5 text-center text-lg font-bold">
                   Organised by :
                 </h2>
                 <div className="flex flex-wrap justify-center gap-5">
                   {imageUrls.map((src, index) => (
-                    <Image
+                    <div
                       key={index}
-                      src={src}
-                      alt={`Image ${index + 1}`}
-                      height={50}
-                      width={150}
-                      className="rounded-2xl"
-                    />
+                      className="flex h-[50px] w-[150px] items-center justify-center overflow-hidden rounded-lg bg-white sm:h-[50px] sm:w-[150px] md:h-[50px] md:w-[150px] lg:h-[50px] lg:w-[150px]"
+                    >
+                      <Image
+                        src={src}
+                        alt={`Image ${index + 1}`}
+                        width={150}
+                        height={150}
+                        className="h-full w-full object-contain"
+                      />
+                    </div>
                   ))}
                 </div>
               </div>
             </div>
+
+            {/* Logo */}
             <div className="">
               <Image
                 src={
@@ -61,7 +68,7 @@ export const Hero = () => {
                 className="rounded-2xl bg-transparent opacity-60"
               />
             </div>
-
+            {/* Text */}
             <div className="flex  items-center justify-center px-4">
               <div className="w-full max-w-4xl">
                 <p className="mx-auto mt-10 bg-gradient-to-r from-[#0796F5] via-[#D34FAC] to-[#562196] bg-clip-text text-center text-2xl font-bold uppercase text-transparent md:text-3xl lg:text-4xl">
