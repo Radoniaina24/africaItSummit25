@@ -30,7 +30,7 @@ export const Hero = () => {
             <div className="">
               <Image
                 src={
-                  "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739165624/476151562_2328845874161874_8979689573363720244_n_tami0e.jpg"
+                  "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739166737/475938736_2402108826848914_91954768505517833_n_o91o5x.jpg"
                 }
                 alt={"logo"}
                 width={1200}
