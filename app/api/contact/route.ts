@@ -4,7 +4,6 @@ import nodemailer from "nodemailer";
 export async function POST(req: NextRequest) {
   try {
     const { fullname, email, subject, phone, message } = await req.json();
-    console.log(fullname);
     // Configurer le transporteur Nodemailer
     const transporter = nodemailer.createTransport({
       service: "gmail", // Utilise Gmail ou configure un autre SMTP
@@ -16,7 +15,7 @@ export async function POST(req: NextRequest) {
 
     // Contenu de l'email
     const mailOptions = {
-      from: `"From Africa IT Summit" <${process.env.EMAIL_USER}>`,
+      from: `"From Africa IT Summit"`,
       to: "contact@africaitsummit.com", // Destinataire
       subject: `Subject: ${subject}`,
       html: `
