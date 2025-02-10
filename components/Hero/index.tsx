@@ -32,7 +32,7 @@ export const Hero = () => {
             <div className="">
               <Image
                 src={
-                  "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739173274/476430444_1721693348767771_2325540913444564809_n_pvbsfp.jpg"
+                  "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739176912/476329299_2662401750613947_1389772492083038774_n_cadvyl.jpg"
                 }
                 alt={"logo"}
                 width={600}
@@ -45,15 +45,18 @@ export const Hero = () => {
                 {tech.toUpperCase()}
               </p>
             </div> */}
-
-            <div className="max-xl container mx-auto mt-10 text-center text-4xl font-bold uppercase">
-              <ReactTyped
-                strings={[
-                  "Let’s start building the future of Africa’s digital revolution together.",
-                ]}
-                typeSpeed={40}
-                showCursor={false}
-              />
+            <div className="flex  items-center justify-center px-4">
+              <div className="w-full max-w-4xl">
+                <p className="mx-auto mt-10 text-center text-4xl font-bold uppercase">
+                  <ReactTyped
+                    strings={[
+                      "Let’s start building the future of Africa’s digital revolution together.",
+                    ]}
+                    typeSpeed={40}
+                    showCursor={false}
+                  />
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -21,7 +21,7 @@ export default function AboutUs() {
   };
 
   return (
-    <section className="relative  bg-black py-12">
+    <section className="relative bg-black py-12">
       {/* <div className="absolute  left-0 z-[-1] h-full w-full   bg-[url(https://res.cloudinary.com/dx3xhdaym/image/upload/v1738915501/Patern-2_uqkum8.png)] bg-no-repeat"></div> */}
       <div className="container relative mx-auto grid grid-cols-1 items-center gap-8 px-4 md:grid-cols-2">
         <div>
