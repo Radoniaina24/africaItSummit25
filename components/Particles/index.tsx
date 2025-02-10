@@ -49,7 +49,7 @@ export default function ParticleAnimation({ children }) {
             },
             move: {
               enable: true,
-              speed: 3, // Vitesse des particules pour un mouvement plus fluide
+              speed: 0.5, // Vitesse des particules pour un mouvement plus fluide
               direction: "none", // Direction aléatoire pour un mouvement naturel
               out_mode: "out", // Les particules disparaissent lorsqu'elles sortent de l'écran
             },

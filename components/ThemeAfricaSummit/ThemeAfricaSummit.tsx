@@ -4,6 +4,7 @@ import React from "react";
 import themes from "./dataTheme";
 import Image from "next/image";
 import SectionHeader from "../Common/SectionHeader";
+import Link from "next/link";
 export default function ThemeAfricaSummit() {
   const { language } = useLanguageContext();
   return (
@@ -17,7 +18,8 @@ export default function ThemeAfricaSummit() {
       />
       <div className="my-20 mt-14 flex flex-wrap justify-center gap-6">
         {themes[language].map((theme, index) => (
-          <div
+          <Link
+            href={theme.link}
             key={index}
             className="flex h-[400px] w-full cursor-pointer flex-col rounded-xl border p-4 shadow-md transition-all duration-300  hover:shadow-lg md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
           >
@@ -38,7 +40,7 @@ export default function ThemeAfricaSummit() {
                 {theme.description}
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
