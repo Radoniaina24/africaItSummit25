@@ -23,39 +23,20 @@ export const Hero = () => {
           type="video/mp4"
         />
       </video>
-
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       {/* Content */}
+
       <div className="relative z-10 flex h-full items-center justify-center px-6 text-white">
         <div className="container">
           <div className="flex flex-col items-center gap-2">
-            {/* Organisateur */}
-            <div className="flex items-center justify-center px-4">
-              <div className="mb-1 w-full md:mb-5">
-                <h2 className="mb-5 text-center text-lg font-bold">
-                  Organised by :
-                </h2>
-                <div className="flex flex-wrap justify-center gap-5">
-                  {imageUrls.map((src, index) => (
-                    <div
-                      key={index}
-                      className="flex h-[50px] w-[150px] items-center justify-center overflow-hidden rounded-lg bg-white sm:h-[50px] sm:w-[150px] md:h-[50px] md:w-[150px] lg:h-[50px] lg:w-[150px]"
-                    >
-                      <Image
-                        src={src}
-                        alt={`Image ${index + 1}`}
-                        width={150}
-                        height={150}
-                        className="h-full w-full object-contain"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            {/* organizer */}
 
+            {/* Organizer (Positionné en haut à droite) */}
+            <div className="absolute right-14 top-8 z-20 sm:right-14 sm:top-8 md:right-22 md:top-8 lg:right-72 lg:top-7">
+              <Organizer />
+            </div>
             {/* Logo */}
             <div className="">
               <Image
@@ -68,6 +49,7 @@ export const Hero = () => {
                 className="rounded-2xl bg-transparent opacity-60"
               />
             </div>
+
             {/* Text */}
             <div className="flex  items-center justify-center px-4">
               <div className="w-full max-w-4xl">
@@ -86,5 +68,31 @@ export const Hero = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+const Organizer = () => {
+  return (
+    <div className="flex items-center justify-end px-4">
+      <div className="mb-1 w-full md:mb-5">
+        <div className="flex flex-wrap justify-center gap-2 text-center">
+          <h2 className="mb-2 text-center text-xs  font-bold">Organised by</h2>
+          {imageUrls.map((src, index) => (
+            <div
+              key={index}
+              className="flex h-[20px] w-[60px] items-center justify-center overflow-hidden rounded-lg bg-white "
+            >
+              <Image
+                src={src}
+                alt={`Image ${index + 1}`}
+                width={150}
+                height={150}
+                className="h-full w-full object-contain"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };

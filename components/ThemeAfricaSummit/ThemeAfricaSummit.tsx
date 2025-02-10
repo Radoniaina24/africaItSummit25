@@ -13,7 +13,7 @@ export default function ThemeAfricaSummit() {
         <SectionHeader
           headerInfo={{
             title: "",
-            subtitle: "Theme Africa It Summit 2025",
+            subtitle: "Theme Africa IT Summit 2025",
             description: "",
           }}
         />
