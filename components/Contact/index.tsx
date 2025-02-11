@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import * as yup from "yup";
 import { string } from "yup";
 import { useFormik } from "formik";
+import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 export const contactAfricaItSummitSchema = yup.object({
   fullname: string().required("This fullname is required"),
   email: string()
@@ -270,51 +271,7 @@ const Contact = () => {
               </form>
             </motion.div>
 
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  y: -20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 2, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_top w-full md:w-2/5 md:p-7.5 lg:w-[26%] xl:pt-15"
-            >
-              <h2 className="mb-12.5 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
-                Find us
-              </h2>
-
-              {/* <div className="5 mb-7">
-                <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Our Loaction
-                </h3>
-                <p>290 Maryam Springs 260, Courbevoie, Paris, France</p>
-              </div> */}
-              <div className="5 mb-7">
-                <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Email Address
-                </h3>
-                <p>
-                  <a href="#">contact@africaitsummit.com</a>
-                </p>
-              </div>
-              <div>
-                <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Phone Number
-                </h4>
-                <p>
-                  <a href="#">+261 34 03 777 07</a>
-                </p>
-              </div>
-            </motion.div>
+            <ContactSection />
           </div>
         </div>
       </section>
@@ -332,5 +289,88 @@ const ErrorMessage = ({ touched, error }: { touched?: any; error?: any }) => {
     <p className="mt-2 text-sm text-red-600 dark:text-red-500">
       <span className="font-medium">{error}</span>
     </p>
+  );
+};
+
+const ContactSection = () => {
+  return (
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: -20 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      whileInView="visible"
+      transition={{ duration: 2, delay: 0.1 }}
+      viewport={{ once: true }}
+      className="w-full rounded-lg bg-white p-6 shadow-lg dark:bg-gray-800 md:w-2/5 md:p-7.5 lg:w-[26%] xl:pt-15"
+    >
+      <h2 className="mb-6 flex items-center gap-3 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
+        Find Us
+      </h2>
+
+      {/* Email */}
+      <div className="mb-7 flex items-start gap-3">
+        <div>
+          <FaEnvelope className="mt-1 text-lg text-[#7B42A6]" />
+        </div>
+
+        <div>
+          <h3 className="mb-2 text-lg font-medium text-black dark:text-white">
+            Email Address
+          </h3>
+          <p>
+            <a
+              href="mailto:contact@africaitsummit.com"
+              className="text-blue-500 hover:underline"
+            >
+              contact@africaitsummit.com
+            </a>
+            <br />
+            <a
+              href="mailto:media@africaITsummit.com"
+              className="text-blue-500 hover:underline"
+            >
+              media@africaITsummit.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+      {/* Téléphone */}
+      <div className="flex items-start gap-3">
+        <div>
+          <FaPhoneAlt className="mt-1 text-lg text-[#7B42A6]" />
+        </div>
+
+        <div>
+          <h3 className="mb-2 text-lg font-medium text-black dark:text-white">
+            Phone Number
+          </h3>
+          <p>
+            <a
+              href="tel:+261340377707"
+              className="text-blue-500 hover:underline"
+            >
+              +261 340377707
+            </a>
+            <br />
+            <a
+              href="tel:+23057509443"
+              className="text-blue-500 hover:underline"
+            >
+              +230 57509443
+            </a>
+            <br />
+            <a
+              href="tel:+23058408569"
+              className="text-blue-500 hover:underline"
+            >
+              +230 58408569
+            </a>
+          </p>
+        </div>
+      </div>
+    </motion.div>
   );
 };
