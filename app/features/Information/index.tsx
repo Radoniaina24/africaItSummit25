@@ -19,6 +19,7 @@ export default function InfoAfricaItSummit() {
         title={title}
         subtitle={subtitle}
         backgroundImage="https://res.cloudinary.com/dx3xhdaym/image/upload/v1739131089/12979579_5068893_q8kjw1.jpg"
+        subtitleColor={"white"}
       />
     </div>
   );

@@ -5,8 +5,18 @@ import themes from "./dataTheme";
 import Image from "next/image";
 import SectionHeader from "../Common/SectionHeader";
 import Link from "next/link";
+import { useEffect } from "react";
+import "aos/dist/aos.css"; // Importer les styles AOS
+import AOS from "aos"; // Importer la librairie AOS
+
 export default function ThemeAfricaSummit() {
   const { language } = useLanguageContext();
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Durée de l'animation
+      easing: "ease-in-out", // Transition fluide
+    });
+  }, []);
   return (
     <section className="bg-gradient-to-br from-[#42A9F5] via-[#7B42A6] to-[#E05CBB] py-20">
       <div className="container mx-auto px-4 ">
@@ -24,6 +34,7 @@ export default function ThemeAfricaSummit() {
               href={theme.link}
               key={index}
               className="flex h-[400px] w-full cursor-pointer flex-col rounded-xl  p-4  transition-all duration-300   md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+              data-aos="zoom-out-down"
             >
               <div className="overflow-hidden rounded-lg">
                 <Image
