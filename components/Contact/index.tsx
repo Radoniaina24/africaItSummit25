@@ -311,7 +311,7 @@ const Contact = () => {
                   Phone Number
                 </h4>
                 <p>
-                  <a href="#">+261 34 31 777 47</a>
+                  <a href="#">+261 34 03 777 07</a>
                 </p>
               </div>
             </motion.div>

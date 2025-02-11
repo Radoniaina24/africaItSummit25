@@ -4,13 +4,26 @@ interface HeroBannerProps {
   title: string;
   subtitle?: string;
   backgroundImage?: string;
+  subtitleColor?: string | [string, string, string];
 }
 
 const HeroBanner: React.FC<HeroBannerProps> = ({
   title,
   subtitle,
   backgroundImage,
+  subtitleColor = "#000",
 }) => {
+  // Détection de dégradé ou couleur simple pour le sous-titre
+  const getSubtitleStyle = () => {
+    if (Array.isArray(subtitleColor) && subtitleColor.length === 3) {
+      return {
+        background: `linear-gradient(to right, ${subtitleColor[0]}, ${subtitleColor[1]}, ${subtitleColor[2]})`,
+        WebkitBackgroundClip: "text",
+        color: "transparent",
+      };
+    }
+    return { color: subtitleColor };
+  };
   return (
     <div
       className="relative bg-cover bg-fixed bg-center px-6 py-16 text-white"
@@ -27,6 +40,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
         <h2
           className=" mb-4 text-xl font-extrabold text-white md:text-4xl"
           data-aos="fade-up"
+          style={getSubtitleStyle()}
         >
           {title}
         </h2>
