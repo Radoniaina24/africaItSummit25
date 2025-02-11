@@ -41,7 +41,7 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
-  const addBg = pathUrl === "/blog" || pathUrl === "/themes/s" ? fond : "";
+  const addBg = /\/themes/.test(pathUrl) ? fond : "";
 
   return (
     <header
@@ -107,9 +107,9 @@ const Header = () => {
 
         {/* Nav Menu Start */}
         <div
-          className={`invisible h-0 w-auto items-center justify-between overflow-hidden xl:visible xl:flex xl:h-auto xl:w-full ${
+          className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
-            "navbar !visible mt-4 h-auto max-h-[400px]  w-full overflow-hidden rounded-md xl:h-auto xl:p-0 xl:shadow-none"
+            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-black p-7.5  opacity-90 shadow-solid-5 lg:bg-transparent xl:h-auto xl:p-0 xl:shadow-none "
           }`}
         >
           <nav>

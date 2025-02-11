@@ -8,7 +8,7 @@ type SectionHeaderProps = {
     description: string;
   };
   titleColor?: string;
-  subtitleColor?: string;
+  subtitleColor?: string | [string, string, string]; // Le sous-titre peut être une couleur ou un tableau de trois couleurs pour un dégradé à trois couleurs
   descriptionColor?: string;
   titleBgColor?: string;
   borderColor?: string;
@@ -19,7 +19,7 @@ type SectionHeaderProps = {
 const SectionHeader = ({
   headerInfo,
   titleColor = "#000", // Couleur par défaut du titre
-  subtitleColor = "#000", // Couleur par défaut du sous-titre
+  subtitleColor = "#000", // Couleur ou dégradé par défaut du sous-titre
   descriptionColor = "#333", // Couleur par défaut de la description
   titleBgColor = "#F5F5F5", // Couleur de fond du titre par défaut
   borderColor = "#ddd", // Couleur de la bordure par défaut
@@ -27,6 +27,18 @@ const SectionHeader = ({
   animationDelay = 0.1, // Délai de l'animation
 }: SectionHeaderProps) => {
   const { title, subtitle, description } = headerInfo;
+
+  // Détection de dégradé ou couleur simple pour le sous-titre
+  const getSubtitleStyle = () => {
+    if (Array.isArray(subtitleColor) && subtitleColor.length === 3) {
+      return {
+        background: `linear-gradient(to right, ${subtitleColor[0]}, ${subtitleColor[1]}, ${subtitleColor[2]})`,
+        WebkitBackgroundClip: "text",
+        color: "transparent",
+      };
+    }
+    return { color: subtitleColor };
+  };
 
   return (
     <motion.div
@@ -65,7 +77,7 @@ const SectionHeader = ({
 
       <h2
         className="mx-auto mb-4 text-3xl font-bold md:w-4/5 xl:w-1/2 xl:text-sectiontitle3"
-        style={{ color: subtitleColor }}
+        style={getSubtitleStyle()}
       >
         {subtitle}
       </h2>

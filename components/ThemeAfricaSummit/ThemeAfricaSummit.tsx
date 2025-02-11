@@ -16,6 +16,7 @@ export default function ThemeAfricaSummit() {
             subtitle: "Theme Africa IT Summit 2025",
             description: "",
           }}
+          // subtitleColor={["#0796F5", "#D34FAC", "#562196"]}
         />
         <div className=" mt-14 flex flex-wrap justify-center gap-6">
           {themes[language].map((theme, index) => (
