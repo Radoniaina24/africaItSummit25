@@ -28,6 +28,8 @@ import PanelInteractif from "./PanelInteractif";
 
 import AOS from "aos";
 import Assurance from "./Assurance";
+import EspaceNetworking from "./EspaceNetworking";
+import InfoAfricaItSummit from "../Information";
 export default function HealthDetails() {
   useEffect(() => {
     AOS.init({
@@ -265,6 +267,9 @@ export default function HealthDetails() {
         <PanelInteractif />
         {/*Assurance*/}
         <Assurance />
+        {/* Espace Networking */}
+        <EspaceNetworking />
+        <InfoAfricaItSummit />
       </section>
     </ParticleAnimation>
   );

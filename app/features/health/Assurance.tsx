@@ -14,61 +14,6 @@ export default function Assurance() {
     en: "The Africa IT Summit 2025 will bring together digital companies, healthcare professionals, investors, and policymakers to shape the future of e-health in Africa.",
   };
 
-  const marketExploration = {
-    fr: [
-      {
-        title: "Croissance de la demande en e-santé",
-        description:
-          "L’Afrique connaît une explosion de la demande pour les services numériques en santé.",
-        icon: "📈", // Icône personnalisée
-      },
-      {
-        title: "Investissements en forte croissance",
-        description:
-          "Les investissements dans les infrastructures médicales digitales sont en pleine expansion.",
-        icon: "💰", // Icône personnalisée
-      },
-      {
-        title: "Nouvelles opportunités de partenariats",
-        description:
-          "De nouvelles opportunités de partenariats et de financement émergent pour les entreprises et startups du secteur.",
-        icon: "🤝", // Icône personnalisée
-      },
-      {
-        title: "Espace de Networking et d’Affaires",
-        description:
-          "Rencontrez les acteurs clés du secteur et développez votre réseau professionnel.",
-        icon: "🌐", // Icône personnalisée
-      },
-    ],
-    en: [
-      {
-        title: "Growing Demand for E-Health",
-        description:
-          "Africa is experiencing a surge in demand for digital healthcare services.",
-        icon: "📈", // Custom icon
-      },
-      {
-        title: "Rapid Growth in Investments",
-        description:
-          "Investments in digital medical infrastructure are expanding significantly.",
-        icon: "💰", // Custom icon
-      },
-      {
-        title: "New Partnership Opportunities",
-        description:
-          "Emerging opportunities for partnerships and funding are driving innovation for companies and startups in the sector.",
-        icon: "🤝", // Custom icon
-      },
-      {
-        title: "Networking and Business Hub",
-        description:
-          "Connect with key industry players and expand your professional network.",
-        icon: "🌐", // Custom icon
-      },
-    ],
-  };
-
   return (
     <section className="bg-gradient-to-br from-[#42A9F5] via-[#7B42A6] to-[#E05CBB] px-6 py-10 lg:py-10 xl:py-20">
       <div className=" ">
@@ -145,6 +90,7 @@ const ProfessionnalRelations = () => {
           {professionalRelations[language].map((item, index) => (
             <div
               key={index}
+              data-aos="zoom-in"
               className="relative flex transform flex-col items-start overflow-hidden rounded-xl bg-white p-8 text-gray-800 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
               {/* Icône flottante */}
@@ -241,6 +187,7 @@ const MarketExploration = () => {
         <div className="grid gap-8  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {marketExploration[language].map((item, index) => (
             <div
+              data-aos="fade-up"
               key={index}
               className="relative  flex transform flex-col items-start overflow-hidden rounded-xl bg-white p-8 text-gray-800 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
