@@ -6,7 +6,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125880/130350_cakzvi.jpg",
       description:
         "Découvrez comment les technologies numériques révolutionnent le domaine médical, de la télémédecine aux dossiers médicaux électroniques.",
-      link: "/themes/",
+      link: "/themes/health",
     },
     {
       title: "Cinématographie et Audiovisuel",
@@ -72,7 +72,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125880/130350_cakzvi.jpg",
       description:
         "Discover how digital technologies are revolutionizing healthcare, from telemedicine to electronic health records.",
-      link: "/themes/",
+      link: "/themes/health",
     },
     {
       title: "Cinematography & Audiovisual",

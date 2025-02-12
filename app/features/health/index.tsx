@@ -7,7 +7,7 @@ import ParticleAnimation from "@/components/Particles";
 import { Card, CardContent } from "@/components/Ui/Card/card";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
 import {
   FaNetworkWired,
@@ -24,7 +24,16 @@ import {
   FaBusinessTime,
 } from "react-icons/fa";
 import HealthStrategique from "./HealthStrategique";
+import PanelInteractif from "./PanelInteractif";
+
+import AOS from "aos";
 export default function HealthDetails() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Durée de l'animation
+      easing: "ease-in-out", // Transition fluide
+    });
+  }, []);
   const colors = ["#0796F5", "#D34FAC", "#562196"];
   const { language } = useLanguageContext();
   const title = {
@@ -241,17 +250,18 @@ export default function HealthDetails() {
         </section>
 
         {/* Santé Numérique : Un Enjeu Stratégique */}
-        <section className="">
-          <div className="relative z-10 mx-auto max-w-7xl py-20 text-center">
-            <h2
-              className=" mb-4 bg-gradient-to-r from-[#562196] via-[#D34FAC] to-[#0796F5] bg-clip-text text-3xl font-extrabold text-transparent md:text-5xl "
-              data-aos="fade-up"
-            >
-              {heathNumeric[language]}
-            </h2>
-          </div>
-          <HealthStrategique />
-        </section>
+
+        <div className="relative z-10 mx-auto max-w-7xl py-20 text-center">
+          <h2
+            className=" mb-4 bg-gradient-to-r from-[#562196] via-[#D34FAC] to-[#0796F5] bg-clip-text text-3xl font-extrabold text-transparent md:text-5xl "
+            data-aos="fade-up"
+          >
+            {heathNumeric[language]}
+          </h2>
+        </div>
+        <HealthStrategique />
+        {/*panels interactifs et des retours d’expérience concrets */}
+        <PanelInteractif />
       </section>
     </ParticleAnimation>
   );
