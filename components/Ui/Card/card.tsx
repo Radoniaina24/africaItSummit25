@@ -7,7 +7,10 @@ interface CardProps {
 
 export function Card({ children, className = "" }: CardProps) {
   return (
-    <div className={`rounded-lg bg-[#55a5da] p-4 shadow-md ${className}`}>
+    <div
+      className={`rounded-lg bg-[#55a5da] p-4 shadow-md ${className}`}
+      data-aos="zoom-in-down"
+    >
       {children}
     </div>
   );

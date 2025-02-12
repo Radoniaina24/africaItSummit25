@@ -27,6 +27,7 @@ import HealthStrategique from "./HealthStrategique";
 import PanelInteractif from "./PanelInteractif";
 
 import AOS from "aos";
+import Assurance from "./Assurance";
 export default function HealthDetails() {
   useEffect(() => {
     AOS.init({
@@ -262,6 +263,8 @@ export default function HealthDetails() {
         <HealthStrategique />
         {/*panels interactifs et des retours d’expérience concrets */}
         <PanelInteractif />
+        {/*Assurance*/}
+        <Assurance />
       </section>
     </ParticleAnimation>
   );

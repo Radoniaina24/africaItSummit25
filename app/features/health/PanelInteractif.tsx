@@ -1,6 +1,6 @@
 "use client";
 import { useLanguageContext } from "@/app/context/LanguageContext";
-import React, { useEffect } from "react";
+import React from "react";
 import SectionImageCity from "./SectionWithImage";
 export default function PanelInteractif() {
   const { language } = useLanguageContext();
