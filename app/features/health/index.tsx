@@ -1,5 +1,6 @@
 "use client";
 import { useLanguageContext } from "@/app/context/LanguageContext";
+import SectionHeader from "@/components/Common/SectionHeader";
 import FrameDecoration from "@/components/Framedecoration/Framedecoration";
 import HeroBanner from "@/components/HeroBanner";
 import ParticleAnimation from "@/components/Particles";
@@ -22,6 +23,7 @@ import {
   FaMoneyBillWave,
   FaBusinessTime,
 } from "react-icons/fa";
+import HealthStrategique from "./HealthStrategique";
 export default function HealthDetails() {
   const colors = ["#0796F5", "#D34FAC", "#562196"];
   const { language } = useLanguageContext();
@@ -239,15 +241,16 @@ export default function HealthDetails() {
         </section>
 
         {/* Santé Numérique : Un Enjeu Stratégique */}
-        <section className="py-20">
-          <div className="relative z-10 mx-auto max-w-7xl text-center">
+        <section className="">
+          <div className="relative z-10 mx-auto max-w-7xl py-20 text-center">
             <h2
-              className=" mb-4 bg-gradient-to-r from-[#562196] via-[#D34FAC] to-[#0796F5] bg-clip-text text-xl font-extrabold text-transparent md:text-4xl"
+              className=" mb-4 bg-gradient-to-r from-[#562196] via-[#D34FAC] to-[#0796F5] bg-clip-text text-3xl font-extrabold text-transparent md:text-5xl "
               data-aos="fade-up"
             >
               {heathNumeric[language]}
             </h2>
           </div>
+          <HealthStrategique />
         </section>
       </section>
     </ParticleAnimation>
