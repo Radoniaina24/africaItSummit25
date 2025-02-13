@@ -30,6 +30,7 @@ export default function Innovation() {
       </div>
 
       <PartnershipOpportunities />
+      <Sectors />
     </section>
   );
 }
@@ -90,7 +91,7 @@ const PartnershipOpportunities = () => {
       {/* Contenu principal */}
       <div className="mx-auto max-w-full text-center text-white">
         {/* Titre de la section */}
-        <h1 className="mb-12 text-4xl font-extrabold text-indigo-700">
+        <h1 className="my-12 text-4xl font-extrabold text-indigo-700">
           {titleOpôrtunities[language]}
         </h1>
 
@@ -142,5 +143,110 @@ const InnovationItem = ({ data }) => {
         </div>
       </motion.div>
     </>
+  );
+};
+
+const Sectors = () => {
+  const { language } = useLanguageContext();
+  const sectors = {
+    fr: [
+      {
+        text: "Caméras et équipements de production nouvelle génération",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739450160/2148038903_hsdshu.jpg",
+      },
+      {
+        text: "Logiciels de montage, d’effets spéciaux et d’animation.",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739450252/2149269935_aoumwk.jpg",
+      },
+      {
+        text: "Plateformes émergentes pour la distribution de contenu et les services de streaming.",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739450326/2150172379_vuhljg.jpg",
+      },
+      {
+        text: "Studios virtuels et production décentralisée.",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739450586/2148815346_hqhm86.jpg",
+      },
+      {
+        text: "Technologies immersives (réalité augmentée et virtuelle).",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739450657/2148815718_qz32iy.jpg",
+      },
+      {
+        text: "Blockchain et protection des droits d’auteur.",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739450741/2149074564_bwaly7.jpg",
+      },
+      {
+        text: "Financement participatif et nouveaux modèles économiques.",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739450834/2147863948_ufwrg3.jpg",
+      },
+    ],
+    en: [
+      {
+        text: "Next-generation cameras and production equipment",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739450160/2148038903_hsdshu.jpg",
+      },
+      {
+        text: "Editing, special effects, and animation software",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739450252/2149269935_aoumwk.jpg",
+      },
+      {
+        text: "Emerging platforms for content distribution and streaming services",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739450326/2150172379_vuhljg.jpg",
+      },
+      {
+        text: "Virtual studios and decentralized production",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739450586/2148815346_hqhm86.jpg",
+      },
+      {
+        text: "Immersive technologies (augmented and virtual reality)",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739450657/2148815718_qz32iy.jpg",
+      },
+      {
+        text: "Blockchain and copyright protection",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739450741/2149074564_bwaly7.jpg",
+      },
+      {
+        text: "Crowdfunding and new economic models",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739450834/2147863948_ufwrg3.jpg",
+      },
+    ],
+  };
+
+  const titleOpôrtunities = {
+    fr: " Les secteurs représenté ",
+    en: "The represented sectors",
+  };
+  return (
+    <div className="relative px-6 py-5">
+      {/* Contenu principal */}
+      <div className="mx-auto max-w-full text-center text-white">
+        {/* Titre de la section */}
+        <h1 className="my-12 text-4xl font-extrabold text-indigo-700">
+          {titleOpôrtunities[language]}
+        </h1>
+
+        {/* Grille de cartes */}
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 xl:gap-7">
+            {sectors[language].map((opportunity, index) => (
+              <InnovationItem data={opportunity} key={index} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
