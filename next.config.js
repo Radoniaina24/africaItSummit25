@@ -3,6 +3,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  // experimental: {
+  //   nextScriptWorkers: true,
+  // },
   images: {
     domains: ["localhost", "res.cloudinary.com", "picsum.photos"],
     remotePatterns: [
