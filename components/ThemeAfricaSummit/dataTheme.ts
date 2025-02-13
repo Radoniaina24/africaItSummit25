@@ -14,7 +14,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125881/2149558794_aoisto.jpg",
       description:
         "Plongez dans l'univers des effets spéciaux, de la production numérique et des innovations qui transforment l'industrie audiovisuelle.",
-      link: "/themes/",
+      link: "/themes/audio_visuel",
     },
     {
       title: "Intelligence Artificielle et Automatisation",
@@ -80,7 +80,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125881/2149558794_aoisto.jpg",
       description:
         "Dive into the world of special effects, digital production, and innovations transforming the audiovisual industry.",
-      link: "/themes/",
+      link: "/themes/audio_visuel",
     },
     {
       title: "Artificial Intelligence & Automation",
