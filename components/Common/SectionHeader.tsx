@@ -76,7 +76,7 @@ const SectionHeader = ({
       )}
 
       <h2
-        className="mx-auto mb-4 text-3xl font-bold md:w-4/5 xl:w-1/2 xl:text-sectiontitle3"
+        className="mx-auto mb-4 text-3xl font-bold md:w-4/5 xl:w-1/2 xl:text-sectiontitle2"
         style={getSubtitleStyle()}
       >
         {subtitle}

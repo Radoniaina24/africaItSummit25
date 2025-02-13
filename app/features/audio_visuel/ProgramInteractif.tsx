@@ -129,7 +129,7 @@ const PartnershipOpportunities = () => {
   return (
     <div className="relative px-6 py-16">
       {/* Contenu principal */}
-      <div className="mx-auto max-w-full text-center text-white">
+      <div className=" container mx-auto  text-center text-white">
         {/* Titre de la section */}
         <h1 className="mb-12 text-4xl font-extrabold text-indigo-700">
           {titleOpôrtunities[language]}

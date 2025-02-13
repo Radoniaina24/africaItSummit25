@@ -16,7 +16,7 @@ export default function Innovation() {
   };
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-gray-50 py-20">
       <div className="mt-10">
         <SectionHeader
           headerInfo={{
@@ -91,7 +91,7 @@ const PartnershipOpportunities = () => {
       {/* Contenu principal */}
       <div className="mx-auto max-w-full text-center text-white">
         {/* Titre de la section */}
-        <h1 className="my-12 text-4xl font-extrabold text-indigo-700">
+        <h1 className="my-8 text-4xl font-extrabold text-indigo-700">
           {titleOpôrtunities[language]}
         </h1>
 
@@ -234,7 +234,7 @@ const Sectors = () => {
       {/* Contenu principal */}
       <div className="mx-auto max-w-full text-center text-white">
         {/* Titre de la section */}
-        <h1 className="my-12 text-4xl font-extrabold text-indigo-700">
+        <h1 className="my-8 text-4xl font-extrabold text-indigo-700">
           {titleOpôrtunities[language]}
         </h1>
 

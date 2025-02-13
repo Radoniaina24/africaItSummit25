@@ -7,6 +7,9 @@ import React from "react";
 import Why from "./Why";
 import ProgramInteractif from "./ProgramInteractif";
 import Innovation from "./Innovation";
+import FormationUniversite from "./FormationUniversite";
+import Networking from "./Networking";
+import InfoAfricaItSummit from "../Information";
 
 export default function AudioVisuel() {
   const { language } = useLanguageContext();
@@ -39,6 +42,9 @@ export default function AudioVisuel() {
         <Why />
         <ProgramInteractif />
         <Innovation />
+        <FormationUniversite />
+        <Networking />
+        <InfoAfricaItSummit />
       </section>
     </ParticleAnimation>
   );
