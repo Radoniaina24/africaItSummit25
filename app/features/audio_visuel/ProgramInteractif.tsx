@@ -140,7 +140,7 @@ const PartnershipOpportunities = () => {
           {professionnel[language].map((opportunity, index) => (
             <div
               key={index}
-              className="relative flex w-full transform flex-col items-center overflow-hidden rounded-3xl bg-purple-300 p-6 shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl sm:w-80 sm:p-8 md:w-96 md:p-10 lg:w-1/3 xl:w-1/4"
+              className="md:w-w-1/2 relative flex w-full transform flex-col items-center overflow-hidden rounded-3xl bg-purple-300 p-6 shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl sm:w-80 sm:p-8 md:p-10 lg:w-1/3 xl:w-1/4"
               data-aos="zoom-out"
             >
               {/* Icône dynamique */}
