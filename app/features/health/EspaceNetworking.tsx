@@ -15,7 +15,7 @@ export default function EspaceNetworking() {
   };
 
   return (
-    <section className="py-20">
+    <section className="bg-white py-20">
       <SectionHeader
         headerInfo={{
           title: "",

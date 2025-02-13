@@ -30,6 +30,7 @@ import AOS from "aos";
 import Assurance from "./Assurance";
 import EspaceNetworking from "./EspaceNetworking";
 import InfoAfricaItSummit from "../Information";
+import ScrollTitle from "@/components/Scroll/ScrollTitle";
 export default function HealthDetails() {
   useEffect(() => {
     AOS.init({
@@ -167,14 +168,13 @@ export default function HealthDetails() {
   };
   return (
     <ParticleAnimation>
-      <section className="">
+      <section className="bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5]">
+        <ScrollTitle text={title[language]} />
         {/* Title and description */}
-        <div className="relative h-[700px] bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] py-36">
+        <div className="relative h-[500px] bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] py-36">
+          {/* <ScrollTitle text={title[language]} /> */}
           <div className="  ">
             <div className="mx-auto text-center">
-              <h2 className="mx-auto mb-4 bg-gradient-to-r from-[#337dae]  via-[#562196] to-[#e722ac] bg-clip-text text-2xl   font-bold text-transparent md:w-4/5 lg:text-4xl xl:w-1/2 xl:text-4xl">
-                {title[language]}
-              </h2>
               <p className="mx-auto text-white md:w-4/5 lg:w-3/5 xl:w-[46%]">
                 {description[language]}
               </p>
@@ -186,32 +186,35 @@ export default function HealthDetails() {
         </div>
 
         {/* Title 2 and description with Image */}
-        <div className=" container relative mx-auto">
-          <div className=" py-20">
-            <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:items-center">
-              {/* Partie texte */}
-              <div className="text-center md:w-1/3 md:text-left">
-                <h2 className="mb-4 text-3xl font-bold text-[#D34FAC]">
-                  L’Africa IT Summit 2025
-                </h2>
-                <p className="text-md leading-relaxed text-gray-700">
-                  {description2[language]}
-                </p>
-              </div>
+        <section className="bg-white">
+          <div className=" container relative mx-auto ">
+            <div className=" py-20">
+              <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:items-center">
+                {/* Partie texte */}
+                <div className="text-center md:w-1/3 md:text-left">
+                  <h2 className="mb-4 text-3xl font-bold text-[#D34FAC]">
+                    L’Africa IT Summit 2025
+                  </h2>
+                  <p className="text-md leading-relaxed text-gray-700">
+                    {description2[language]}
+                  </p>
+                </div>
 
-              {/* Partie image */}
-              <div className="relative flex justify-center md:w-1/3">
-                <Image
-                  width={400}
-                  height={400}
-                  src="https://res.cloudinary.com/dx3xhdaym/image/upload/v1739262906/Radoniaina_Michael_ANDRIAMBOLA_digital_health_d6dd9028-5536-4e51-818c-b8591e83457a_ydoide.png"
-                  alt="Africa IT Summit 2025"
-                  className="rounded-full object-cover shadow-lg"
-                />
+                {/* Partie image */}
+                <div className="relative flex justify-center md:w-1/3">
+                  <Image
+                    width={400}
+                    height={400}
+                    src="https://res.cloudinary.com/dx3xhdaym/image/upload/v1739262906/Radoniaina_Michael_ANDRIAMBOLA_digital_health_d6dd9028-5536-4e51-818c-b8591e83457a_ydoide.png"
+                    alt="Africa IT Summit 2025"
+                    className="rounded-full object-cover shadow-lg"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
         {/* why choose africa it summit */}
         {/* Opportunities */}
         <section
@@ -253,15 +256,17 @@ export default function HealthDetails() {
         </section>
 
         {/* Santé Numérique : Un Enjeu Stratégique */}
+        <section className="bg-white">
+          <div className="relative z-10 mx-auto max-w-7xl py-20 text-center">
+            <h2
+              className=" mb-4 bg-gradient-to-r from-[#562196] via-[#D34FAC] to-[#0796F5] bg-clip-text text-3xl font-extrabold text-transparent md:text-5xl "
+              data-aos="fade-up"
+            >
+              {heathNumeric[language]}
+            </h2>
+          </div>
+        </section>
 
-        <div className="relative z-10 mx-auto max-w-7xl py-20 text-center">
-          <h2
-            className=" mb-4 bg-gradient-to-r from-[#562196] via-[#D34FAC] to-[#0796F5] bg-clip-text text-3xl font-extrabold text-transparent md:text-5xl "
-            data-aos="fade-up"
-          >
-            {heathNumeric[language]}
-          </h2>
-        </div>
         <HealthStrategique />
         {/*panels interactifs et des retours d’expérience concrets */}
         <PanelInteractif />

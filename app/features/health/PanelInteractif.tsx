@@ -119,7 +119,7 @@ export default function PanelInteractif() {
   };
 
   return (
-    <section className="py-20">
+    <section className="bg-white py-20">
       {language === "fr" ? (
         <div className="mx-auto my-12 max-w-5xl gap-5 rounded-lg bg-purple-100 p-8 shadow-lg">
           <p className=" mb-5 text-center text-lg font-bold leading-relaxed text-gray-700">
