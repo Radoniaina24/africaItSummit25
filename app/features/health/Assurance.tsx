@@ -91,7 +91,7 @@ const ProfessionnalRelations = () => {
             <div
               key={index}
               data-aos="zoom-in"
-              className="relative flex transform flex-col items-start overflow-hidden rounded-xl bg-white p-8 text-gray-800 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              className="relative flex transform flex-col items-start overflow-hidden rounded-xl bg-purple-300 p-8 text-gray-800 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
               {/* Icône flottante */}
               <div className="absolute right-0 top-0 -mr-6 -mt-6 flex h-16 w-16 items-center justify-center rounded-full bg-indigo-100 text-3xl text-indigo-600 shadow">
@@ -189,7 +189,7 @@ const MarketExploration = () => {
             <div
               data-aos="fade-up"
               key={index}
-              className="relative  flex transform flex-col items-start overflow-hidden rounded-xl bg-white p-8 text-gray-800 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              className="relative  flex transform flex-col items-start overflow-hidden rounded-xl bg-purple-300 p-8 text-gray-800 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
               {/* Icône flottante */}
               <div className="absolute right-0 top-0 -mr-6 -mt-6 flex h-16 w-16 items-center justify-center rounded-full bg-indigo-100 text-3xl text-indigo-600 shadow">

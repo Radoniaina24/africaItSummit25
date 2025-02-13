@@ -5,6 +5,8 @@ import ParticleAnimation from "@/components/Particles";
 import ScrollTitle from "@/components/Scroll/ScrollTitle";
 import React from "react";
 import Why from "./Why";
+import ProgramInteractif from "./ProgramInteractif";
+import Innovation from "./Innovation";
 
 export default function AudioVisuel() {
   const { language } = useLanguageContext();
@@ -35,6 +37,8 @@ export default function AudioVisuel() {
           </div>
         </div>
         <Why />
+        <ProgramInteractif />
+        <Innovation />
       </section>
     </ParticleAnimation>
   );

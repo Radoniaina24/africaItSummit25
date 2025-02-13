@@ -47,8 +47,8 @@ export default function Designin() {
         </div>
         {/* <!-- Section Title End --> */}
       </div>
-      <div className="mx-auto mt-10 max-w-c-1280 px-4 md:px-8 xl:mt-15 xl:px-0">
-        <div className="grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
+      <div className="container mx-auto mt-10 px-4 md:px-8 xl:mt-15 xl:px-0">
+        <div className="grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 xl:gap-10">
           {data.map((design, key) => (
             <DesignItem data={design} key={key} />
           ))}
@@ -58,7 +58,7 @@ export default function Designin() {
   );
 }
 
-const DesignItem = ({ data }) => {
+export const DesignItem = ({ data }) => {
   const { mainImage, title, metadata } = data;
   return (
     <>
@@ -90,7 +90,7 @@ const DesignItem = ({ data }) => {
         </div>
 
         <div className="relative block aspect-[368/239]">
-          <Image src={mainImage} alt={title} fill />
+          <Image src={mainImage} alt={title} width={200} height={200} />
         </div>
       </motion.div>
     </>
