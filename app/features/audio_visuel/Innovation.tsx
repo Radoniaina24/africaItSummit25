@@ -108,7 +108,7 @@ const PartnershipOpportunities = () => {
   );
 };
 
-const InnovationItem = ({ data }) => {
+export const InnovationItem = ({ data, textColor = "text-gray-700" }) => {
   const { text, imageSource } = data;
   return (
     <>
@@ -130,7 +130,7 @@ const InnovationItem = ({ data }) => {
         className="animate_top mt-7.5 flex flex-col justify-between gap-5 p-4 pb-9 shadow-solid-8"
       >
         <div className="mb-3.5">
-          <p className="text-gray-700">{text}</p>
+          <p className={textColor}>{text}</p>
         </div>
 
         <div className="relative h-0 w-full pb-[65%]">

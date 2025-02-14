@@ -22,7 +22,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125877/75500_wipt4y.jpg",
       description:
         "Explorez les avancées de l'IA et de l'automatisation qui transforment les entreprises, l'industrie et la vie quotidienne.",
-      link: "/themes/",
+      link: "/themes/ai_automation",
     },
     {
       title: "Développement Web et Mobile",
@@ -88,7 +88,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125877/75500_wipt4y.jpg",
       description:
         "Explore AI and automation advancements that are reshaping businesses, industries, and daily life.",
-      link: "/themes/",
+      link: "/themes/ai_automation",
     },
     {
       title: "Web & Mobile Development",
