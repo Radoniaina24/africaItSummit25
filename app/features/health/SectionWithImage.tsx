@@ -1,12 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import { CheckCircleIcon } from "@heroicons/react/solid";
+
 interface SectionWithImageProps {
   title: string;
   highlights: { icon?: React.ReactNode; text: string }[];
   imageSrc: string;
   imageAlt: string;
-  imageOnRight?: boolean; // Définit si l'image est à droite ou à gauche
+  imageOnRight?: boolean;
+  titleColor?: string;
+  highlightTextColor?: string;
+  iconColor?: string;
+  borderColor?: string;
 }
 
 const SectionImageCity: React.FC<SectionWithImageProps> = ({
@@ -14,7 +19,11 @@ const SectionImageCity: React.FC<SectionWithImageProps> = ({
   highlights,
   imageSrc,
   imageAlt,
-  imageOnRight = true, // Valeur par défaut : image à droite
+  imageOnRight = true,
+  titleColor = "#42A9F5",
+  highlightTextColor = "gray",
+  iconColor = "#7B42A6",
+  borderColor = "#E05CBB",
 }) => {
   return (
     <div className="mx-auto max-w-7xl space-y-16">
@@ -28,18 +37,24 @@ const SectionImageCity: React.FC<SectionWithImageProps> = ({
         <div
           className={`${
             imageOnRight ? "border-l-8" : "border-r-8"
-          } border-[#E05CBB] p-6 pl-4 md:w-1/2`} // Bordure à gauche ou à droite en fonction de imageOnRight
+          } p-6 pl-4 md:w-1/2 border-[${borderColor}]`}
           data-aos={imageOnRight ? "fade-right" : "fade-left"}
         >
-          <h2 className="mb-4 text-xl font-bold text-[#42A9F5]  md:text-2xl">
+          <h2
+            className="mb-4 text-xl font-bold md:text-2xl"
+            style={{ color: titleColor }}
+          >
             {title}
           </h2>
-          <ul className="space-y-3 text-gray-500 ">
+          <ul className="space-y-3" style={{ color: highlightTextColor }}>
             {highlights.map((highlight, index) => (
               <li key={index} className="flex items-center">
                 <div className="mr-4">
                   {highlight.icon || (
-                    <CheckCircleIcon className="h-6 w-6 text-[#7B42A6]" />
+                    <CheckCircleIcon
+                      className="h-6 w-6"
+                      style={{ color: iconColor }}
+                    />
                   )}
                 </div>
                 <div>{highlight.text}</div>

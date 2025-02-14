@@ -98,7 +98,7 @@ export default function Opportunities() {
   };
 
   return (
-    <section className="bg-white">
+    <section className="bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] py-20">
       <div>
         <div className="relative z-10 mx-auto max-w-7xl text-center">
           <SectionHeader
@@ -107,8 +107,8 @@ export default function Opportunities() {
               subtitle: title[language],
               description: description[language],
             }}
-            subtitleColor={["#D34FAC", "#0796F5", "#562196"]}
-            descriptionColor="gray"
+            subtitleColor={["#0796F5", "#D34FAC", "#562196"]}
+            descriptionColor="white"
           />
         </div>
         <div className="space-y-16 px-6 py-12 ">
@@ -120,6 +120,7 @@ export default function Opportunities() {
               imageSrc={item.imageSrc}
               imageAlt={item.title}
               imageOnRight={item.imageOnRight}
+              highlightTextColor="white"
             />
           ))}
         </div>

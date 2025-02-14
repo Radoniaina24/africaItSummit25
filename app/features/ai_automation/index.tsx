@@ -10,6 +10,8 @@ import Why from "./Why";
 import Panel from "./Panel";
 import Exhibitions from "./Exhibitions";
 import Opportunities from "./Opportunities";
+import Networking from "./Networking";
+import InfoAfricaItSummit from "../Information";
 export default function AiAutomatisation() {
   useEffect(() => {
     AOS.init({
@@ -94,6 +96,9 @@ export default function AiAutomatisation() {
         <Exhibitions />
         {/* Opportunities */}
         <Opportunities />
+        {/* Networking */}
+        <Networking />
+        <InfoAfricaItSummit />
       </section>
     </ParticleAnimation>
   );
