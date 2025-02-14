@@ -21,6 +21,7 @@ import {
 } from "react-icons/fa";
 
 import { Card, CardContent } from "@/components/Ui/Card/card";
+import SectionImageCity from "../health/SectionWithImage";
 export default function Exhibitions() {
   const { language } = useLanguageContext();
 
@@ -148,9 +149,13 @@ export default function Exhibitions() {
             descriptionColor="gray"
           />
         </div>
-        <Opportunities />
-        <AiSolutions />
       </div>
+      <section className="">
+        <div className="container mx-auto ">
+          <Opportunities />
+          <AiSolutions />
+        </div>
+      </section>
     </section>
   );
 }
@@ -236,71 +241,63 @@ const Opportunities = () => {
 
 const AiSolutions = () => {
   const { language } = useLanguageContext();
-  const why = {
-    fr: "Ce que les visiteurs pourront explorer",
-    en: "What Visitors Will Explore",
-  };
-  const colors = ["#0796F5", "#D34FAC", "#562196"];
   const aiSolutions = {
     fr: [
       {
-        description:
-          "Solutions d’IA pour l’optimisation des entreprises et des services publics.",
-        icon: FaCogs, // Icône représentant l'optimisation des processus
-      },
-      {
-        description:
-          "Robots et automatisation dans l’industrie, la logistique et la santé.",
-        icon: FaRobot, // Icône représentant les robots et l’automatisation
-      },
-      {
-        description:
-          "Outils d’analyse de données et de prise de décision basés sur l’IA.",
-        icon: FaChartLine, // Icône représentant l’analyse de données
-      },
-      {
-        description:
-          "Systèmes intelligents pour la gestion des infrastructures et des villes connectées.",
-        icon: FaCity, // Icône représentant les villes intelligentes
-      },
-      {
-        description:
-          "Plateformes d’apprentissage automatique et de formation en IA.",
-        icon: FaChalkboardTeacher, // Icône représentant l’apprentissage
-      },
-      {
-        description:
-          "Solutions de cybersécurité basées sur l’intelligence artificielle.",
-        icon: FaShieldAlt, // Icône représentant la cybersécurité
+        title: "Ce que les visiteurs pourront explorer",
+        highlights: [
+          {
+            text: "Optimisation des entreprises et des services publics grâce à l’IA.",
+          },
+          {
+            text: "Automatisation et robots dans les secteurs industriel, logistique et santé.",
+          },
+          {
+            text: "Outils d’analyse de données et de prise de décision avec l’IA.",
+          },
+          {
+            text: "Systèmes intelligents pour la gestion des infrastructures et des villes connectées.",
+          },
+          {
+            text: "Plateformes d’apprentissage automatique et formations en IA.",
+          },
+          {
+            text: "Solutions de cybersécurité basées sur l’intelligence artificielle.",
+          },
+        ],
+        imageSrc:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739515105/2149524383_n27c5n.jpg", // Remplacez par l'URL réelle de l'image
+        imageAlt: "Opportunités commerciales et networking",
+        imageOnRight: false, // Positionne l'image à droite
       },
     ],
     en: [
       {
-        description:
-          "AI solutions for optimizing businesses and public services.",
-        icon: FaCogs, // Icon representing process optimization
-      },
-      {
-        description:
-          "Robots and automation in industry, logistics, and healthcare.",
-        icon: FaRobot, // Icon representing robots and automation
-      },
-      {
-        description: "AI-based data analysis and decision-making tools.",
-        icon: FaChartLine, // Icon representing data analysis
-      },
-      {
-        description:
-          "Smart systems for managing infrastructure and connected cities.",
-        icon: FaCity, // Icon representing smart cities
-      },
-      {
-        description: "Machine learning platforms and AI training.",
-        icon: FaChalkboardTeacher, // Icon representing learning
-      },
-      {
-        description: "AI-based cybersecurity solutions.",
-        icon: FaShieldAlt, // Icon representing cybersecurity
+        title: "What Visitors Will Explore",
+        highlights: [
+          {
+            text: "AI solutions for optimizing businesses and public services.",
+          },
+          {
+            text: "Robots and automation in industry, logistics, and healthcare.",
+          },
+          {
+            text: "AI-based data analysis and decision-making tools.",
+          },
+          {
+            text: "Smart systems for managing infrastructure and connected cities.",
+          },
+          {
+            text: "Machine learning platforms and AI training.",
+          },
+          {
+            text: "AI-based cybersecurity solutions.",
+          },
+        ],
+        imageSrc:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739515105/2149524383_n27c5n.jpg", // Replace with the actual image URL
+        imageAlt: "Business Opportunities and Networking",
+        imageOnRight: false, // Position the image on the right
       },
     ],
   };
@@ -308,31 +305,16 @@ const AiSolutions = () => {
   return (
     <section className="pt-10">
       <div className="container mx-auto">
-        <div className="mb-15">
-          {" "}
-          <h2 className="mx-auto  mb-4 text-center text-2xl font-bold text-[#562196] md:w-4/5 xl:w-1/2 xl:text-3xl">
-            {why[language]}
-          </h2>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-10 p-4">
+        <div className="space-y-16 px-6 py-12 ">
           {aiSolutions[language].map((item, index) => (
-            <Card
+            <SectionImageCity
               key={index}
-              className="relative flex w-full flex-col items-center rounded-xl bg-gray-100 p-6 shadow-lg transition-all duration-300 hover:cursor-pointer hover:border-none   hover:shadow-xl sm:w-1/3 md:w-1/3 lg:w-1/4 xl:w-1/5"
-            >
-              <div className="absolute -top-8 left-1/2 -translate-x-1/2 transform rounded-full border border-gray-200 bg-gray-200 p-5 shadow-md">
-                <item.icon
-                  className="text-4xl"
-                  style={{ color: colors[index % colors.length] }}
-                />
-              </div>
-              <CardContent className="pt-10 text-center">
-                <p className="text-md font-medium text-gray-700">
-                  {item.description}
-                </p>
-              </CardContent>
-            </Card>
+              title={item.title}
+              highlights={item.highlights}
+              imageSrc={item.imageSrc}
+              imageAlt={item.title}
+              imageOnRight={item.imageOnRight}
+            />
           ))}
         </div>
       </div>
