@@ -1,0 +1,341 @@
+import { useLanguageContext } from "@/app/context/LanguageContext";
+import React from "react";
+import { InnovationItem } from "../audio_visuel/Innovation";
+import SectionHeader from "@/components/Common/SectionHeader";
+import {
+  FaIndustry,
+  FaHospital,
+  FaSeedling,
+  FaLock,
+  FaBalanceScale,
+  FaChalkboardTeacher,
+  FaRegMoneyBillAlt,
+  FaRobot,
+  FaChartLine,
+  FaCity,
+  FaShieldAlt,
+  FaCogs,
+  FaLightbulb,
+  FaHandshake,
+  FaPlayCircle,
+} from "react-icons/fa";
+
+import { Card, CardContent } from "@/components/Ui/Card/card";
+export default function Exhibitions() {
+  const { language } = useLanguageContext();
+
+  const title = {
+    fr: "Exhibitions et Espace d’Innovation",
+    en: "Exhibitions and Innovation Space",
+  };
+  const description = {
+    fr: "L’Africa IT Summit 2025 proposera un espace dédié aux démonstrations, aux startups innovantes et aux entreprises technologiques souhaitant exposer leurs solutions et leurs avancées en IA et automatisation.",
+    en: "The Africa IT Summit 2025 will feature a dedicated space for demonstrations, innovative startups, and tech companies looking to showcase their solutions and advancements in AI and automation.",
+  };
+  const aiAndAutomationTopics = {
+    fr: [
+      {
+        title: "IA et automatisation dans l’entreprise",
+        description:
+          "Comment optimiser les opérations et améliorer la productivité.",
+        icon: <FaIndustry />,
+      },
+      {
+        title: "L’IA dans la finance et la banque",
+        description:
+          "Gestion des risques, détection de la fraude, automatisation des services financiers.",
+        icon: <FaRegMoneyBillAlt />,
+      },
+      {
+        title: "IA et e-santé",
+        description:
+          "Intelligence artificielle au service du diagnostic médical, de la télémédecine et de la gestion hospitalière.",
+        icon: <FaHospital />,
+      },
+      {
+        title: "Industrie 4.0 et automatisation",
+        description:
+          "Usines intelligentes, robots et optimisation des chaînes de production.",
+        icon: <FaIndustry />,
+      },
+      {
+        title: "Agriculture intelligente et IA",
+        description:
+          "Améliorer les rendements agricoles grâce à l’analyse des données et l’automatisation des tâches.",
+        icon: <FaSeedling />,
+      },
+      {
+        title: "L’IA au service de la cybersécurité",
+        description:
+          "Protection contre les cyberattaques et détection des menaces en temps réel.",
+        icon: <FaLock />,
+      },
+      {
+        title: "Éthique et régulation de l’IA en Afrique",
+        description:
+          "Enjeux juridiques et cadres réglementaires pour une adoption responsable.",
+        icon: <FaBalanceScale />,
+      },
+      {
+        title: "Formation et développement des compétences en IA",
+        description:
+          "Comment préparer la main-d’œuvre africaine aux métiers du futur.",
+        icon: <FaChalkboardTeacher />,
+      },
+    ],
+    en: [
+      {
+        title: "AI and Automation in Business",
+        description: "How to optimize operations and improve productivity.",
+        icon: <FaIndustry />,
+      },
+      {
+        title: "AI in Finance and Banking",
+        description:
+          "Risk management, fraud detection, and automation of financial services.",
+        icon: <FaRegMoneyBillAlt />,
+      },
+      {
+        title: "AI and e-Health",
+        description:
+          "Artificial intelligence in medical diagnostics, telemedicine, and hospital management.",
+        icon: <FaHospital />,
+      },
+      {
+        title: "Industry 4.0 and Automation",
+        description:
+          "Smart factories, robots, and production line optimization.",
+        icon: <FaIndustry />,
+      },
+      {
+        title: "Smart Agriculture and AI",
+        description:
+          "Improving agricultural yields through data analysis and task automation.",
+        icon: <FaSeedling />,
+      },
+      {
+        title: "AI for Cybersecurity",
+        description:
+          "Protection against cyberattacks and real-time threat detection.",
+        icon: <FaLock />,
+      },
+      {
+        title: "Ethics and AI Regulation in Africa",
+        description:
+          "Legal challenges and regulatory frameworks for responsible adoption.",
+        icon: <FaBalanceScale />,
+      },
+      {
+        title: "AI Training and Skills Development",
+        description:
+          "How to prepare the African workforce for the jobs of the future.",
+        icon: <FaChalkboardTeacher />,
+      },
+    ],
+  };
+
+  return (
+    <section className="bg-white py-20">
+      <div className="container mx-auto ">
+        <div className="mb-10">
+          <SectionHeader
+            headerInfo={{
+              title: "",
+              subtitle: title[language],
+              description: description[language],
+            }}
+            subtitleColor={["#D34FAC", "#0796F5", "#562196"]}
+            descriptionColor="gray"
+          />
+        </div>
+        <Opportunities />
+        <AiSolutions />
+      </div>
+    </section>
+  );
+}
+
+const Opportunities = () => {
+  const { language } = useLanguageContext();
+  const why = {
+    fr: "Opportunités pour les exposants",
+    en: "Opportunities for Exhibitors",
+  };
+  const colors = ["#0796F5", "#D34FAC", "#562196"];
+  const innovationOpportunities = {
+    fr: [
+      {
+        description:
+          "Présenter leurs innovations en IA et en automatisation devant un public qualifié.",
+        icon: FaLightbulb, // Icône représentant l'innovation
+      },
+      {
+        description:
+          "Attirer des investisseurs, des partenaires stratégiques et des clients potentiels.",
+        icon: FaHandshake, // Icône représentant le partenariat
+      },
+      {
+        description:
+          "Démontrer en direct l’efficacité de leurs solutions pour répondre aux défis des entreprises et des gouvernements africains.",
+        icon: FaPlayCircle, // Icône représentant une démonstration en direct
+      },
+    ],
+    en: [
+      {
+        description:
+          "Present their innovations in AI and automation to a qualified audience.",
+        icon: FaLightbulb, // Icon representing innovation
+      },
+      {
+        description:
+          "Attract investors, strategic partners, and potential clients.",
+        icon: FaHandshake, // Icon representing partnership
+      },
+      {
+        description:
+          "Demonstrate live the effectiveness of their solutions to address the challenges of African businesses and governments.",
+        icon: FaPlayCircle, // Icon representing a live demonstration
+      },
+    ],
+  };
+
+  return (
+    <section className="">
+      <div className="container mx-auto">
+        <div className="mb-15">
+          {" "}
+          <h2 className="mx-auto  mb-4 text-center text-2xl font-bold text-[#562196] md:w-4/5 xl:w-1/2 xl:text-3xl">
+            {why[language]}
+          </h2>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-10 p-4">
+          {innovationOpportunities[language].map((item, index) => (
+            <Card
+              key={index}
+              className="relative flex w-full flex-col items-center rounded-xl bg-gray-100 p-6 shadow-lg transition-all duration-300 hover:cursor-pointer hover:border-none  hover:shadow-xl sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
+            >
+              <div className="absolute -top-8 left-1/2 -translate-x-1/2 transform rounded-full border border-gray-200 bg-gray-200 p-5 shadow-md">
+                <item.icon
+                  className="text-4xl"
+                  style={{ color: colors[index % colors.length] }}
+                />
+              </div>
+              <CardContent className="pt-10 text-center">
+                <p className="text-md font-medium text-gray-700">
+                  {item.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const AiSolutions = () => {
+  const { language } = useLanguageContext();
+  const why = {
+    fr: "Ce que les visiteurs pourront explorer",
+    en: "What Visitors Will Explore",
+  };
+  const colors = ["#0796F5", "#D34FAC", "#562196"];
+  const aiSolutions = {
+    fr: [
+      {
+        description:
+          "Solutions d’IA pour l’optimisation des entreprises et des services publics.",
+        icon: FaCogs, // Icône représentant l'optimisation des processus
+      },
+      {
+        description:
+          "Robots et automatisation dans l’industrie, la logistique et la santé.",
+        icon: FaRobot, // Icône représentant les robots et l’automatisation
+      },
+      {
+        description:
+          "Outils d’analyse de données et de prise de décision basés sur l’IA.",
+        icon: FaChartLine, // Icône représentant l’analyse de données
+      },
+      {
+        description:
+          "Systèmes intelligents pour la gestion des infrastructures et des villes connectées.",
+        icon: FaCity, // Icône représentant les villes intelligentes
+      },
+      {
+        description:
+          "Plateformes d’apprentissage automatique et de formation en IA.",
+        icon: FaChalkboardTeacher, // Icône représentant l’apprentissage
+      },
+      {
+        description:
+          "Solutions de cybersécurité basées sur l’intelligence artificielle.",
+        icon: FaShieldAlt, // Icône représentant la cybersécurité
+      },
+    ],
+    en: [
+      {
+        description:
+          "AI solutions for optimizing businesses and public services.",
+        icon: FaCogs, // Icon representing process optimization
+      },
+      {
+        description:
+          "Robots and automation in industry, logistics, and healthcare.",
+        icon: FaRobot, // Icon representing robots and automation
+      },
+      {
+        description: "AI-based data analysis and decision-making tools.",
+        icon: FaChartLine, // Icon representing data analysis
+      },
+      {
+        description:
+          "Smart systems for managing infrastructure and connected cities.",
+        icon: FaCity, // Icon representing smart cities
+      },
+      {
+        description: "Machine learning platforms and AI training.",
+        icon: FaChalkboardTeacher, // Icon representing learning
+      },
+      {
+        description: "AI-based cybersecurity solutions.",
+        icon: FaShieldAlt, // Icon representing cybersecurity
+      },
+    ],
+  };
+
+  return (
+    <section className="pt-10">
+      <div className="container mx-auto">
+        <div className="mb-15">
+          {" "}
+          <h2 className="mx-auto  mb-4 text-center text-2xl font-bold text-[#562196] md:w-4/5 xl:w-1/2 xl:text-3xl">
+            {why[language]}
+          </h2>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-10 p-4">
+          {aiSolutions[language].map((item, index) => (
+            <Card
+              key={index}
+              className="relative flex w-full flex-col items-center rounded-xl bg-gray-100 p-6 shadow-lg transition-all duration-300 hover:cursor-pointer hover:border-none   hover:shadow-xl sm:w-1/3 md:w-1/3 lg:w-1/4 xl:w-1/5"
+            >
+              <div className="absolute -top-8 left-1/2 -translate-x-1/2 transform rounded-full border border-gray-200 bg-gray-200 p-5 shadow-md">
+                <item.icon
+                  className="text-4xl"
+                  style={{ color: colors[index % colors.length] }}
+                />
+              </div>
+              <CardContent className="pt-10 text-center">
+                <p className="text-md font-medium text-gray-700">
+                  {item.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};

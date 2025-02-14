@@ -8,6 +8,7 @@ import AOS from "aos";
 import ScrollTitle from "@/components/Scroll/ScrollTitle";
 import Why from "./Why";
 import Panel from "./Panel";
+import Exhibitions from "./Exhibitions";
 export default function AiAutomatisation() {
   useEffect(() => {
     AOS.init({
@@ -88,6 +89,8 @@ export default function AiAutomatisation() {
 
         {/* Panel and conference */}
         <Panel />
+        {/* Exhibitions */}
+        <Exhibitions />
       </section>
     </ParticleAnimation>
   );

@@ -147,12 +147,12 @@ export default function Panel() {
               className="relative flex transform flex-col items-start overflow-hidden rounded-xl bg-gradient-to-br from-indigo-50 to-white p-8 text-gray-800 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
               {/* Icône flottante */}
-              <div className="absolute right-5 top-5 -mr-6 -mt-6 flex h-16 w-16 items-center justify-center rounded-full bg-indigo-100 text-3xl text-indigo-600 shadow">
+              <div className="absolute right-5 top-5 -mr-6 -mt-6 flex h-16 w-16 items-center justify-center rounded-full bg-indigo-100 text-3xl text-indigo-500 shadow">
                 {item.icon}
               </div>
 
               {/* Titre */}
-              <h2 className="mt-6 text-xl font-bold text-indigo-600">
+              <h2 className="mt-6 text-xl font-bold text-purple-500">
                 {item.title}
               </h2>
 
