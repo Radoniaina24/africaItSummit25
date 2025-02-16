@@ -46,7 +46,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125877/2148884838_zx2avc.jpg",
       description:
         "Plongez dans les solutions numériques éco-responsables qui façonnent un avenir technologique durable.",
-      link: "/themes/",
+      link: "/themes/digital_tech",
     },
     {
       title: "Villes Intelligentes et Infrastructures Connectées",
@@ -112,7 +112,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125877/2148884838_zx2avc.jpg",
       description:
         "Dive into eco-friendly digital solutions shaping a sustainable tech future.",
-      link: "/themes/",
+      link: "/themes/digital_tech",
     },
     {
       title: "Smart Cities & Connected Infrastructure",
