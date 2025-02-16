@@ -8,11 +8,11 @@ import AOS from "aos";
 import ScrollTitle from "@/components/Scroll/ScrollTitle";
 
 import InfoAfricaItSummit from "../Information";
-import Exhibitions from "../ai_automation/Exhibitions";
-import Networking from "../ai_automation/Networking";
-import Opportunities from "../ai_automation/Opportunities";
-import Panel from "../ai_automation/Panel";
-import Why from "../ai_automation/Why";
+import Why from "./Why";
+import Panel from "./Panel";
+import Exhibitions from "./Exhibitions";
+import Opportunities from "./Opportunities";
+import Networking from "./Networking";
 export default function FintechFinancial() {
   useEffect(() => {
     AOS.init({
