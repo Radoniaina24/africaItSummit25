@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function WebMobile() {
-  return <HealthDetails />;
+  return <WebMobile />;
 }
