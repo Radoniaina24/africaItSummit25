@@ -75,23 +75,7 @@ export default function WebMobile() {
         </section>
 
         {/* why choose africa it summit */}
-        <section
-          className="relative bg-cover bg-fixed bg-center px-6 py-16 text-white"
-          style={{
-            backgroundImage: `url('https://res.cloudinary.com/dx3xhdaym/image/upload/v1739515105/2149524383_n27c5n.jpg')`,
-          }}
-        >
-          <div className="relative z-10 mx-auto max-w-7xl text-center">
-            <h2
-              className=" mb-4 bg-gradient-to-r from-[#562196] via-[#D34FAC] to-[#0796F5] bg-clip-text text-xl font-extrabold text-transparent md:text-4xl"
-              data-aos="fade-up"
-            >
-              {why[language]}
-            </h2>
-          </div>
-          <Why />
-        </section>
-
+        <Why />
         {/* Panel and conference */}
         <Panel />
         {/* Exhibitions */}
