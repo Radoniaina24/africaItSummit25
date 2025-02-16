@@ -30,7 +30,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125878/17651_vstqpo.jpg",
       description:
         "Découvrez les dernières tendances en matière de création d'applications web et mobiles performantes et innovantes.",
-      link: "/themes/web_mobile_developement",
+      link: "/themes",
     },
     {
       title: "Fintech et Inclusion Financière",
@@ -38,7 +38,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125877/124767_wk0q8c.jpg",
       description:
         "Explorez les innovations financières qui rendent les services bancaires plus accessibles grâce aux technologies numériques.",
-      link: "/themes/",
+      link: "/themes/fintech_financial",
     },
     {
       title: "Technologies Numériques Durables",
@@ -96,7 +96,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125878/17651_vstqpo.jpg",
       description:
         "Discover the latest trends in building high-performance, innovative web and mobile applications.",
-      link: "/themes/web_mobile_developement",
+      link: "/themes",
     },
     {
       title: "Fintech & Financial Inclusion",
@@ -104,7 +104,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125877/124767_wk0q8c.jpg",
       description:
         "Explore financial innovations that make banking services more accessible through digital technologies.",
-      link: "/themes/",
+      link: "/themes/fintech_financial",
     },
     {
       title: "Sustainable Digital Technologies",

@@ -4,89 +4,129 @@ import { InnovationItem } from "../audio_visuel/Innovation";
 
 export default function Why() {
   const { language } = useLanguageContext();
-  const networkingAI = {
+  const fintechInclusion = {
     fr: [
       {
-        text: "Accédez à un réseau de décideurs et d’experts en IA pour échanger avec des leaders de l’innovation, des investisseurs, des chercheurs et des entreprises technologiques.",
+        text: "Accédez à un marché en pleine expansion et connectez-vous avec des acteurs clés.",
         imageSource:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739513528/2151003763_iqpv9a.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739681711/2150377156_cg2bk2.jpg",
       },
       {
-        text: "Participez à des sessions de networking B2B, B2C et B2G pour établir des partenariats stratégiques.",
+        text: "Échangez avec des banques, des startups fintech, des investisseurs et des régulateurs.",
         imageSource:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739513632/2147923358_ugp1yg.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739681822/2149714433_d8vpbt.jpg",
       },
       {
-        text: "Découvrez des cas concrets d’application de l’IA et de l’automatisation à travers différents secteurs.",
+        text: "Participez à des sessions de networking B2B, B2C et B2G pour développer des opportunités de collaboration.",
         imageSource:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739513791/2151133519_wsb4ex.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739681962/2149104411_rvp0np.jpg",
       },
       {
-        text: "Explorez les dernières avancées en IA et automatisation et identifiez les solutions les plus adaptées à votre activité.",
+        text: "Découvrez les nouvelles tendances qui transforment le secteur financier africain.",
         imageSource:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739513870/2150038862_ymjin0.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739682098/2150461333_n3x6uq.jpg",
       },
       {
-        text: "Apprenez comment intégrer l’IA pour optimiser la gestion des données et améliorer la prise de décision.",
+        text: "Explorez des solutions innovantes pour renforcer l’inclusion financière.",
         imageSource:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739513946/2151003701_zidubp.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739682191/2148305937_egsigv.jpg",
       },
       {
-        text: "Accédez à des opportunités de financement pour les startups et entreprises innovantes.",
+        text: "Apprenez comment les paiements mobiles, la blockchain et l’IA révolutionnent les services financiers.",
         imageSource:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739514036/2148991374_y90kwy.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739682362/2149153407_yry8sx.jpg",
       },
       {
-        text: "Découvrez les stratégies gagnantes pour développer des projets IA performants et rentables.",
+        text: "Identifiez les meilleures pratiques pour développer des services accessibles aux populations non bancarisées.",
         imageSource:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739514130/2151137386_en8eeu.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739682467/2147844526_dec2tu.jpg",
       },
       {
-        text: "Échangez avec des leaders de l’innovation, des investisseurs, des chercheurs et des entreprises technologiques.",
+        text: "Accédez à des opportunités d’investissement et de financement pour vos projets fintech.",
         imageSource:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739514328/2149409842_ohrz63.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739683020/2148780630_i4gr1d.jpg",
+      },
+      {
+        text: "Développez votre activité et saisissez de nouvelles opportunités de marché.",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739683665/2149908187_hjlaue.jpg",
+      },
+      {
+        text: "L’Afrique est le marché fintech qui connaît la plus forte croissance mondiale.",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739684093/2150038844_vzyobp.jpg",
+      },
+      {
+        text: "Les gouvernements et institutions internationales soutiennent le développement de solutions financières inclusives.",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739684292/2150433440_j0kofi.jpg",
+      },
+      {
+        text: "De nouvelles plateformes et infrastructures numériques émergent, créant des opportunités pour les startups et entreprises établies.",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739684500/2151941526_zsue1n.jpg",
       },
     ],
     en: [
       {
-        text: "Access a network of decision-makers and AI experts to connect with innovation leaders, investors, researchers, and tech companies.",
+        text: "Access a rapidly growing market and connect with key industry players.",
         imageSource:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739513528/2151003763_iqpv9a.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739681711/2150377156_cg2bk2.jpg",
       },
       {
-        text: "Participate in B2B, B2C, and B2G networking sessions to establish strategic partnerships.",
+        text: "Engage with banks, fintech startups, investors, and regulators.",
         imageSource:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739513632/2147923358_ugp1yg.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739681822/2149714433_d8vpbt.jpg",
       },
       {
-        text: "Discover real-world applications of AI and automation across different industries.",
+        text: "Participate in B2B, B2C, and B2G networking sessions to foster collaboration opportunities.",
         imageSource:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739513791/2151133519_wsb4ex.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739681962/2149104411_rvp0np.jpg",
       },
       {
-        text: "Explore the latest advancements in AI and automation and identify the most suitable solutions for your business.",
+        text: "Discover emerging trends reshaping Africa’s financial sector.",
         imageSource:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739513870/2150038862_ymjin0.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739682098/2150461333_n3x6uq.jpg",
       },
       {
-        text: "Learn how to integrate AI to optimize data management and improve decision-making.",
+        text: "Explore innovative solutions to enhance financial inclusion.",
         imageSource:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739513946/2151003701_zidubp.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739682191/2148305937_egsigv.jpg",
       },
       {
-        text: "Access funding opportunities for startups and innovative businesses.",
+        text: "Learn how mobile payments, blockchain, and AI are transforming financial services.",
         imageSource:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739514036/2148991374_y90kwy.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739682362/2149153407_yry8sx.jpg",
       },
       {
-        text: "Discover winning strategies to develop high-performing and profitable AI projects.",
+        text: "Identify best practices for developing services accessible to unbanked populations.",
         imageSource:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739514130/2151137386_en8eeu.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739682467/2147844526_dec2tu.jpg",
       },
       {
-        text: "Connect with innovation leaders, investors, researchers, and tech companies.",
+        text: "Access investment and funding opportunities for your fintech projects.",
         imageSource:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739514328/2149409842_ohrz63.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739683020/2148780630_i4gr1d.jpg",
+      },
+      {
+        text: "Grow your business and tap into new market opportunities.",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739683665/2149908187_hjlaue.jpg",
+      },
+      {
+        text: "Africa is the fastest-growing fintech market in the world.",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739684093/2150038844_vzyobp.jpg",
+      },
+      {
+        text: "Governments and international institutions are supporting the development of inclusive financial solutions.",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739684292/2150433440_j0kofi.jpg",
+      },
+      {
+        text: "New digital platforms and infrastructures are emerging, creating opportunities for startups and established businesses.",
+        imageSource:
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739684500/2151941526_zsue1n.jpg",
       },
     ],
   };
@@ -94,7 +134,7 @@ export default function Why() {
   return (
     <div className="container mx-auto py-20">
       <div className="grid grid-cols-1 gap-10 p-4  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {networkingAI[language].map((item, index) => (
+        {fintechInclusion[language].map((item, index) => (
           <InnovationItem data={item} key={index} textColor="text-white" />
         ))}
       </div>
