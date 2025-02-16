@@ -15,17 +15,17 @@ export default function Opportunities() {
         title: "Développement des relations professionnelles",
         highlights: [
           {
-            text: "B2B (Business to Business) : Rencontres entre fintech, banques, investisseurs et entreprises technologiques.",
+            text: "B2B (Business to Business) : Rencontres entre startups, entreprises IT, industriels et prestataires de services.",
           },
           {
-            text: "B2C (Business to Consumer) : Interactions avec les utilisateurs et présentation des solutions adaptées aux besoins des consommateurs africains.",
+            text: "B2C (Business to Consumer) : Exploration des solutions d’IA accessibles aux entreprises et aux consommateurs.",
           },
           {
-            text: "B2G (Business to Government) : Discussions sur la régulation, le cadre légal et les initiatives publiques en faveur de l’inclusion financière.",
+            text: "B2G (Business to Government) : Discussions sur les stratégies nationales d’adoption de l’IA et de l’automatisation.",
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739689393/2147626268_knugn3.jpg", // Remplacez par l'URL réelle de l'image
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536578/2148339351_g7utaz.jpg", // Remplacez par l'URL réelle de l'image
         imageAlt: "Développement des relations professionnelles",
         imageOnRight: true,
       },
@@ -33,13 +33,13 @@ export default function Opportunities() {
         title: "Exploration de nouveaux marchés",
         highlights: [
           {
-            text: "Le secteur fintech africain connaît une croissance exponentielle, attirant des investissements internationaux.",
+            text: "La demande en solutions IA explose en Afrique, avec des investissements croissants dans les infrastructures technologiques.",
           },
           {
-            text: "De plus en plus de services financiers numériques émergent, touchant des millions de nouveaux utilisateurs.",
+            text: "De nombreux secteurs intègrent déjà l’IA et l’automatisation, créant de nouvelles opportunités pour les entreprises et les entrepreneurs.",
           },
           {
-            text: "Les gouvernements africains soutiennent l’adoption des fintech pour moderniser l’économie et favoriser l’inclusion financière.",
+            text: "Les gouvernements africains mettent en place des stratégies numériques, ouvrant la voie à des collaborations et financements dans l’IA.",
           },
         ],
         imageSrc:
@@ -53,17 +53,17 @@ export default function Opportunities() {
         title: "Professional Relationship Development",
         highlights: [
           {
-            text: "B2B (Business to Business): Meetings between fintech, banks, investors, and tech companies.",
+            text: "B2B (Business to Business): Meetings between startups, IT companies, industrial players, and service providers.",
           },
           {
-            text: "B2C (Business to Consumer): Interactions with users and presentation of solutions tailored to the needs of African consumers.",
+            text: "B2C (Business to Consumer): Exploration of AI solutions accessible to businesses and consumers.",
           },
           {
-            text: "B2G (Business to Government): Discussions on regulation, legal frameworks, and public initiatives supporting financial inclusion.",
+            text: "B2G (Business to Government): Discussions on national strategies for AI and automation adoption.",
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739689393/2147626268_knugn3.jpg", // Replace with the actual image URL
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536578/2148339351_g7utaz.jpg", // Replace with the actual image URL
         imageAlt: "Professional Relationship Development",
         imageOnRight: true,
       },
@@ -71,13 +71,13 @@ export default function Opportunities() {
         title: "Exploring New Markets",
         highlights: [
           {
-            text: "The African fintech sector is experiencing exponential growth, attracting international investments.",
+            text: "The demand for AI solutions is booming in Africa, with increasing investments in technology infrastructure.",
           },
           {
-            text: "Increasing numbers of digital financial services are emerging, reaching millions of new users.",
+            text: "Many sectors are already integrating AI and automation, creating new opportunities for businesses and entrepreneurs.",
           },
           {
-            text: "African governments are supporting the adoption of fintech to modernize the economy and promote financial inclusion.",
+            text: "African governments are implementing digital strategies, paving the way for collaborations and AI funding.",
           },
         ],
         imageSrc:
@@ -93,12 +93,12 @@ export default function Opportunities() {
     en: "Collaboration and Market Opportunities",
   };
   const description = {
-    fr: "L’Africa IT Summit 2025 réunira les entreprises du numérique, les institutions financières, les startups fintech et les décideurs politiques pour façonner l’avenir des services financiers en Afrique.",
-    en: "The Africa IT Summit 2025 will bring together digital enterprises, financial institutions, fintech startups, and policymakers to shape the future of financial services in Africa.",
+    fr: "L’Africa IT Summit 2025 rassemblera les entreprises technologiques, les startups, les investisseurs et les décideurs politiques pour explorer les opportunités qu’offre l’intelligence artificielle et l’automatisation en Afrique.",
+    en: "The Africa IT Summit 2025 will bring together technology companies, startups, investors, and policymakers to explore the opportunities presented by artificial intelligence and automation in Africa.",
   };
 
   return (
-    <section className="bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] py-20">
+    <section className="bg-white">
       <div>
         <div className="relative z-10 mx-auto max-w-7xl text-center">
           <SectionHeader
@@ -107,8 +107,8 @@ export default function Opportunities() {
               subtitle: title[language],
               description: description[language],
             }}
-            subtitleColor={["#0796F5", "#D34FAC", "#562196"]}
-            descriptionColor="white"
+            subtitleColor={["#D34FAC", "#0796F5", "#562196"]}
+            descriptionColor="gray"
           />
         </div>
         <div className="space-y-16 px-6 py-12 ">
@@ -120,7 +120,6 @@ export default function Opportunities() {
               imageSrc={item.imageSrc}
               imageAlt={item.title}
               imageOnRight={item.imageOnRight}
-              highlightTextColor="white"
             />
           ))}
         </div>

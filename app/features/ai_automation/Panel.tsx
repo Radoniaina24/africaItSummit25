@@ -1,131 +1,130 @@
 import { useLanguageContext } from "@/app/context/LanguageContext";
 import React from "react";
-import { InnovationItem } from "../audio_visuel/Innovation";
 import SectionHeader from "@/components/Common/SectionHeader";
 import {
-  FaMobileAlt,
-  FaBitcoin,
-  FaHandHoldingUsd,
-  FaRobot,
-  FaShieldAlt,
-  FaUniversity,
-  FaGavel,
-  FaUserGraduate,
+  FaIndustry,
+  FaHospital,
+  FaSeedling,
+  FaLock,
+  FaBalanceScale,
+  FaChalkboardTeacher,
+  FaRegMoneyBillAlt,
 } from "react-icons/fa";
 export default function Panel() {
   const { language } = useLanguageContext();
 
   const title = {
-    fr: "Conférences et Panels : Le Futur des Services Financiers en Afrique",
-    en: "Conferences and Panels: The Future of Financial Services in Africa",
+    fr: "Conférences et Panels",
+    en: "Conferences and Panels",
   };
   const description = {
-    fr: "Les experts du secteur aborderont les tendances, innovations et stratégies pour accélérer la digitalisation des services financiers.",
-    en: "Industry experts will discuss trends, innovations, and strategies to accelerate the digitalization of financial services.",
+    fr: "Les meilleurs experts du domaine partageront leurs analyses et expériences sur des sujets clés :",
+    en: "Top industry experts will share their insights and experiences on key topics:",
   };
-
-  const fintechTopics = {
+  const aiAndAutomationTopics = {
     fr: [
       {
-        title: "Paiements mobiles et portefeuilles électroniques",
+        title: "IA et automatisation dans l’entreprise",
         description:
-          "Comment les solutions fintech simplifient les transactions du quotidien.",
-        icon: <FaMobileAlt />,
+          "Comment optimiser les opérations et améliorer la productivité.",
+        icon: <FaIndustry />,
       },
       {
-        title: "Blockchain et finance décentralisée (DeFi)",
+        title: "L’IA dans la finance et la banque",
         description:
-          "Sécurisation des paiements, traçabilité et réduction des coûts.",
-        icon: <FaBitcoin />,
+          "Gestion des risques, détection de la fraude, automatisation des services financiers.",
+        icon: <FaRegMoneyBillAlt />,
       },
       {
-        title: "Microcrédits et financement alternatif",
+        title: "IA et e-santé",
         description:
-          "Solutions numériques pour démocratiser l’accès au crédit en Afrique.",
-        icon: <FaHandHoldingUsd />,
+          "Intelligence artificielle au service du diagnostic médical, de la télémédecine et de la gestion hospitalière.",
+        icon: <FaHospital />,
       },
       {
-        title:
-          "L’intelligence artificielle et l’automatisation dans la finance",
+        title: "Industrie 4.0 et automatisation",
         description:
-          "Optimisation du scoring de crédit, détection de la fraude et personnalisation des services.",
-        icon: <FaRobot />,
+          "Usines intelligentes, robots et optimisation des chaînes de production.",
+        icon: <FaIndustry />,
       },
       {
-        title: "Cybersécurité et protection des transactions financières",
-        description: "Stratégies pour renforcer la confiance des utilisateurs.",
-        icon: <FaShieldAlt />,
+        title: "Agriculture intelligente et IA",
+        description:
+          "Améliorer les rendements agricoles grâce à l’analyse des données et l’automatisation des tâches.",
+        icon: <FaSeedling />,
       },
       {
-        title: "Banques numériques et néobanques",
+        title: "L’IA au service de la cybersécurité",
         description:
-          "Comment les nouveaux acteurs disruptent le marché bancaire.",
-        icon: <FaUniversity />,
+          "Protection contre les cyberattaques et détection des menaces en temps réel.",
+        icon: <FaLock />,
       },
       {
-        title: "Régulation et cadre légal des fintech en Afrique",
+        title: "Éthique et régulation de l’IA en Afrique",
         description:
-          "Perspectives et enjeux pour un développement équilibré du secteur.",
-        icon: <FaGavel />,
+          "Enjeux juridiques et cadres réglementaires pour une adoption responsable.",
+        icon: <FaBalanceScale />,
       },
       {
-        title: "Éducation financière et adoption des solutions numériques",
+        title: "Formation et développement des compétences en IA",
         description:
-          "Comment accompagner les populations vers un usage sécurisé et efficace des fintech.",
-        icon: <FaUserGraduate />,
+          "Comment préparer la main-d’œuvre africaine aux métiers du futur.",
+        icon: <FaChalkboardTeacher />,
       },
     ],
     en: [
       {
-        title: "Mobile Payments and Digital Wallets",
-        description: "How fintech solutions simplify everyday transactions.",
-        icon: <FaMobileAlt />,
+        title: "AI and Automation in Business",
+        description: "How to optimize operations and improve productivity.",
+        icon: <FaIndustry />,
       },
       {
-        title: "Blockchain and Decentralized Finance (DeFi)",
+        title: "AI in Finance and Banking",
         description:
-          "Securing payments, ensuring traceability, and reducing costs.",
-        icon: <FaBitcoin />,
+          "Risk management, fraud detection, and automation of financial services.",
+        icon: <FaRegMoneyBillAlt />,
       },
       {
-        title: "Microcredit and Alternative Financing",
+        title: "AI and e-Health",
         description:
-          "Digital solutions to democratize access to credit in Africa.",
-        icon: <FaHandHoldingUsd />,
+          "Artificial intelligence in medical diagnostics, telemedicine, and hospital management.",
+        icon: <FaHospital />,
       },
       {
-        title: "Artificial Intelligence and Automation in Finance",
+        title: "Industry 4.0 and Automation",
         description:
-          "Optimizing credit scoring, fraud detection, and service personalization.",
-        icon: <FaRobot />,
+          "Smart factories, robots, and production line optimization.",
+        icon: <FaIndustry />,
       },
       {
-        title: "Cybersecurity and Financial Transaction Protection",
-        description: "Strategies to strengthen user trust.",
-        icon: <FaShieldAlt />,
-      },
-      {
-        title: "Digital Banks and Neobanks",
-        description: "How new players are disrupting the banking market.",
-        icon: <FaUniversity />,
-      },
-      {
-        title: "Fintech Regulation and Legal Framework in Africa",
+        title: "Smart Agriculture and AI",
         description:
-          "Perspectives and challenges for balanced sector development.",
-        icon: <FaGavel />,
+          "Improving agricultural yields through data analysis and task automation.",
+        icon: <FaSeedling />,
       },
       {
-        title: "Financial Education and Digital Adoption",
+        title: "AI for Cybersecurity",
         description:
-          "How to guide populations towards secure and efficient fintech usage.",
-        icon: <FaUserGraduate />,
+          "Protection against cyberattacks and real-time threat detection.",
+        icon: <FaLock />,
+      },
+      {
+        title: "Ethics and AI Regulation in Africa",
+        description:
+          "Legal challenges and regulatory frameworks for responsible adoption.",
+        icon: <FaBalanceScale />,
+      },
+      {
+        title: "AI Training and Skills Development",
+        description:
+          "How to prepare the African workforce for the jobs of the future.",
+        icon: <FaChalkboardTeacher />,
       },
     ],
   };
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-gradient-to-br from-[#a261d4] via-[#63b6f1] to-[#e575c5] py-20">
       <div className="container mx-auto ">
         <div className="mb-10">
           <SectionHeader
@@ -135,24 +134,24 @@ export default function Panel() {
               description: description[language],
             }}
             subtitleColor={["#D34FAC", "#0796F5", "#562196"]}
-            descriptionColor="gray"
+            descriptionColor="white"
           />
         </div>
 
         <div className="grid grid-cols-1 gap-10 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {fintechTopics[language].map((item, index) => (
+          {aiAndAutomationTopics[language].map((item, index) => (
             <div
               key={index}
               data-aos="zoom-in"
               className="relative flex transform flex-col items-start overflow-hidden rounded-xl bg-gradient-to-br from-indigo-50 to-white p-8 text-gray-800 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
               {/* Icône flottante */}
-              <div className="absolute right-5 top-5 -mr-6 -mt-6 flex h-16 w-16 items-center justify-center rounded-full bg-indigo-100 text-3xl text-indigo-500 shadow">
+              <div className="absolute right-5 top-5 -mr-6 -mt-6 flex h-16 w-16 items-center justify-center rounded-full bg-indigo-100 text-3xl text-indigo-600 shadow">
                 {item.icon}
               </div>
 
               {/* Titre */}
-              <h2 className="mt-6 text-lg font-bold text-blue-400">
+              <h2 className="mt-6 text-xl font-bold text-indigo-600">
                 {item.title}
               </h2>
 

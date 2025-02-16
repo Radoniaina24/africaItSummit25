@@ -30,8 +30,8 @@ export default function Exhibitions() {
     en: "Exhibitions and Innovation Space",
   };
   const description = {
-    fr: "L’Africa IT Summit 2025 proposera un espace d’exposition pour les entreprises fintech, les banques numériques et les startups afin de mettre en avant leurs solutions et services devant un public qualifié.",
-    en: "The Africa IT Summit 2025 will feature an exhibition space for fintech companies, digital banks, and startups to showcase their solutions and services to a qualified audience.",
+    fr: "L’Africa IT Summit 2025 proposera un espace dédié aux démonstrations, aux startups innovantes et aux entreprises technologiques souhaitant exposer leurs solutions et leurs avancées en IA et automatisation.",
+    en: "The Africa IT Summit 2025 will feature a dedicated space for demonstrations, innovative startups, and tech companies looking to showcase their solutions and advancements in AI and automation.",
   };
 
   return (
@@ -66,38 +66,38 @@ const Opportunities = () => {
     en: "Opportunities for Exhibitors",
   };
   const colors = ["#0796F5", "#D34FAC", "#562196"];
-  const exhibitorOpportunities = {
+  const innovationOpportunities = {
     fr: [
       {
         description:
-          "Présentez vos innovations fintech devant des investisseurs, institutions financières et entrepreneurs.",
+          "Présenter leurs innovations en IA et en automatisation devant un public qualifié.",
         icon: FaLightbulb, // Icône représentant l'innovation
       },
       {
         description:
-          "Attirez des clients et partenaires stratégiques en quête de solutions financières adaptées aux réalités africaines.",
+          "Attirer des investisseurs, des partenaires stratégiques et des clients potentiels.",
         icon: FaHandshake, // Icône représentant le partenariat
       },
       {
         description:
-          "Démontrez en direct l’efficacité de vos plateformes et technologies.",
+          "Démontrer en direct l’efficacité de leurs solutions pour répondre aux défis des entreprises et des gouvernements africains.",
         icon: FaPlayCircle, // Icône représentant une démonstration en direct
       },
     ],
     en: [
       {
         description:
-          "Showcase your fintech innovations to investors, financial institutions, and entrepreneurs.",
+          "Present their innovations in AI and automation to a qualified audience.",
         icon: FaLightbulb, // Icon representing innovation
       },
       {
         description:
-          "Attract clients and strategic partners looking for financial solutions tailored to African realities.",
+          "Attract investors, strategic partners, and potential clients.",
         icon: FaHandshake, // Icon representing partnership
       },
       {
         description:
-          "Demonstrate the effectiveness of your platforms and technologies live.",
+          "Demonstrate live the effectiveness of their solutions to address the challenges of African businesses and governments.",
         icon: FaPlayCircle, // Icon representing a live demonstration
       },
     ],
@@ -114,7 +114,7 @@ const Opportunities = () => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-10 p-4">
-          {exhibitorOpportunities[language].map((item, index) => (
+          {innovationOpportunities[language].map((item, index) => (
             <Card
               key={index}
               className="relative flex w-full flex-col items-center rounded-xl bg-gray-100 p-6 shadow-lg transition-all duration-300 hover:cursor-pointer hover:border-none  hover:shadow-xl sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
@@ -140,33 +140,33 @@ const Opportunities = () => {
 
 const AiSolutions = () => {
   const { language } = useLanguageContext();
-  const financialSolutions = {
+  const aiSolutions = {
     fr: [
       {
         title: "Ce que les visiteurs pourront explorer",
         highlights: [
           {
-            text: "Applications de paiements mobiles et solutions de transfert d’argent.",
+            text: "Optimisation des entreprises et des services publics grâce à l’IA.",
           },
           {
-            text: "Services bancaires numériques et plateformes de microfinance.",
+            text: "Automatisation et robots dans les secteurs industriel, logistique et santé.",
           },
           {
-            text: "Solutions blockchain pour la finance et la sécurisation des transactions.",
+            text: "Outils d’analyse de données et de prise de décision avec l’IA.",
           },
           {
-            text: "Outils d’intelligence artificielle pour l’analyse des données financières.",
+            text: "Systèmes intelligents pour la gestion des infrastructures et des villes connectées.",
           },
           {
-            text: "Systèmes de scoring de crédit et financement alternatif.",
+            text: "Plateformes d’apprentissage automatique et formations en IA.",
           },
           {
-            text: "Plateformes de finance décentralisée et gestion des actifs numériques.",
+            text: "Solutions de cybersécurité basées sur l’intelligence artificielle.",
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739686192/2149187287_mekkak.jpg", // Remplacez par l'URL réelle de l'image
-        imageAlt: "Opportunités dans la finance numérique",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739515105/2149524383_n27c5n.jpg", // Remplacez par l'URL réelle de l'image
+        imageAlt: "Opportunités commerciales et networking",
         imageOnRight: false, // Positionne l'image à droite
       },
     ],
@@ -175,27 +175,27 @@ const AiSolutions = () => {
         title: "What Visitors Will Explore",
         highlights: [
           {
-            text: "Mobile payment applications and money transfer solutions.",
+            text: "AI solutions for optimizing businesses and public services.",
           },
           {
-            text: "Digital banking services and microfinance platforms.",
+            text: "Robots and automation in industry, logistics, and healthcare.",
           },
           {
-            text: "Blockchain solutions for finance and transaction security.",
+            text: "AI-based data analysis and decision-making tools.",
           },
           {
-            text: "AI tools for financial data analysis.",
+            text: "Smart systems for managing infrastructure and connected cities.",
           },
           {
-            text: "Credit scoring systems and alternative financing.",
+            text: "Machine learning platforms and AI training.",
           },
           {
-            text: "Decentralized finance platforms and digital asset management.",
+            text: "AI-based cybersecurity solutions.",
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739686192/2149187287_mekkak.jpg", // Replace with the actual image URL
-        imageAlt: "Opportunities in Digital Finance",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739515105/2149524383_n27c5n.jpg", // Replace with the actual image URL
+        imageAlt: "Business Opportunities and Networking",
         imageOnRight: false, // Position the image on the right
       },
     ],
@@ -205,7 +205,7 @@ const AiSolutions = () => {
     <section className="pt-10">
       <div className="container mx-auto">
         <div className="space-y-16 px-6 py-12 ">
-          {financialSolutions[language].map((item, index) => (
+          {aiSolutions[language].map((item, index) => (
             <SectionImageCity
               key={index}
               title={item.title}
