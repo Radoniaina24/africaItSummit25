@@ -30,7 +30,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125878/17651_vstqpo.jpg",
       description:
         "Découvrez les dernières tendances en matière de création d'applications web et mobiles performantes et innovantes.",
-      link: "/themes/",
+      link: "/themes/web_mobile_developement",
     },
     {
       title: "Fintech et Inclusion Financière",
@@ -96,7 +96,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125878/17651_vstqpo.jpg",
       description:
         "Discover the latest trends in building high-performance, innovative web and mobile applications.",
-      link: "/themes/",
+      link: "/themes/web_mobile_developement",
     },
     {
       title: "Fintech & Financial Inclusion",

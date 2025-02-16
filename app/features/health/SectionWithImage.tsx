@@ -23,7 +23,7 @@ const SectionImageCity: React.FC<SectionWithImageProps> = ({
   titleColor = "#42A9F5",
   highlightTextColor = "gray",
   iconColor = "#7B42A6",
-  borderColor = "#E05CBB",
+  borderColor = "#f60505",
 }) => {
   return (
     <div className="mx-auto max-w-7xl space-y-16">

@@ -2,7 +2,7 @@ import AudioVisuel from "@/app/features/audio_visuel";
 import { Metadata } from "next";
 import React from "react";
 export const metadata: Metadata = {
-  title: "AI | Africa It Summit",
+  title: "AudioVisuel | Africa It Summit",
 
   // other metadata
 };
