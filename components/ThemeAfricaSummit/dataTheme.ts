@@ -54,7 +54,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125877/22451_x2argx.jpg",
       description:
         "Découvrez comment les technologies transforment nos villes pour les rendre plus intelligentes, durables et connectées.",
-      link: "/themes/",
+      link: "/themes/smart_cities",
     },
     {
       title: "Cybersécurité et Protection des Données",
@@ -120,7 +120,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125877/22451_x2argx.jpg",
       description:
         "Discover how technology is transforming cities into smarter, more sustainable, and connected spaces.",
-      link: "/themes/",
+      link: "/themes/smart_cities",
     },
     {
       title: "Cybersecurity & Data Protection",
