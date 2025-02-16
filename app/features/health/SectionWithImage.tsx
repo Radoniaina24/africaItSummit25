@@ -37,7 +37,7 @@ const SectionImageCity: React.FC<SectionWithImageProps> = ({
         <div
           className={`${
             imageOnRight ? "border-l-8" : "border-r-8"
-          } p-6 pl-4 md:w-1/2 border-[${borderColor}]`}
+          } border-blue-500 p-6 pl-4 md:w-1/2`}
           data-aos={imageOnRight ? "fade-right" : "fade-left"}
         >
           <h2

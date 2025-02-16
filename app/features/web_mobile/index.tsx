@@ -8,11 +8,12 @@ import AOS from "aos";
 import ScrollTitle from "@/components/Scroll/ScrollTitle";
 
 import InfoAfricaItSummit from "../Information";
-import Exhibitions from "../ai_automation/Exhibitions";
-import Networking from "../ai_automation/Networking";
-import Opportunities from "../ai_automation/Opportunities";
-import Panel from "../ai_automation/Panel";
-import Why from "../ai_automation/Why";
+import Networking from "./Networking";
+import Opportunities from "./Opportunities";
+import Exhibitions from "./Exhibitions";
+import Panel from "./Panel";
+import Why from "./Why";
+
 export default function WebMobile() {
   useEffect(() => {
     AOS.init({
@@ -23,12 +24,12 @@ export default function WebMobile() {
   const colors = ["#0796F5", "#D34FAC", "#562196"];
   const { language } = useLanguageContext();
   const title = {
-    fr: "Intelligence Artificielle et Automatisation",
-    en: "Artificial Intelligence and Automation",
+    fr: "Développement Web & Mobile",
+    en: "Web & Mobile Development",
   };
   const description = {
-    fr: "L’intelligence artificielle (IA) et l’automatisation redéfinissent la manière dont les entreprises et les industries opèrent à travers le monde. En Afrique, ces technologies offrent des opportunités considérables pour améliorer l’efficacité des entreprises, optimiser les processus, renforcer la prise de décision et stimuler la productivité dans de nombreux secteurs : santé, finance, logistique, industrie, éducation, agriculture et bien plus encore.",
-    en: "Artificial Intelligence (AI) and automation are redefining how businesses and industries operate worldwide. In Africa, these technologies present significant opportunities to enhance business efficiency, optimize processes, strengthen decision-making, and boost productivity across various sectors, including healthcare, finance, logistics, industry, education, agriculture, and many more.",
+    fr: "L’essor rapide des technologies web et mobiles transforme le paysage numérique africain, permettant aux entreprises, aux gouvernements et aux startups d’accéder à de nouveaux marchés, d’innover plus rapidement et d’améliorer l’expérience utilisateur. De l’e-commerce et la fintech aux applications basées sur l’intelligence artificielle et aux solutions cloud, les plateformes numériques stimulent la croissance économique et redéfinissent les industries à travers le continent.",
+    en: "The rapid expansion of web and mobile technologies is transforming Africa’s digital landscape, enabling businesses, governments, and startups to reach new markets, innovate faster, and enhance user experiences. From e-commerce and fintech to AI-powered apps and cloud solutions, digital platforms are driving economic growth and reshaping industries across the continent.",
   };
   const why = {
     fr: "Pourquoi Participer à l’Africa IT Summit 2025",
@@ -36,8 +37,8 @@ export default function WebMobile() {
   };
 
   const description2 = {
-    fr: "L’Africa IT Summit 2025 mettra en avant le rôle stratégique de l’IA et de l’automatisation dans la transformation digitale du continent. L’événement réunira des leaders technologiques, des entreprises, des startups, des chercheurs et des décideurs politiques pour explorer les tendances, les défis et les opportunités liées à l’adoption de ces technologies en Afrique et dans l’océan Indien.",
-    en: "The Africa IT Summit 2025 will highlight the strategic role of AI and automation in the digital transformation of the continent. The event will bring together technology leaders, businesses, startups, researchers, and policymakers to explore trends, challenges, and opportunities related to the adoption of these technologies in Africa and the Indian Ocean region.",
+    fr: "Lors de l'Africa IT Summit 2025, les principaux développeurs web et mobiles, startups, entreprises technologiques, investisseurs et décideurs se réuniront pour explorer les innovations de pointe, les opportunités d’affaires et l’avenir de la transformation numérique en Afrique.",
+    en: "At Africa IT Summit 2025, leading web & mobile developers, startups, tech enterprises, investors, and policymakers will gather to explore cutting-edge innovations, business opportunities, and the future of digital transformation in Africa.",
   };
   return (
     <ParticleAnimation>
@@ -96,7 +97,7 @@ export default function WebMobile() {
         {/* Exhibitions */}
         <Exhibitions />
         {/* Opportunities */}
-        <Opportunities />
+        {/* <Opportunities /> */}
         {/* Networking */}
         <Networking />
         <InfoAfricaItSummit />
