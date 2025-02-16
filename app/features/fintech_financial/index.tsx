@@ -74,7 +74,7 @@ export default function FintechFinancial() {
         </section>
 
         {/* why choose africa it summit */}
-        <section className="bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] py-20">
+        <section className="bg-gradient-to-br from-[#a261d4] via-[#63b6f1] to-[#e575c5] py-20">
           <div className="relative z-10 mx-auto max-w-7xl text-center">
             <h2
               className="  bg-gradient-to-r from-[#562196] via-[#D34FAC] to-[#0796F5] bg-clip-text text-xl font-extrabold text-transparent md:text-4xl"

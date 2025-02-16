@@ -30,109 +30,8 @@ export default function Exhibitions() {
     en: "Exhibitions and Innovation Space",
   };
   const description = {
-    fr: "L’Africa IT Summit 2025 proposera un espace dédié aux démonstrations, aux startups innovantes et aux entreprises technologiques souhaitant exposer leurs solutions et leurs avancées en IA et automatisation.",
-    en: "The Africa IT Summit 2025 will feature a dedicated space for demonstrations, innovative startups, and tech companies looking to showcase their solutions and advancements in AI and automation.",
-  };
-  const aiAndAutomationTopics = {
-    fr: [
-      {
-        title: "IA et automatisation dans l’entreprise",
-        description:
-          "Comment optimiser les opérations et améliorer la productivité.",
-        icon: <FaIndustry />,
-      },
-      {
-        title: "L’IA dans la finance et la banque",
-        description:
-          "Gestion des risques, détection de la fraude, automatisation des services financiers.",
-        icon: <FaRegMoneyBillAlt />,
-      },
-      {
-        title: "IA et e-santé",
-        description:
-          "Intelligence artificielle au service du diagnostic médical, de la télémédecine et de la gestion hospitalière.",
-        icon: <FaHospital />,
-      },
-      {
-        title: "Industrie 4.0 et automatisation",
-        description:
-          "Usines intelligentes, robots et optimisation des chaînes de production.",
-        icon: <FaIndustry />,
-      },
-      {
-        title: "Agriculture intelligente et IA",
-        description:
-          "Améliorer les rendements agricoles grâce à l’analyse des données et l’automatisation des tâches.",
-        icon: <FaSeedling />,
-      },
-      {
-        title: "L’IA au service de la cybersécurité",
-        description:
-          "Protection contre les cyberattaques et détection des menaces en temps réel.",
-        icon: <FaLock />,
-      },
-      {
-        title: "Éthique et régulation de l’IA en Afrique",
-        description:
-          "Enjeux juridiques et cadres réglementaires pour une adoption responsable.",
-        icon: <FaBalanceScale />,
-      },
-      {
-        title: "Formation et développement des compétences en IA",
-        description:
-          "Comment préparer la main-d’œuvre africaine aux métiers du futur.",
-        icon: <FaChalkboardTeacher />,
-      },
-    ],
-    en: [
-      {
-        title: "AI and Automation in Business",
-        description: "How to optimize operations and improve productivity.",
-        icon: <FaIndustry />,
-      },
-      {
-        title: "AI in Finance and Banking",
-        description:
-          "Risk management, fraud detection, and automation of financial services.",
-        icon: <FaRegMoneyBillAlt />,
-      },
-      {
-        title: "AI and e-Health",
-        description:
-          "Artificial intelligence in medical diagnostics, telemedicine, and hospital management.",
-        icon: <FaHospital />,
-      },
-      {
-        title: "Industry 4.0 and Automation",
-        description:
-          "Smart factories, robots, and production line optimization.",
-        icon: <FaIndustry />,
-      },
-      {
-        title: "Smart Agriculture and AI",
-        description:
-          "Improving agricultural yields through data analysis and task automation.",
-        icon: <FaSeedling />,
-      },
-      {
-        title: "AI for Cybersecurity",
-        description:
-          "Protection against cyberattacks and real-time threat detection.",
-        icon: <FaLock />,
-      },
-      {
-        title: "Ethics and AI Regulation in Africa",
-        description:
-          "Legal challenges and regulatory frameworks for responsible adoption.",
-        icon: <FaBalanceScale />,
-      },
-      {
-        title: "AI Training and Skills Development",
-        description:
-          "How to prepare the African workforce for the jobs of the future.",
-        icon: <FaChalkboardTeacher />,
-      },
-    ],
+    fr: "L’Africa IT Summit 2025 proposera un espace d’exposition pour les entreprises fintech, les banques numériques et les startups afin de mettre en avant leurs solutions et services devant un public qualifié.",
+    en: "The Africa IT Summit 2025 will feature an exhibition space for fintech companies, digital banks, and startups to showcase their solutions and services to a qualified audience.",
   };
 
   return (
@@ -167,38 +66,38 @@ const Opportunities = () => {
     en: "Opportunities for Exhibitors",
   };
   const colors = ["#0796F5", "#D34FAC", "#562196"];
-  const innovationOpportunities = {
+  const exhibitorOpportunities = {
     fr: [
       {
         description:
-          "Présenter leurs innovations en IA et en automatisation devant un public qualifié.",
+          "Présentez vos innovations fintech devant des investisseurs, institutions financières et entrepreneurs.",
         icon: FaLightbulb, // Icône représentant l'innovation
       },
       {
         description:
-          "Attirer des investisseurs, des partenaires stratégiques et des clients potentiels.",
+          "Attirez des clients et partenaires stratégiques en quête de solutions financières adaptées aux réalités africaines.",
         icon: FaHandshake, // Icône représentant le partenariat
       },
       {
         description:
-          "Démontrer en direct l’efficacité de leurs solutions pour répondre aux défis des entreprises et des gouvernements africains.",
+          "Démontrez en direct l’efficacité de vos plateformes et technologies.",
         icon: FaPlayCircle, // Icône représentant une démonstration en direct
       },
     ],
     en: [
       {
         description:
-          "Present their innovations in AI and automation to a qualified audience.",
+          "Showcase your fintech innovations to investors, financial institutions, and entrepreneurs.",
         icon: FaLightbulb, // Icon representing innovation
       },
       {
         description:
-          "Attract investors, strategic partners, and potential clients.",
+          "Attract clients and strategic partners looking for financial solutions tailored to African realities.",
         icon: FaHandshake, // Icon representing partnership
       },
       {
         description:
-          "Demonstrate live the effectiveness of their solutions to address the challenges of African businesses and governments.",
+          "Demonstrate the effectiveness of your platforms and technologies live.",
         icon: FaPlayCircle, // Icon representing a live demonstration
       },
     ],
@@ -215,7 +114,7 @@ const Opportunities = () => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-10 p-4">
-          {innovationOpportunities[language].map((item, index) => (
+          {exhibitorOpportunities[language].map((item, index) => (
             <Card
               key={index}
               className="relative flex w-full flex-col items-center rounded-xl bg-gray-100 p-6 shadow-lg transition-all duration-300 hover:cursor-pointer hover:border-none  hover:shadow-xl sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
@@ -241,33 +140,33 @@ const Opportunities = () => {
 
 const AiSolutions = () => {
   const { language } = useLanguageContext();
-  const aiSolutions = {
+  const financialSolutions = {
     fr: [
       {
         title: "Ce que les visiteurs pourront explorer",
         highlights: [
           {
-            text: "Optimisation des entreprises et des services publics grâce à l’IA.",
+            text: "Applications de paiements mobiles et solutions de transfert d’argent.",
           },
           {
-            text: "Automatisation et robots dans les secteurs industriel, logistique et santé.",
+            text: "Services bancaires numériques et plateformes de microfinance.",
           },
           {
-            text: "Outils d’analyse de données et de prise de décision avec l’IA.",
+            text: "Solutions blockchain pour la finance et la sécurisation des transactions.",
           },
           {
-            text: "Systèmes intelligents pour la gestion des infrastructures et des villes connectées.",
+            text: "Outils d’intelligence artificielle pour l’analyse des données financières.",
           },
           {
-            text: "Plateformes d’apprentissage automatique et formations en IA.",
+            text: "Systèmes de scoring de crédit et financement alternatif.",
           },
           {
-            text: "Solutions de cybersécurité basées sur l’intelligence artificielle.",
+            text: "Plateformes de finance décentralisée et gestion des actifs numériques.",
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739515105/2149524383_n27c5n.jpg", // Remplacez par l'URL réelle de l'image
-        imageAlt: "Opportunités commerciales et networking",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739686192/2149187287_mekkak.jpg", // Remplacez par l'URL réelle de l'image
+        imageAlt: "Opportunités dans la finance numérique",
         imageOnRight: false, // Positionne l'image à droite
       },
     ],
@@ -276,27 +175,27 @@ const AiSolutions = () => {
         title: "What Visitors Will Explore",
         highlights: [
           {
-            text: "AI solutions for optimizing businesses and public services.",
+            text: "Mobile payment applications and money transfer solutions.",
           },
           {
-            text: "Robots and automation in industry, logistics, and healthcare.",
+            text: "Digital banking services and microfinance platforms.",
           },
           {
-            text: "AI-based data analysis and decision-making tools.",
+            text: "Blockchain solutions for finance and transaction security.",
           },
           {
-            text: "Smart systems for managing infrastructure and connected cities.",
+            text: "AI tools for financial data analysis.",
           },
           {
-            text: "Machine learning platforms and AI training.",
+            text: "Credit scoring systems and alternative financing.",
           },
           {
-            text: "AI-based cybersecurity solutions.",
+            text: "Decentralized finance platforms and digital asset management.",
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739515105/2149524383_n27c5n.jpg", // Replace with the actual image URL
-        imageAlt: "Business Opportunities and Networking",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739686192/2149187287_mekkak.jpg", // Replace with the actual image URL
+        imageAlt: "Opportunities in Digital Finance",
         imageOnRight: false, // Position the image on the right
       },
     ],
@@ -306,7 +205,7 @@ const AiSolutions = () => {
     <section className="pt-10">
       <div className="container mx-auto">
         <div className="space-y-16 px-6 py-12 ">
-          {aiSolutions[language].map((item, index) => (
+          {financialSolutions[language].map((item, index) => (
             <SectionImageCity
               key={index}
               title={item.title}

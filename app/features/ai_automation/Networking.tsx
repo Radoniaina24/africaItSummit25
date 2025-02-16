@@ -6,92 +6,92 @@ import SectionHeader from "@/components/Common/SectionHeader";
 export default function Networking() {
   const { language } = useLanguageContext();
 
-  const panelNetworking = {
+  const networking = {
     fr: [
       {
         title: "Accédez à :",
         highlights: [
           {
-            text: "Accédez à des sessions de networking B2B et B2G ciblées pour maximiser vos rencontres d’affaires.",
+            text: "Sessions de networking B2B et B2G ciblées pour maximiser vos rencontres d’affaires.",
           },
           {
-            text: "Participez à des ateliers interactifs et discussions sectorielles pour explorer des cas d’usage concrets.",
+            text: "Ateliers et discussions interactives sur les meilleures stratégies de développement des fintech en Afrique.",
           },
           {
-            text: "Assistez à des conférences inspirantes avec des experts du marché pour mieux comprendre les tendances et les opportunités du secteur.",
+            text: "Conférences animées par des experts du marché pour mieux comprendre les tendances et anticiper les évolutions du secteur.",
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739537810/2151003746_xsarde.jpg", // Remplacez par l'URL réelle de l'image
-        imageAlt: "Espace de Networking et d’Affaires",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536578/2148339351_g7utaz.jpg", // Remplacez par l'URL réelle de l'image
+        imageAlt: "Accédez aux meilleures opportunités de networking",
         imageOnRight: true,
       },
       {
         title: "Pourquoi Participer ?",
         highlights: [
           {
-            text: "Un accès direct aux décideurs du secteur, investisseurs et innovateurs en IA et automatisation.",
+            text: "Un accès direct aux décideurs du secteur financier et aux investisseurs en fintech.",
           },
           {
-            text: "Une opportunité de renforcer votre réseau et d’établir des partenariats stratégiques.",
+            text: "Une opportunité unique de renforcer votre réseau et de développer des partenariats stratégiques.",
           },
           {
-            text: "Un marché en pleine expansion avec des perspectives de croissance rapide.",
+            text: "Un marché en pleine expansion avec une adoption massive des solutions de paiement numérique.",
           },
           {
-            text: "Un espace d’exposition et de démonstration idéal pour promouvoir vos solutions.",
+            text: "Un espace d’exposition idéal pour promouvoir vos solutions et attirer de nouveaux clients.",
           },
           {
-            text: "Une occasion unique d’identifier les innovations et tendances qui façonneront l’avenir de l’IA en Afrique.",
+            text: "Une chance d’identifier les innovations et tendances qui façonneront l’avenir des services financiers en Afrique.",
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739537677/2148932312_c32zzx.jpg", // Remplacez par l'URL réelle de l'image
-        imageAlt: "Pourquoi Participer",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739689318/2149035672_in3j3k.jpg", // Remplacez par l'URL réelle de l'image
+        imageAlt: "Pourquoi participer au Africa IT Summit 2025",
         imageOnRight: false,
       },
     ],
     en: [
       {
-        title: "Access:",
+        title: "Access to:",
         highlights: [
           {
-            text: "Gain access to targeted B2B and B2G networking sessions to maximize business connections.",
+            text: "Targeted B2B and B2G networking sessions to maximize your business meetings.",
           },
           {
-            text: "Participate in interactive workshops and industry discussions to explore real-world use cases.",
+            text: "Workshops and interactive discussions on the best strategies for fintech development in Africa.",
           },
           {
-            text: "Attend inspiring conferences with market experts to better understand industry trends and opportunities.",
+            text: "Conferences led by industry experts to better understand trends and anticipate sector developments.",
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739537810/2151003746_xsarde.jpg", // Replace with the actual image URL
-        imageAlt: "Networking and Business Space",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536578/2148339351_g7utaz.jpg", // Replace with the actual image URL
+        imageAlt: "Access the best networking opportunities",
         imageOnRight: true,
       },
       {
         title: "Why Participate?",
         highlights: [
           {
-            text: "Direct access to key decision-makers, investors, and innovators in AI and automation.",
+            text: "Direct access to decision-makers in the financial sector and fintech investors.",
           },
           {
-            text: "An opportunity to strengthen your network and establish strategic partnerships.",
+            text: "A unique opportunity to strengthen your network and develop strategic partnerships.",
           },
           {
-            text: "A rapidly expanding market with high growth potential.",
+            text: "A rapidly growing market with massive adoption of digital payment solutions.",
           },
           {
-            text: "An ideal exhibition and demonstration space to showcase your solutions.",
+            text: "An ideal exhibition space to promote your solutions and attract new clients.",
           },
           {
-            text: "A unique chance to identify the innovations and trends shaping the future of AI in Africa.",
+            text: "A chance to identify innovations and trends that will shape the future of financial services in Africa.",
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739537677/2148932312_c32zzx.jpg", // Replace with the actual image URL
-        imageAlt: "Why Participate",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739689318/2149035672_in3j3k.jpg", // Replace with the actual image URL
+        imageAlt: "Why participate in the Africa IT Summit 2025",
         imageOnRight: false,
       },
     ],
@@ -102,8 +102,8 @@ export default function Networking() {
     en: "Networking and Business Space",
   };
   const description = {
-    fr: "L’Africa IT Summit 2025 offrira un environnement propice aux rencontres et aux collaborations stratégiques.",
-    en: "The Africa IT Summit 2025 will provide a conducive environment for meetings and strategic collaborations.",
+    fr: "L’Africa IT Summit 2025 constituera un environnement stratégique pour favoriser les échanges et les collaborations.",
+    en: "The Africa IT Summit 2025 will provide a strategic environment to foster exchanges and collaborations.",
   };
 
   return (
@@ -121,7 +121,7 @@ export default function Networking() {
           />
         </div>
         <div className="space-y-16 px-6 py-12 ">
-          {panelNetworking[language].map((item, index) => (
+          {networking[language].map((item, index) => (
             <SectionImageCity
               key={index}
               title={item.title}
