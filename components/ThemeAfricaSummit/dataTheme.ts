@@ -62,7 +62,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125879/64964_hjdy9l.jpg",
       description:
         "Apprenez comment protéger vos données et infrastructures contre les cyberattaques et garantir la confidentialité des informations.",
-      link: "/themes/",
+      link: "/themes/cybersecurity",
     },
   ],
   en: [
@@ -128,7 +128,7 @@ const themes = {
         "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739125879/64964_hjdy9l.jpg",
       description:
         "Learn how to secure data and infrastructure against cyber threats and ensure information privacy.",
-      link: "/themes/",
+      link: "/themes/cybersecurity",
     },
   ],
 };
