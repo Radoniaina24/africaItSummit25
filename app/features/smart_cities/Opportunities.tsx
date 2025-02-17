@@ -21,7 +21,7 @@ export default function Opportunities() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536578/business_relations.jpg", // Remplacez par l'URL réelle de l'image
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739757176/2147838558_cmze8n.jpg", // Remplacez par l'URL réelle de l'image
         imageAlt: "Développement des relations professionnelles",
         imageOnRight: true,
       },
@@ -39,7 +39,7 @@ export default function Opportunities() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536667/market_exploration.jpg", // Remplacez par l'URL réelle de l'image
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739757333/2148780555_xsanla.jpg", // Remplacez par l'URL réelle de l'image
         imageAlt: "Exploration de nouveaux marchés",
         imageOnRight: false,
       },
@@ -59,7 +59,7 @@ export default function Opportunities() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536578/business_relations.jpg", // Replace with the actual image URL
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739757176/2147838558_cmze8n.jpg", // Replace with the actual image URL
         imageAlt: "Professional Relationship Development",
         imageOnRight: true,
       },
@@ -77,7 +77,7 @@ export default function Opportunities() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536667/market_exploration.jpg", // Replace with the actual image URL
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739757333/2148780555_xsanla.jpg", // Replace with the actual image URL
         imageAlt: "Exploring New Markets",
         imageOnRight: false,
       },

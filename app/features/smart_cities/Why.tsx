@@ -24,7 +24,7 @@ export default function Why() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739724970/2150970181_powoi8.jpg", // Remplacez par l'URL réelle de l'image
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739756696/2150901022_sskdio.jpg", // Remplacez par l'URL réelle de l'image
         imageAlt: "Opportunités d'Investissement",
         imageOnRight: true,
       },
@@ -42,7 +42,7 @@ export default function Why() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536253/2149151164_kvcoql.jpg", // Remplacez par l'URL réelle de l'image
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739756792/2151189321_mcnfg9.jpg", // Remplacez par l'URL réelle de l'image
         imageAlt: "Technologies des Villes Intelligentes",
         imageOnRight: false,
       },
@@ -60,7 +60,7 @@ export default function Why() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536667/2147772278_udrnr0.jpg", // Remplacez par l'URL réelle de l'image
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739756888/2149037881_bymdw5.jpg", // Remplacez par l'URL réelle de l'image
         imageAlt: "Networking et Collaboration",
         imageOnRight: true,
       },
@@ -80,7 +80,7 @@ export default function Why() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739724970/2150970181_powoi8.jpg", // Replace with the actual image URL
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739756696/2150901022_sskdio.jpg", // Replace with the actual image URL
         imageAlt: "Investment Opportunities",
         imageOnRight: true,
       },
@@ -98,7 +98,7 @@ export default function Why() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536253/2149151164_kvcoql.jpg", // Replace with the actual image URL
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739756792/2151189321_mcnfg9.jpg", // Replace with the actual image URL
         imageAlt: "Smart City Technologies",
         imageOnRight: false,
       },
@@ -116,7 +116,7 @@ export default function Why() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536667/2147772278_udrnr0.jpg", // Replace with the actual image URL
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739756888/2149037881_bymdw5.jpg", // Replace with the actual image URL
         imageAlt: "Networking and Collaboration",
         imageOnRight: true,
       },

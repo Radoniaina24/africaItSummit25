@@ -148,7 +148,7 @@ const AiSolutions = () => {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536667/2147772278_udrnr0.jpg", // Remplacez par l'URL réelle de l'image
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739757060/2151305357_yiv7g6.jpg", // Remplacez par l'URL réelle de l'image
         imageAlt: "Solutions pour les villes intelligentes",
         imageOnRight: false,
       },
@@ -177,7 +177,7 @@ const AiSolutions = () => {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536667/2147772278_udrnr0.jpg", // Replace with the actual image URL
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739757060/2151305357_yiv7g6.jpg", // Replace with the actual image URL
         imageAlt: "Smart City Solutions",
         imageOnRight: false,
       },
