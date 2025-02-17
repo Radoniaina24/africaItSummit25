@@ -96,7 +96,12 @@ export default function Networking() {
       },
     ],
   };
-
+  <div className="item">
+    <h1></h1>
+    <a href="" className="button">
+      cliquer ici
+    </a>
+  </div>;
   const title = {
     fr: "Espace de Networking et d’Affaires ",
     en: "Networking and Business Space",
