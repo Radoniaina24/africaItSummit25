@@ -34,7 +34,7 @@ export default function Mission() {
 
           {/* Sous-titre */}
           <p
-            className="mx-auto max-w-3xl text-lg font-light leading-relaxed md:text-xl"
+            className="mx-auto max-w-3xl text-lg leading-relaxed text-gray-700 "
             data-aos="fade-in"
           >
             {subtitle}
