@@ -24,7 +24,7 @@ export default function Why() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739724970/networking.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739757837/2148510462_hjk7mv.jpg",
         imageAlt: "Réseautage et Partenariats",
         imageOnRight: true,
       },
@@ -45,7 +45,7 @@ export default function Why() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536253/cybersecurity.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739757960/2149595831_1_l35qcw.jpg",
         imageAlt: "Tendances en Cybersécurité",
         imageOnRight: false,
       },
@@ -63,7 +63,7 @@ export default function Why() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536667/investment.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739758035/2148780559_vlbbd5.jpg",
         imageAlt: "Opportunités d’Investissement",
         imageOnRight: true,
       },
@@ -83,7 +83,7 @@ export default function Why() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739724970/networking.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739757837/2148510462_hjk7mv.jpg",
         imageAlt: "Networking and Partnerships",
         imageOnRight: true,
       },
@@ -104,7 +104,7 @@ export default function Why() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536253/cybersecurity.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739757960/2149595831_1_l35qcw.jpg",
         imageAlt: "Cybersecurity Trends",
         imageOnRight: false,
       },
@@ -122,7 +122,7 @@ export default function Why() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536667/investment.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739758035/2148780559_vlbbd5.jpg",
         imageAlt: "Investment Opportunities",
         imageOnRight: true,
       },

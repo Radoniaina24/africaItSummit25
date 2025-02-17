@@ -22,7 +22,7 @@ export default function Networking() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536578/2148339351_g7utaz.jpg", // Remplacez par l'URL réelle de l'image
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739758544/2151908072_qljl4l.jpg", // Remplacez par l'URL réelle de l'image
         imageAlt: "Accédez à",
         imageOnRight: true,
       },
@@ -46,7 +46,7 @@ export default function Networking() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536667/2147772278_udrnr0.jpg", // Remplacez par l'URL réelle de l'image
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739537677/2148932312_c32zzx.jpg", // Remplacez par l'URL réelle de l'image
         imageAlt: "Pourquoi Participer ?",
         imageOnRight: false,
       },
@@ -66,7 +66,7 @@ export default function Networking() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536578/2148339351_g7utaz.jpg", // Replace with the actual image URL
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739758544/2151908072_qljl4l.jpg", // Replace with the actual image URL
         imageAlt: "Access to",
         imageOnRight: true,
       },
@@ -90,7 +90,7 @@ export default function Networking() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536667/2147772278_udrnr0.jpg", // Replace with the actual image URL
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739537677/2148932312_c32zzx.jpg", // Replace with the actual image URL
         imageAlt: "Why Participate?",
         imageOnRight: false,
       },

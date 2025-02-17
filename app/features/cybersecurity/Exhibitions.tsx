@@ -148,7 +148,7 @@ const AiSolutions = () => {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536667/2147772278_udrnr0.jpg", // Remplacez par l'URL réelle de l'image
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739758124/2150970233_he4iad.jpg", // Remplacez par l'URL réelle de l'image
         imageAlt: "Solutions de cybersécurité",
         imageOnRight: false,
       },
@@ -177,7 +177,7 @@ const AiSolutions = () => {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536667/2147772278_udrnr0.jpg", // Replace with the actual image URL
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739758124/2150970233_he4iad.jpg", // Replace with the actual image URL
         imageAlt: "Cybersecurity Solutions",
         imageOnRight: false,
       },
