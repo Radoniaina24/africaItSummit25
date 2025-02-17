@@ -29,8 +29,8 @@ const VisionSection: React.FC<VisionProps> = ({ lang }) => {
           {/* Texte de la vision */}
           <p className="text-lg leading-relaxed text-gray-700">
             {lang === "fr"
-              ? "Faire de l’Afrique un acteur majeur de l’économie numérique mondiale en misant sur l’innovation, la connectivité et le développement durable."
-              : "Position Africa as a key player in the global digital economy by leveraging innovation, connectivity, and sustainable development."}
+              ? "Notre ambition est de faire de l’Afrique un leader incontournable de l’économie numérique mondiale en misant sur l’innovation disruptive, l’expansion de la connectivité et un développement durable et inclusif. En favorisant les synergies entre les acteurs technologiques, nous créons un écosystème dynamique propice à la croissance et à l’impact à grande échelle."
+              : "Our ambition is to position Africa as a leading force in the global digital economy by driving disruptive innovation, expanding connectivity, and fostering inclusive and sustainable development. By facilitating synergies among key technology players, we are building a dynamic ecosystem that fuels growth and large-scale impact."}
           </p>
         </div>
       </div>

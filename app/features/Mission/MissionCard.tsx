@@ -7,10 +7,10 @@ type MissionCardProps = {
 
 const MissionCards: React.FC<MissionCardProps> = ({ lang }) => {
   return (
-    <section className="container mx-auto">
-      <div className="p-6 py-5">
+    <section className="container mx-auto py-10">
+      <div className="p-6 ">
         {/* Titre principal */}
-        <div className="relative mb-4">
+        <div className="relative mb-4" data-aos="fade-zoom-out">
           <h2 className="bg-gradient-to-r from-[#0796F5]  via-[#D34FAC] to-[#562196] bg-clip-text text-3xl font-bold text-transparent">
             {lang === "fr" ? "Notre Mission" : "Our Mission"}
           </h2>

@@ -3,6 +3,7 @@ import { useLanguageContext } from "@/app/context/LanguageContext";
 import React from "react";
 import MissionCards from "./MissionCard";
 import VisionSection from "./Vision";
+import EventSection from "./Event";
 
 export default function Mission() {
   const { language } = useLanguageContext();
@@ -22,7 +23,7 @@ export default function Mission() {
         {/* <div className="absolute inset-0 bg-black bg-opacity-40"></div> */}
 
         {/* Contenu principal */}
-        <div className="relative z-10 mx-auto max-w-7xl text-center">
+        <div className="relative z-10 mx-auto mb-10 max-w-7xl text-center">
           {/* Titre principal */}
           <h2
             className=" mb-4 bg-gradient-to-r from-[#0796F5] via-[#D34FAC] to-[#562196] bg-clip-text text-xl font-extrabold text-transparent md:text-4xl"
@@ -32,12 +33,16 @@ export default function Mission() {
           </h2>
 
           {/* Sous-titre */}
-          <p className="mx-auto max-w-3xl text-lg font-light leading-relaxed md:text-xl">
+          <p
+            className="mx-auto max-w-3xl text-lg font-light leading-relaxed md:text-xl"
+            data-aos="fade-in"
+          >
             {subtitle}
           </p>
         </div>
         <VisionSection lang={language} />
         <MissionCards lang={language} />
+        <EventSection lang={language} />
       </div>
     </section>
   );
