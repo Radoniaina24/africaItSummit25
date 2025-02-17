@@ -9,13 +9,17 @@ const EventSection: React.FC<EventProps> = ({ lang }) => {
     <section className="container mx-auto ">
       <div className=" flex  flex-col items-center justify-between space-y-6 rounded-xl  p-8  md:flex-row md:space-x-8 md:space-y-0">
         {/* Texte à gauche */}
-        <div className="text-center md:w-1/2 md:text-left" data-aos="fade-down">
+        <div className=" text-left md:w-1/2" data-aos="fade-down">
           {/* Titre avec ligne décorative */}
-          <div className="relative mb-4">
-            <h2 className="bg-gradient-to-r from-[#0796F5]  via-[#D34FAC] to-[#562196] bg-clip-text text-3xl font-bold text-transparent">
-              {lang === "fr" ? "Un Événement Stratégique" : "A Strategic Event"}
-            </h2>
-            <div className="mt-2 h-1 w-16 bg-blue-600"></div>
+          <div className="relative mb-4 flex justify-center md:justify-start">
+            <div>
+              <h2 className="bg-gradient-to-r from-[#0796F5]  via-[#D34FAC] to-[#562196] bg-clip-text text-3xl font-bold text-transparent">
+                {lang === "fr"
+                  ? "Un Événement Stratégique"
+                  : "A Strategic Event"}
+              </h2>
+              <div className="mt-2 h-1 w-16 bg-blue-600 "></div>
+            </div>
           </div>
 
           {/* Texte de l'evenement */}

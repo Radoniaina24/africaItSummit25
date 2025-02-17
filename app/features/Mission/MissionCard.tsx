@@ -10,11 +10,16 @@ const MissionCards: React.FC<MissionCardProps> = ({ lang }) => {
     <section className="container mx-auto py-10">
       <div className="p-6 ">
         {/* Titre principal */}
-        <div className="relative mb-4" data-aos="fade-zoom-out">
-          <h2 className="bg-gradient-to-r from-[#0796F5]  via-[#D34FAC] to-[#562196] bg-clip-text text-3xl font-bold text-transparent">
-            {lang === "fr" ? "Notre Mission" : "Our Mission"}
-          </h2>
-          <div className="mt-2 h-1 w-16 bg-blue-600"></div>
+        <div
+          className="relative mb-4 flex justify-start "
+          data-aos="fade-zoom-out"
+        >
+          <div>
+            <h2 className="bg-gradient-to-r from-[#0796F5]  via-[#D34FAC] to-[#562196] bg-clip-text text-3xl font-bold text-transparent">
+              {lang === "fr" ? "Notre Mission" : "Our Mission"}
+            </h2>
+            <div className="mt-2 h-1 w-16 bg-blue-600"></div>
+          </div>
         </div>
 
         {/* Grille des cartes */}
