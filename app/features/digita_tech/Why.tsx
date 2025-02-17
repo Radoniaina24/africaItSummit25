@@ -43,7 +43,7 @@ export default function Why() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739436253/2149151164_kvcoql.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739755487/2150950163_ieibpz.jpg",
         imageAlt: "Technologies durables et innovation",
         imageOnRight: false,
       },
@@ -67,7 +67,7 @@ export default function Why() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739436253/2149151164_kvcoql.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739755609/2148746476_crgl6v.jpg",
         imageAlt: "Opportunités d’investissement et croissance",
         imageOnRight: true,
       },
@@ -105,7 +105,7 @@ export default function Why() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739436253/2149151164_kvcoql.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739755487/2150950163_ieibpz.jpg",
         imageAlt: "Sustainable Technologies and Innovation",
         imageOnRight: false,
       },
@@ -129,7 +129,7 @@ export default function Why() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739436253/2149151164_kvcoql.jpg",
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739755609/2148746476_crgl6v.jpg",
         imageAlt: "Investment Opportunities and Growth",
         imageOnRight: true,
       },

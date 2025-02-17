@@ -22,7 +22,7 @@ export default function Networking() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536578/2148339351_g7utaz.jpg", // Remplacez par l'URL réelle de l'image
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739756030/2150966123_1_zfjmif.jpg", // Remplacez par l'URL réelle de l'image
         imageAlt: "Accédez à",
         imageOnRight: true,
       },
@@ -46,7 +46,7 @@ export default function Networking() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536667/2147772278_udrnr0.jpg", // Remplacez par l'URL réelle de l'image
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739537677/2148932312_c32zzx.jpg", // Remplacez par l'URL réelle de l'image
         imageAlt: "Pourquoi Participer ?",
         imageOnRight: false,
       },
@@ -66,7 +66,7 @@ export default function Networking() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536578/2148339351_g7utaz.jpg", // Replace with the actual image URL
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739756030/2150966123_1_zfjmif.jpg", // Replace with the actual image URL
         imageAlt: "Access to",
         imageOnRight: true,
       },
@@ -90,7 +90,7 @@ export default function Networking() {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739536667/2147772278_udrnr0.jpg", // Replace with the actual image URL
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739537677/2148932312_c32zzx.jpg", // Replace with the actual image URL
         imageAlt: "Why Participate?",
         imageOnRight: false,
       },
@@ -107,7 +107,7 @@ export default function Networking() {
   };
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-gradient-to-br from-[#a261d4] via-[#63b6f1] to-[#e575c5]  py-20">
       <div>
         <div className="relative z-10 mx-auto max-w-7xl text-center">
           <SectionHeader
@@ -117,7 +117,7 @@ export default function Networking() {
               description: description[language],
             }}
             subtitleColor={["#D34FAC", "#0796F5", "#562196"]}
-            descriptionColor="gray"
+            descriptionColor="white"
           />
         </div>
         <div className="space-y-16 px-6 py-12 ">
@@ -129,6 +129,8 @@ export default function Networking() {
               imageSrc={item.imageSrc}
               imageAlt={item.title}
               imageOnRight={item.imageOnRight}
+              highlightTextColor="white"
+              titleColor="#3b82f6"
             />
           ))}
         </div>

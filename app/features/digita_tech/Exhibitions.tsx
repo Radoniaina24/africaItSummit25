@@ -149,7 +149,7 @@ const AiSolutions = () => {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739515105/2149524383_n27c5n.jpg", // Remplacez par l'URL réelle de l'image
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739755758/2148884838_1_mauddu.jpg", // Remplacez par l'URL réelle de l'image
         imageAlt: "Solutions technologiques écologiques",
         imageOnRight: false, // Positionne l'image à droite
       },
@@ -178,7 +178,7 @@ const AiSolutions = () => {
           },
         ],
         imageSrc:
-          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739515105/2149524383_n27c5n.jpg", // Replace with the actual image URL
+          "https://res.cloudinary.com/dx3xhdaym/image/upload/v1739755758/2148884838_1_mauddu.jpg", // Replace with the actual image URL
         imageAlt: "Eco-friendly technological solutions",
         imageOnRight: false, // Position the image on the right
       },
