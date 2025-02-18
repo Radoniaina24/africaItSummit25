@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useState } from "react";
 import FeaturesTabItem from "./FeaturesTabItem";
 import featuresTabData from "./featuresTabData";
@@ -16,10 +15,7 @@ const TabItem = ({ id, label, activeTab, setActiveTab, index }: any) => {
           : ""
       }`}
     >
-      <div className="flex h-12.5 w-12.5 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-        <p className="text-metatitle3 font-medium text-black dark:text-white">{`0${index}`}</p>
-      </div>
-      <div className="md:w-3/5 lg:w-auto">
+      <div className="md:w-3/6 lg:w-auto">
         <button className="text-sm font-medium text-black dark:text-white xl:text-regular">
           {label}
         </button>
@@ -34,7 +30,7 @@ const FeaturesTab = () => {
   return (
     <>
       {/* <!-- ===== Features Tab Start ===== --> */}
-      <section className="relative pb-20 pt-18.5 lg:pb-22.5">
+      <section className="relative bg-white pb-20 pt-18.5 lg:pb-22.5">
         <div className="relative mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           {/* Tab Menues Start */}
           <motion.div
@@ -52,7 +48,7 @@ const FeaturesTab = () => {
             whileInView="visible"
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="animate_top mb-15 flex flex-wrap justify-center rounded-[10px] border border-stroke bg-white shadow-solid-5 dark:border-strokedark dark:bg-blacksection dark:shadow-solid-6 md:flex-nowrap md:items-center lg:gap-7.5 xl:mb-21.5 xl:gap-12.5"
+            className="animate_top mb-15 flex flex-wrap justify-center rounded-[10px] border border-stroke bg-white shadow-solid-5   md:flex-nowrap md:items-center lg:gap-7.5 xl:mb-21.5 xl:gap-1"
           >
             {featuresTabData.map((feature, index) => (
               <TabItem

@@ -3,7 +3,7 @@ import { FeatureTab } from "@/types/featureTab";
 const featuresTabData: FeatureTab[] = [
   {
     id: "tabOne",
-    label: "CONCEPT AND OBJECTIVES",
+    label: "Attendee",
     title: "Accelerate Africa’s digital transformation",
     desc1: `Africa is undergoing a rapid digital transformation, with a fast-growing digital economy.
 However, major challenges remain: limited
@@ -18,7 +18,7 @@ innovation, excellence, and forward-thinking vision.`,
       "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738923493/74_bu0blp.jpg",
   },
   {
-    id: "tabTwo",
+    id: "Startup Pass",
     label: "EVENT FORMAT",
     title: " Interactive and strategic sessions.",
     desc1: `Conferences & Panels: In-depth discussions on the impact of digital transformation in key sectors such as health, education, and agriculture, featuring experts,
@@ -31,7 +31,35 @@ digital ecosystem. `,
   },
   {
     id: "tabThree",
-    label: "KEY TOPICS COVERED",
+    label: "Exposant Pass",
+    title: "Africa’s digital landscape",
+    desc1: `Analyzing emerging technologies in
+content production and distribution,
+fostering cultural diversity and the growth
+of Africa’s creative industry. `,
+    desc2: `Discussing digital sovereignty, critical
+infrastructure protection, and cybersecurity awareness to safeguard Africa’s digital
+transformation. `,
+    image:
+      "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738923492/47500_bj48kc.jpg",
+  },
+  {
+    id: "tabThree",
+    label: "Investor Pass",
+    title: "Africa’s digital landscape",
+    desc1: `Analyzing emerging technologies in
+content production and distribution,
+fostering cultural diversity and the growth
+of Africa’s creative industry. `,
+    desc2: `Discussing digital sovereignty, critical
+infrastructure protection, and cybersecurity awareness to safeguard Africa’s digital
+transformation. `,
+    image:
+      "https://res.cloudinary.com/dx3xhdaym/image/upload/v1738923492/47500_bj48kc.jpg",
+  },
+  {
+    id: "tabThree",
+    label: "Dîner de Gala & Remise des Trophées",
     title: "Africa’s digital landscape",
     desc1: `Analyzing emerging technologies in
 content production and distribution,

@@ -46,14 +46,14 @@ export const Hero = () => {
                 alt={"logo"}
                 width={600}
                 height={600}
-                className="rounded-2xl bg-transparent opacity-60"
+                className="w-full max-w-xs rounded-2xl bg-transparent opacity-60 lg:max-w-sm xl:max-w-lg"
               />
             </div>
 
             {/* Text */}
             <div className="flex  items-center justify-center px-4">
               <div className="w-full max-w-4xl">
-                <p className="mx-auto mt-10 bg-gradient-to-r from-[#0796F5] via-[#D34FAC] to-[#562196] bg-clip-text text-center text-2xl font-bold uppercase text-transparent md:text-3xl lg:text-4xl">
+                <p className="mx-auto mt-10 bg-gradient-to-r from-[#0796F5] via-[#D34FAC] to-[#562196] bg-clip-text text-center text-xl font-bold uppercase text-transparent md:text-3xl lg:text-3xl">
                   <ReactTyped
                     strings={[
                       "Let’s start building the future of Africa’s digital revolution together.",

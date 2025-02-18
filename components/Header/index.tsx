@@ -9,7 +9,6 @@ import LanguageSelect from "../Language/LanguageSelect";
 import { useLanguageContext } from "@/app/context/LanguageContext";
 import { menuDataEn, menuDataFr } from "./menuData";
 
-// const Header = () => {
 //   const { language } = useLanguageContext();
 //   const menuData = language === "en" ? menuDataEn : menuDataFr;
 //   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -239,7 +238,7 @@ const Header = () => {
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
                   aria-label="Mobile Menu"
-                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px]   lg:hidden"
                 >
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] ${
@@ -330,12 +329,13 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                {/* <button
+                {/* <Link
+                  href={"/get_pass"}
                   aria-label="Get the Plan button"
                   className="group/btn inline-flex transform items-center gap-2 rounded-lg bg-gradient-to-br from-[#0796F5] via-[#562196] to-[#D34FAC] px-4 py-1.5 font-medium text-white shadow-lg transition-all duration-300  hover:scale-105 hover:shadow-xl"
                 >
                   <span className="">Get your pass</span>
-                </button> */}
+                </Link> */}
                 <div>
                   {/* <ThemeToggler /> */}
                   <LanguageSelect sticky={sticky} />
