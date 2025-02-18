@@ -277,9 +277,9 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={` animation-hover relative inline-block px-2 py-2 text-transparent text-white ${
+                            className={` animation-hover relative inline-block px-2 py-2 text-gray-600  ${
                               usePathName === menuItem.path
-                                ? "animation-active bg-gradient-to-r px-2 py-2 sm:text-gray-600 lg:text-white"
+                                ? "animation-active bg-gradient-to-r px-2 py-2 text-gray-600 sm:text-gray-600 lg:text-white"
                                 : "sm:text-gray-600 lg:text-white"
                             }`}
                           >
