@@ -39,9 +39,9 @@ export default function Home() {
       <ParticleAnimation>
         <AboutUs />
         <ThemeAfricaSummit />
-        {/* <Designing />
-        <Blog />
-        <FeaturesTab /> */}
+        {/* <Designing /> */}
+        {/* <Blog /> */}
+        {/* <FeaturesTab /> */}
         {/* <Brands /> */}
         {/* <Feature /> */}
         {/* <About /> */}
@@ -50,8 +50,8 @@ export default function Home() {
         {/* <Integration /> */}
         {/* <CTA /> */}
 
-        {/* <Testimonial />
-        <Pricing /> */}
+        {/* <Testimonial /> */}
+        {/* <Pricing /> */}
         <Mission />
         <InfoAfricaItSummit />
         <Contact />

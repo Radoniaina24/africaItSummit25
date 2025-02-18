@@ -34,7 +34,7 @@ export const Hero = () => {
             {/* organizer */}
 
             {/* Organizer (Positionné en haut à droite) */}
-            <div className="absolute right-20 top-20 z-99999 sm:right-20 sm:top-8 md:right-45 md:top-8 lg:right-40 lg:top-8 xl:right-72 xl:top-7.5">
+            <div className="absolute right-20 top-20 z-99999 sm:right-20 sm:top-10 md:right-45 md:top-10 lg:right-40 lg:top-10 xl:right-72 xl:top-10">
               <Organizer />
             </div>
             {/* Logo */}

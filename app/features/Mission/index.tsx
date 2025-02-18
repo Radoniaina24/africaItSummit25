@@ -15,7 +15,7 @@ export default function Mission() {
   const subtitle =
     language === "fr"
       ? "L’Africa IT Summit est le rendez-vous annuel incontournable pour accélérer la transformation digitale du continent. Il rassemble les leaders technologiques, entreprises innovantes, startups, investisseurs et décideurs publics afin de créer un écosystème dynamique propice à l’innovation, aux investissements et aux collaborations stratégiques."
-      : "The Africa IT Summit is the premier annual event dedicated to accelerating the continent’s digital transformation. It brings together technology leaders, innovative companies, startups, investors, and policymakers to foster a dynamic ecosystem that drives innovation, investment, and strategic collaborations.";
+      : "The Africa IT Summit is the first annual event dedicated to accelerating the continent’s digital transformation. It brings together technology leaders, innovative companies, startups, investors, and policymakers to foster a dynamic ecosystem that drives innovation, investment, and strategic collaborations.";
   return (
     <section>
       <div className="relative bg-white px-6 py-20 ">

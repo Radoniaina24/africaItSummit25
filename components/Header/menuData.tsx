@@ -94,6 +94,7 @@ export const menuDataEn: Menu[] = [
     newTab: false,
     path: "/",
   },
+
   // {
   //   id: 2,
   //   title: "Features",
