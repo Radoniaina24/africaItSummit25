@@ -4,6 +4,7 @@ import { useLanguageContext } from "@/app/context/LanguageContext";
 import { useFormik } from "formik";
 import React from "react";
 import * as Yup from "yup";
+import InputFormik from "./Componnents/InputFormik";
 export default function FormStep2() {
   const { language } = useLanguageContext();
   const { setStep, setFormData, formData } = useFormPassContext();
@@ -44,71 +45,60 @@ export default function FormStep2() {
       className="space-y-4"
       autoComplete="off"
     >
-      <input
+      <InputFormik
+        label={language === "fr" ? "Nom de l’entreprise" : "Company Name"}
         type="text"
-        name="companyName"
+        id="companyName"
         placeholder={language === "fr" ? "Nom de l’entreprise" : "Company Name"}
-        className="w-full rounded border p-2"
-        onChange={billingFormik.handleChange}
         value={billingFormik.values.companyName}
+        onChange={billingFormik.handleChange}
+        error={billingFormik.errors.companyName}
+        touched={billingFormik.touched.companyName}
       />
-      {billingFormik.touched.companyName &&
-        billingFormik.errors.companyName && (
-          <p className="text-sm text-red-500">
-            {billingFormik.errors.companyName}
-          </p>
-        )}
-      <input
+      <InputFormik
+        label={language === "fr" ? "Adresse de facturation" : "Billing Address"}
         type="text"
-        name="billingAddress"
+        id="billingAddress"
         placeholder={
           language === "fr" ? "Adresse de facturation" : "Billing Address"
         }
-        className="w-full rounded border p-2"
-        onChange={billingFormik.handleChange}
         value={billingFormik.values.billingAddress}
+        onChange={billingFormik.handleChange}
+        error={billingFormik.errors.billingAddress}
+        touched={billingFormik.touched.billingAddress}
       />
-      {billingFormik.touched.billingAddress &&
-        billingFormik.errors.billingAddress && (
-          <p className="text-sm text-red-500">
-            {billingFormik.errors.billingAddress}
-          </p>
-        )}
-      <input
+
+      <InputFormik
+        label={language === "fr" ? "Code postal" : "Postal Code"}
         type="text"
-        name="postalCode"
+        id="postalCode"
         placeholder={language === "fr" ? "Code postal" : "Postal Code"}
-        className="w-full rounded border p-2"
-        onChange={billingFormik.handleChange}
         value={billingFormik.values.postalCode}
+        onChange={billingFormik.handleChange}
+        error={billingFormik.errors.postalCode}
+        touched={billingFormik.touched.postalCode}
       />
-      {billingFormik.touched.postalCode && billingFormik.errors.postalCode && (
-        <p className="text-sm text-red-500">
-          {billingFormik.errors.postalCode}
-        </p>
-      )}
-      <input
+
+      <InputFormik
+        label={language === "fr" ? "Ville" : "City"}
         type="text"
-        name="city"
+        id="city"
         placeholder={language === "fr" ? "Ville" : "City"}
-        className="w-full rounded border p-2"
-        onChange={billingFormik.handleChange}
         value={billingFormik.values.city}
-      />
-      {billingFormik.touched.city && billingFormik.errors.city && (
-        <p className="text-sm text-red-500">{billingFormik.errors.city}</p>
-      )}
-      <input
-        type="text"
-        name="country"
-        placeholder={language === "fr" ? "Pays" : "Country"}
-        className="w-full rounded border p-2"
         onChange={billingFormik.handleChange}
-        value={billingFormik.values.country}
+        error={billingFormik.errors.city}
+        touched={billingFormik.touched.city}
       />
-      {billingFormik.touched.country && billingFormik.errors.country && (
-        <p className="text-sm text-red-500">{billingFormik.errors.country}</p>
-      )}
+      <InputFormik
+        label={language === "fr" ? "Pays" : "Country"}
+        type="text"
+        id="country"
+        placeholder={language === "fr" ? "Pays" : "Country"}
+        value={billingFormik.values.country}
+        onChange={billingFormik.handleChange}
+        error={billingFormik.errors.country}
+        touched={billingFormik.touched.country}
+      />
       <div className="flex justify-between space-x-4">
         <button
           onClick={() => setStep(0)}

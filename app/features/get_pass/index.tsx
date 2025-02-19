@@ -5,6 +5,7 @@ import React from "react";
 import SectionHeader from "@/components/Common/SectionHeader";
 import MultiStepFormPass from "./FromPass";
 import { FormPassProvider } from "@/app/context/FormPassContext";
+import Pass from "./Pass";
 
 export default function GetYourPass() {
   const { language } = useLanguageContext();
@@ -35,7 +36,7 @@ export default function GetYourPass() {
           <FrameDecoration />
         </div>
       </div>
-      {/* <Pass /> */}
+      <Pass />
       <FormPassProvider>
         <section className="h-screen bg-white">
           <MultiStepFormPass />

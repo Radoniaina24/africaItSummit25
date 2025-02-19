@@ -30,8 +30,11 @@ export default function MultiStepForm() {
   };
   const { step, setStep } = useFormPassContext();
   return (
-    <div className="mx-auto  max-w-xl rounded-lg bg-white p-6 shadow-lg">
+    <div className=" mx-auto max-w-c-1016 rounded-lg bg-white p-6 shadow-lg">
       <div className="mb-6">
+        <p className="my-5 text-center text-lg font-semibold">
+          {steps[language][step]}
+        </p>
         <div className="h-2 w-full overflow-hidden rounded-full bg-gray-200">
           <motion.div
             className="h-2 rounded-full bg-blue-500"
@@ -40,9 +43,6 @@ export default function MultiStepForm() {
             transition={{ duration: 0.5 }}
           />
         </div>
-        <p className="mt-2 text-center text-sm font-semibold">
-          {steps[language][step]}
-        </p>
       </div>
 
       {step === 0 && <FormStep1 />}

@@ -1,9 +1,11 @@
 "use client";
 import React from "react";
-import { useFormik } from "formik";
+import { ErrorMessage, useFormik } from "formik";
 import * as Yup from "yup";
 import { useFormPassContext } from "@/app/context/FormPassContext";
 import { useLanguageContext } from "@/app/context/LanguageContext";
+import FormikErrorMessage from "./Componnents/FormikErrorMessage";
+import InputFormik from "./Componnents/InputFormik";
 export default function FormStep1() {
   const { language } = useLanguageContext();
   const { setStep, setFormData, step, formData } = useFormPassContext();
@@ -37,50 +39,43 @@ export default function FormStep1() {
     },
   });
 
-  console.log("Current step:", step);
   return (
     <form
       onSubmit={formik.handleSubmit}
       className="space-y-4"
       autoComplete="off"
     >
-      <input
+      <InputFormik
+        label={language === "fr" ? "Nom Complet" : "FullName"}
         type="text"
-        name="name"
+        id="name"
         placeholder={language === "fr" ? "Nom Complet" : "FullName"}
-        className="w-full rounded border p-2"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
         value={formik.values.name}
-      />
-      {formik.touched.name && formik.errors.name && (
-        <p className="text-sm text-red-500">{formik.errors.name}</p>
-      )}
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        className="w-full rounded border p-2"
         onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.email}
+        error={formik.errors.name}
+        touched={formik.touched.name}
       />
-      {formik.touched.email && formik.errors.email && (
-        <p className="text-sm text-red-500">{formik.errors.email}</p>
-      )}
-      <input
-        type="text"
-        name="phone"
-        placeholder={language === "fr" ? "Numéro de téléphone" : "Phone number"}
-        className="w-full rounded border p-2"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.phone}
-      />
-      {formik.touched.phone && formik.errors.phone && (
-        <p className="text-sm text-red-500">{formik.errors.phone}</p>
-      )}
 
+      <InputFormik
+        label="Email"
+        type="text"
+        id="email"
+        placeholder="Email"
+        value={formik.values.email}
+        onChange={formik.handleChange}
+        error={formik.errors.email}
+        touched={formik.touched.email}
+      />
+      <InputFormik
+        label={language === "fr" ? "Numéro de téléphone" : "Phone number"}
+        type="text"
+        id="phone"
+        placeholder={language === "fr" ? "Numéro de téléphone" : "Phone number"}
+        value={formik.values.phone}
+        onChange={formik.handleChange}
+        error={formik.errors.phone}
+        touched={formik.touched.phone}
+      />
       <div className="flex justify-end">
         <button
           type="submit"
