@@ -10,8 +10,8 @@ export interface PricingPlan {
   id: string;
   label: string;
   tarif: string;
-  normalPrice: number;
-  price: number;
+  normalPrice: number | null;
+  price: number | null;
   title: string;
   description: string;
   features: Feature[];

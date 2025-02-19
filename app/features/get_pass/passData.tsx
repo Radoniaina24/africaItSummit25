@@ -81,7 +81,7 @@ export const passData: PricingPlans = {
       tarif: "Tarif Early Bird",
       normalPrice: 150, // Added normalPrice
       price: 130,
-      title: "Attendee – Standard",
+      title: "Attendee Standart",
       description:
         " Idéal pour les étudiants et passionnés du numérique souhaitant explorer l’événement, découvrir les innovations et assister aux conférences.",
       features: [
@@ -113,7 +113,7 @@ export const passData: PricingPlans = {
       ],
       isPopular: false,
       id: "tabOne",
-      label: "Attendee",
+      label: "Attendee Standart",
     },
     {
       tarif: "Tarif Early Bird",
@@ -163,59 +163,59 @@ export const passData: PricingPlans = {
       id: "tabTwo",
       label: "Startup Pass",
     },
-    // {
-    //   tarif: "Tarif Early Bird",
-    //   price: 450,
-    //   normalPrice: 550, // Added normalPrice
-    //   title: " Attendee – Business & Leaders ",
-    //   description:
-    //     "Conçu pour les entrepreneurs, cadres et décideurs cherchant des opportunités stratégiques et des connexions de haut niveau.",
-    //   features: [
-    //     {
-    //       text: "Accès complet aux expositions et conférences",
-    //       isAvailable: true,
-    //       icon: <FaCircleCheck size={20} className="text-green-500" />,
-    //     },
-    //     {
-    //       text: "Networking premium avec lounge dédié",
-    //       isAvailable: true,
-    //       icon: <FaCircleCheck size={20} className="text-green-500" />,
-    //     },
-    //     {
-    //       text: "Accès aux sessions B2B & investisseurs",
-    //       isAvailable: true,
-    //       icon: <FaCircleCheck size={20} className="text-green-500" />,
-    //     },
-    //     {
-    //       text: " Participation aux workshops et tables rondes avancées",
-    //       isAvailable: true,
-    //       icon: <FaCircleCheck size={20} className="text-green-500" />,
-    //     },
-    //     {
-    //       text: " Accès au dîner de gala (inclus)",
-    //       isAvailable: true,
-    //       icon: <FaCircleCheck size={20} className="text-green-500" />,
-    //     },
-    //     {
-    //       text: "Pause café et déjeuner inclus (pour chaque journée)",
-    //       isAvailable: true,
-    //       icon: <FaCircleCheck size={20} className="text-green-500" />,
-    //     },
-    //     {
-    //       text: " Visibilité sur le catalogue officiel",
-    //       isAvailable: true,
-    //       icon: <FaTimesCircle size={20} className="text-red-500" />,
-    //     },
-    //     {
-    //       text: "Opportunité d’exposition",
-    //       isAvailable: true,
-    //       icon: <FaTimesCircle size={20} className="text-red-500" />,
-    //     },
-    //   ],
-    //   isPopular: false,
-    //   id: "tabOne",
-    //   label: "Attendee",
-    // },
+    {
+      tarif: "Tarif Early Bird",
+      price: 450,
+      normalPrice: 550, // Added normalPrice
+      title: " Attendee  Business ",
+      description:
+        "Conçu pour les entrepreneurs, cadres et décideurs cherchant des opportunités stratégiques et des connexions de haut niveau.",
+      features: [
+        {
+          text: "Accès complet aux expositions et conférences",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Networking premium avec lounge dédié",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Accès aux sessions B2B & investisseurs",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: " Participation aux workshops et tables rondes avancées",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: " Accès au dîner de gala (inclus)",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Pause café et déjeuner inclus (pour chaque journée)",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: " Visibilité sur le catalogue officiel",
+          isAvailable: true,
+          icon: <FaTimesCircle size={20} className="text-red-500" />,
+        },
+        {
+          text: "Opportunité d’exposition",
+          isAvailable: true,
+          icon: <FaTimesCircle size={20} className="text-red-500" />,
+        },
+      ],
+      isPopular: false,
+      id: "tabOnes",
+      label: "Attendee Business",
+    },
     {
       tarif: "Tarif Early Bird",
       normalPrice: 700, // Added normalPrice
@@ -380,6 +380,54 @@ export const passData: PricingPlans = {
       id: "tabFive",
       label: "Dîner de Gala ",
     },
+    {
+      tarif: "Sur invitation uniquement",
+      normalPrice: null, // Pas de prix car sur invitation
+      price: null,
+      title: "Pass VIP & Conférenciers",
+      description:
+        "Accès exclusif réservé aux speakers, experts et personnalités influentes du secteur IT.",
+      features: [
+        {
+          text: "Accès complet aux conférences et événements VIP",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Opportunité de prise de parole et modération de panels",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Sessions de networking privé avec investisseurs & décideurs",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Accès exclusif aux lounges VIP",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Accès au dîner de gala (inclus)",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Affichage de votre nom et photo en tant que panéliste sur le site web et plateformes",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Branding personnel pour valoriser votre expertise & leadership dans la tech",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+      ],
+      isPopular: false,
+      id: "tabVIP",
+      label: "VIP & Conférenciers",
+    },
   ],
   en: [
     {
@@ -418,7 +466,7 @@ export const passData: PricingPlans = {
       ],
       isPopular: false,
       id: "tabOne",
-      label: "Attendee",
+      label: "Attendee Standard",
     },
     {
       tarif: "Tarif Early Bird",
@@ -469,59 +517,59 @@ export const passData: PricingPlans = {
       id: "tabTwo",
       label: "Startup Pass",
     },
-    // {
-    //   tarif: "Early Bird Rate",
-    //   normalPrice: 550, // Added normalPrice
-    //   price: 450,
-    //   title: "Attendee – Business & Leaders",
-    //   description:
-    //     "Designed for entrepreneurs, executives, and decision-makers seeking strategic opportunities and high-level connections.",
-    //   features: [
-    //     {
-    //       text: "Full access to exhibitions and conferences",
-    //       isAvailable: true,
-    //       icon: <FaCircleCheck size={20} className="text-green-500" />,
-    //     },
-    //     {
-    //       text: "Premium networking with dedicated lounge",
-    //       isAvailable: true,
-    //       icon: <FaCircleCheck size={20} className="text-green-500" />,
-    //     },
-    //     {
-    //       text: "Access to B2B sessions & investor meetings",
-    //       isAvailable: true,
-    //       icon: <FaCircleCheck size={20} className="text-green-500" />,
-    //     },
-    //     {
-    //       text: "Participation in workshops and advanced round tables",
-    //       isAvailable: true,
-    //       icon: <FaCircleCheck size={20} className="text-green-500" />,
-    //     },
-    //     {
-    //       text: "Access to the gala dinner (included)",
-    //       isAvailable: true,
-    //       icon: <FaCircleCheck size={20} className="text-green-500" />,
-    //     },
-    //     {
-    //       text: "Coffee and lunch breaks included (for each day)",
-    //       isAvailable: true,
-    //       icon: <FaCircleCheck size={20} className="text-green-500" />,
-    //     },
-    //     {
-    //       text: "Visibility in the official catalog",
-    //       isAvailable: true,
-    //       icon: <FaTimesCircle size={20} className="text-red-500" />,
-    //     },
-    //     {
-    //       text: "Exhibition opportunity",
-    //       isAvailable: true,
-    //       icon: <FaTimesCircle size={20} className="text-red-500" />,
-    //     },
-    //   ],
-    //   isPopular: false,
-    //   id: "tabOne",
-    //   label: "Attendee",
-    // },
+    {
+      tarif: "Early Bird Rate",
+      normalPrice: 550, // Added normalPrice
+      price: 450,
+      title: "Attendee – Business",
+      description:
+        "Designed for entrepreneurs, executives, and decision-makers seeking strategic opportunities and high-level connections.",
+      features: [
+        {
+          text: "Full access to exhibitions and conferences",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Premium networking with dedicated lounge",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Access to B2B sessions & investor meetings",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Participation in workshops and advanced round tables",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Access to the gala dinner (included)",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Coffee and lunch breaks included (for each day)",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Visibility in the official catalog",
+          isAvailable: true,
+          icon: <FaTimesCircle size={20} className="text-red-500" />,
+        },
+        {
+          text: "Exhibition opportunity",
+          isAvailable: true,
+          icon: <FaTimesCircle size={20} className="text-red-500" />,
+        },
+      ],
+      isPopular: false,
+      id: "tabOnes",
+      label: "Attendee – Business",
+    },
     {
       tarif: "Early Bird Rate",
       normalPrice: 700, // Added normalPrice
@@ -685,6 +733,54 @@ export const passData: PricingPlans = {
       isPopular: false,
       id: "tabFive",
       label: "Gala Dinner",
+    },
+    {
+      tarif: "Invitation Only",
+      normalPrice: null, // No price since it's by invitation
+      price: null,
+      title: "VIP & Speakers Pass",
+      description:
+        "Exclusive access for speakers, experts, and key IT industry figures.",
+      features: [
+        {
+          text: "Full access to conferences and VIP events",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Opportunity to speak and moderate panels",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Private networking sessions with investors & decision-makers",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Exclusive access to VIP lounges",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Gala dinner access (included)",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Name & photo displayed as a panelist on website and platforms",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+        {
+          text: "Personal branding to highlight expertise & leadership in tech",
+          isAvailable: true,
+          icon: <FaCircleCheck size={20} className="text-green-500" />,
+        },
+      ],
+      isPopular: false,
+      id: "tabVIP",
+      label: "VIP & Speakers",
     },
   ],
 };

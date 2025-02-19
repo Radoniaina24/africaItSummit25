@@ -5,34 +5,37 @@ import FrameDecoration from "@/components/Framedecoration/Framedecoration";
 
 import React from "react";
 import Pass from "./Pass";
+import SectionHeader from "@/components/Common/SectionHeader";
 
 export default function GetYourPass() {
   const { language } = useLanguageContext();
   const title = {
-    fr: "Obtenez votre pass",
-    en: "Get your pass",
+    fr: "Tarifs & Avantages des Pass  Africa IT Summit 2025",
+    en: "Pricing & Benefits of Passes  Africa IT Summit 2025",
   };
   const description = {
-    fr: "Décembre 2025 à Maurice",
-    en: "December 2025 in Mauritius",
+    fr: "L’Africa IT Summit propose des pass accessibles et adaptés à chaque profil, que vous soyez étudiant, startup innovante, investisseur ou entrepreneur en quête de partenariats.",
+    en: "The Africa IT Summit offers accessible and tailored passes for every profile, whether you are a student, an innovative startup, an investor, or an entrepreneur seeking partnerships.",
   };
+
   return (
     <section className="bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5]">
       {/* Title and description */}
       <div className="relative flex items-center justify-center bg-gradient-to-br from-[#63b6f1]  via-[#a261d4] to-[#e575c5] py-36 sm:h-[300px] lg:h-[400px] xl:h-[600px]">
-        {/* <ScrollTitle text={title[language]} /> */}
-        <div className="mx-auto max-w-4xl rounded-lg bg-transparent px-5  text-center text-2xl font-semibold text-blue-600  backdrop-blur-sm  sm:text-2xl md:text-4xl lg:text-4xl  xl:text-5xl">
-          <div className="bg-gradient-to-br from-[#337dae] via-[#562196]  to-[#e722ac] bg-clip-text  text-transparent">
-            {title[language]}
-          </div>
-          <p className="py-5 text-lg text-white md:text-2xl">
-            {description[language]}
-          </p>
-        </div>
+        <SectionHeader
+          headerInfo={{
+            title: "",
+            subtitle: title[language],
+            description: description[language],
+          }}
+          subtitleColor={["#0796F5", "#562196", "##a261d4"]}
+          descriptionColor="white"
+        />
         <div className="absolute bottom-0 w-full">
           <FrameDecoration />
         </div>
       </div>
+
       <Pass />
     </section>
   );

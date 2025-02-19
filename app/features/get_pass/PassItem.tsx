@@ -45,11 +45,14 @@ export const PassItem = ({ pass }: { pass: PricingPlan }) => {
         </h3>
         <h3 className="text-xl font-bold text-black lg:text-2xl  ">{tarif}</h3>
         <h3 className="  text-lg font-bold  text-indigo-400 line-through  ">
-          €{normalPrice}{" "}
+          {normalPrice ? "€" + normalPrice : ""}
         </h3>
         <h3 className="mb-7.5 text-3xl font-bold text-black  ">
-          €{price}{" "}
-          <span className="text-regular text-waterloo "> TTC / pass</span>
+          {price ? "€" + price : ""}
+          <span className="text-regular text-waterloo ">
+            {" "}
+            {price ? "TTC / pass" + price : ""}{" "}
+          </span>
         </h3>
       </div>
 
