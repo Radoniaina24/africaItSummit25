@@ -30,7 +30,7 @@ export const PassItem = ({ pass }: { pass: PricingPlan }) => {
     pass;
   return (
     <div
-      className={`animate_top group relative rounded-lg border border-x-4 border-y-4  border-[#D34FAC]  bg-white p-7.5 shadow-solid-10  xl:p-12.5 ${
+      className={`animate_top group relative  rounded-lg border border-x-4 border-y-4  border-[#D34FAC]  bg-white p-7.5 shadow-solid-10  xl:p-12.5 ${
         isPopular ? "relative" : ""
       }`}
     >
@@ -51,19 +51,19 @@ export const PassItem = ({ pass }: { pass: PricingPlan }) => {
           {price ? "€" + price : ""}
           <span className="text-regular text-waterloo ">
             {" "}
-            {price ? "TTC / pass" + price : ""}{" "}
+            {price ? "TTC / pass" : ""}
           </span>
         </h3>
       </div>
 
-      <p className="text-lead text-lg">{description}</p>
+      <p className=" text-black">{description}</p>
 
       <div className="d mt-9 border-t border-stroke   pb-12.5">
         <ul className="divide-y divide-gray-200">
           {features.map((feature, index) => (
             <li
               key={index}
-              className={`md:text-md flex items-center justify-between py-2 text-black lg:text-lg ${
+              className={`text-md  flex items-center justify-between py-2  ${
                 feature.isAvailable ? "" : "opacity-40"
               } last:mb-0 `}
             >

@@ -28,7 +28,8 @@ export default function GetYourPass() {
             subtitle: title[language],
             description: description[language],
           }}
-          subtitleColor={["#0796F5", "#562196", "##a261d4"]}
+          subtitleColor={["#0796F5", "#562196", "#a261d4"]}
+          // subtitleColor={"white"}
           descriptionColor="white"
         />
         <div className="absolute bottom-0 w-full">
