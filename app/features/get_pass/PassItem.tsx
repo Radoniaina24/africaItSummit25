@@ -1,6 +1,5 @@
 import React from "react";
-import { FeatureTab } from "@/types/featureTab";
-import Image from "next/image";
+
 import { PricingPlan } from "@/types/pass";
 
 // const PassItem = ({ featureTab }: { featureTab: FeatureTab }) => {

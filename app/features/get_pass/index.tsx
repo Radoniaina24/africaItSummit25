@@ -1,11 +1,10 @@
 "use client";
 import { useLanguageContext } from "@/app/context/LanguageContext";
-
 import FrameDecoration from "@/components/Framedecoration/Framedecoration";
-
 import React from "react";
-import Pass from "./Pass";
 import SectionHeader from "@/components/Common/SectionHeader";
+import MultiStepFormPass from "./FromPass";
+import { FormPassProvider } from "@/app/context/FormPassContext";
 
 export default function GetYourPass() {
   const { language } = useLanguageContext();
@@ -36,8 +35,12 @@ export default function GetYourPass() {
           <FrameDecoration />
         </div>
       </div>
-
-      <Pass />
+      {/* <Pass /> */}
+      <FormPassProvider>
+        <section className="h-screen bg-white">
+          <MultiStepFormPass />
+        </section>
+      </FormPassProvider>
     </section>
   );
 }
