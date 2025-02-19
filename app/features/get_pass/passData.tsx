@@ -521,7 +521,7 @@ export const passData: PricingPlans = {
       tarif: "Early Bird Rate",
       normalPrice: 550, // Added normalPrice
       price: 450,
-      title: "Attendee – Business",
+      title: "Attendee Business",
       description:
         "Designed for entrepreneurs, executives, and decision-makers seeking strategic opportunities and high-level connections.",
       features: [
@@ -568,7 +568,7 @@ export const passData: PricingPlans = {
       ],
       isPopular: false,
       id: "tabOnes",
-      label: "Attendee – Business",
+      label: "Attendee Business",
     },
     {
       tarif: "Early Bird Rate",
