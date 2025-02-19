@@ -10,7 +10,7 @@ const TabItem = ({ id, label, activeTab, setActiveTab, index }: any) => {
   return (
     <div
       onClick={() => setActiveTab(id)}
-      className={`relative flex w-full cursor-pointer items-center justify-center gap-4 border-b border-stroke  px-5 py-2 last:border-0 md:w-auto md:border-0 md:py-5 lg:px-10 xl:px-13.5 xl:py-5 ${
+      className={`relative flex w-full cursor-pointer items-center justify-center gap-4 border-b border-stroke  px-5 py-2 last:border-0 md:w-auto md:border-0 md:py-5 lg:px-10 xl:px-10 xl:py-5 ${
         activeTab === id
           ? "active before:absolute before:bottom-0 before:left-0 before:h-1 before:w-full before:rounded-tl-[4px] before:rounded-tr-[4px] before:bg-gradient-to-r before:from-[#D34FAC] before:to-[#3E7DFF]"
           : ""
