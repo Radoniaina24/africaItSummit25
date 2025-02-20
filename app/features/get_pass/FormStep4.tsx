@@ -119,13 +119,13 @@ export default function FormStep4() {
       <div className="mt-5 flex justify-between space-x-4">
         <button
           onClick={() => setStep(2)}
-          className="rounded bg-gray-300 px-4 py-2"
+          className="rounded-full bg-gray-300  px-6 py-2 text-sm hover:bg-gray-400  hover:text-white"
         >
           {language === "fr" ? "Précédent" : "Previous"}
         </button>
         <button
           type="submit"
-          className="rounded bg-blue-500 px-4 py-2 text-white"
+          className="rounded-full bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] px-6 py-2 text-sm text-white hover:from-[#4486b6]  hover:via-[#8125c8] hover:to-[#f050c2]"
         >
           {language === "fr" ? "Suivant" : "Next"}
         </button>

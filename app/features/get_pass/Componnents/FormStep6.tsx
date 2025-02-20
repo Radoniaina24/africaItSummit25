@@ -74,13 +74,13 @@ export default function FormStep6() {
       <div className="mt-5 flex justify-between space-x-4">
         <button
           onClick={() => setStep(4)}
-          className="rounded bg-gray-300 px-4 py-2"
+          className="rounded-full bg-gray-300  px-6 py-2 text-sm hover:bg-gray-400  hover:text-white"
         >
           {language === "fr" ? "Précédent" : "Previous"}
         </button>
         <button
           type="button"
-          className="rounded bg-green-600 px-4 py-2 text-white"
+          className="rounded-full bg-green-600 px-4 py-2 text-sm text-white hover:bg-green-700"
         >
           {language === "fr" ? "Soumettre" : "Submit"}
         </button>

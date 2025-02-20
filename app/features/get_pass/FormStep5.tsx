@@ -1,9 +1,10 @@
 "use client";
 import React, { use, useEffect, useState } from "react";
-
+import { FaCirclePlus } from "react-icons/fa6";
 import { PassType, useFormPassContext } from "@/app/context/FormPassContext";
 import { useLanguageContext } from "@/app/context/LanguageContext";
 
+import { MdOutlineRemoveCircle } from "react-icons/md";
 export default function FormStep5() {
   const { language } = useLanguageContext();
   const { setStep, setFormData, step, formData } = useFormPassContext();
@@ -68,20 +69,20 @@ export default function FormStep5() {
                 <td className="p-2">{ticket.type}</td>
                 <td className="p-2 text-center">{ticket.priceEarly}</td>
                 <td className="flex items-center justify-center gap-2 p-2 text-center">
-                  <button
+                  <MdOutlineRemoveCircle
+                    className="text-red-600 hover:cursor-pointer hover:text-red-700"
+                    size={25}
                     onClick={() => updateQuantity(index, -1)}
-                    className="rounded bg-gray-300 px-2 py-1"
-                    disabled={ticket.quantity === 1}
-                  >
-                    -
-                  </button>
+                    // disabled={ticket.quantity === 1}
+                  />
+
                   <span className="px-3">{ticket.quantity}</span>
-                  <button
+
+                  <FaCirclePlus
+                    className="text-green-600 hover:cursor-pointer hover:text-green-700"
+                    size={22}
                     onClick={() => updateQuantity(index, 1)}
-                    className="rounded bg-blue-500 px-2 py-1 text-white"
-                  >
-                    +
-                  </button>
+                  />
                 </td>
                 <td className="p-2 text-center">
                   {ticket.priceEarly * ticket.quantity} €
@@ -107,14 +108,14 @@ export default function FormStep5() {
       <div className="mt-5 flex justify-between space-x-4">
         <button
           onClick={() => setStep(3)}
-          className="rounded bg-gray-300 px-4 py-2"
+          className="rounded-full bg-gray-300  px-6 py-2 text-sm hover:bg-gray-400  hover:text-white"
         >
           {language === "fr" ? "Précédent" : "Previous"}
         </button>
         <button
           onClick={handleClik}
           type="button"
-          className="rounded bg-blue-500 px-4 py-2 text-white"
+          className="rounded-full bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] px-6 py-2 text-sm text-white hover:from-[#4486b6]  hover:via-[#8125c8] hover:to-[#f050c2]"
         >
           {language === "fr" ? "Suivant" : "Next"}
         </button>

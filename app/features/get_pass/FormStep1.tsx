@@ -79,7 +79,7 @@ export default function FormStep1() {
       <div className="flex justify-end">
         <button
           type="submit"
-          className="rounded bg-blue-500 px-4 py-2 text-white"
+          className="rounded-full bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] px-6 py-2 text-sm text-white hover:from-[#4486b6]  hover:via-[#8125c8] hover:to-[#f050c2]"
         >
           {language === "fr" ? "Suivant" : "Next"}
         </button>

@@ -36,19 +36,18 @@ export default function MultiStepForm() {
   return (
     <div className=" mx-auto max-w-c-1016 rounded-lg bg-white p-6 shadow-lg">
       <div className="mb-6">
-        <p className="my-5 text-center text-lg font-semibold">
-          {steps[language][step]}
-        </p>
         <div className="h-3 w-full overflow-hidden rounded-full bg-gray-200">
           <motion.div
-            className="h-3 rounded-full bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5]"
+            className="h-3 rounded-full bg-gradient-to-br  from-[#4486b6]  via-[#8125c8] to-[#f050c2]"
             initial={{ width: "0%" }}
             animate={{ width: `${((step + 1) / 6) * 100}%` }}
             transition={{ duration: 0.5 }}
           />
         </div>
+        <p className="my-5 text-center text-xl font-bold  text-primary">
+          {steps[language][step]}
+        </p>
       </div>
-
       {step === 0 && <FormStep1 />}
       {step === 1 && <FormStep3 />}
       {step === 2 && <FormStep2 />}
