@@ -5,6 +5,7 @@ import { useFormPassContext } from "@/app/context/FormPassContext";
 import FormStep2 from "./FormStep2";
 import { useLanguageContext } from "@/app/context/LanguageContext";
 import FormStep3 from "./FormStep3";
+import FormStep4 from "./FormStep4";
 
 export default function MultiStepForm() {
   const { language } = useLanguageContext();
@@ -12,17 +13,16 @@ export default function MultiStepForm() {
   const steps = {
     fr: [
       "Informations Personnelles",
-
-      "Informations de Facturation",
       "Choisissez votre Pass",
+      "Informations de Facturation",
       "Facturation & Paiement",
       "Résumé de la Commande",
       "Conditions & Soumission",
     ],
     en: [
       "Personal Information",
-      "Billing Information",
       "Choose Your Pass",
+      "Billing Information",
       "Billing & Payment",
       "Order Summary",
       "Terms & Submission",
@@ -46,8 +46,9 @@ export default function MultiStepForm() {
       </div>
 
       {step === 0 && <FormStep1 />}
-      {step === 1 && <FormStep2 />}
-      {step === 2 && <FormStep3 />}
+      {step === 1 && <FormStep3 />}
+      {step === 2 && <FormStep2 />}
+      {step === 3 && <FormStep4 />}
       {/* {step === 2 && (
         <div className="space-y-4">
           <h2 className="text-lg font-bold">Sélection du Pass</h2>

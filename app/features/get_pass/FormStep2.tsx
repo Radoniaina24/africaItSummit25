@@ -36,7 +36,7 @@ export default function FormStep2() {
     }),
     onSubmit: (values) => {
       setFormData((prev) => ({ ...prev, ...values }));
-      setStep(2);
+      setStep(3);
     },
   });
   return (
@@ -101,7 +101,7 @@ export default function FormStep2() {
       />
       <div className="flex justify-between space-x-4">
         <button
-          onClick={() => setStep(0)}
+          onClick={() => setStep(1)}
           className="rounded bg-gray-300 px-4 py-2"
         >
           {language === "fr" ? "Précédent" : "Previous"}

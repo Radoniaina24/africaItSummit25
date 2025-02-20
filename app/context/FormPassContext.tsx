@@ -1,15 +1,22 @@
 "use client";
 import React, { createContext, useContext, useState } from "react";
+export interface PassType {
+  type: string;
+  priceEarly: number;
+}
 interface FormData {
   name: string;
   email: string;
   phone: string;
-  passTypes: string[];
+  passTypes: PassType[];
   companyName: string;
   billingAddress: string;
   postalCode: string;
   city: string;
   country: string;
+  cardNumber: string;
+  expirationDate: string;
+  cvv: string;
 }
 
 const FormPassContext = createContext<any | null>(null);
@@ -25,6 +32,9 @@ function FormPassProvider({ children }: { children: React.ReactNode }) {
     postalCode: "",
     city: "",
     country: "",
+    cardNumber: "",
+    expirationDate: "",
+    cvv: "",
   });
   console.log(formData);
   return (
