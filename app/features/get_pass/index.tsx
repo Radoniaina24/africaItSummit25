@@ -18,6 +18,15 @@ export default function GetYourPass() {
     en: "The Africa IT Summit offers accessible and tailored passes for every profile, whether you are a student, an innovative startup, an investor, or an entrepreneur seeking partnerships.",
   };
 
+  const titleForm = {
+    fr: "Formulaire d’Inscription et Achat de Pass – Africa IT Summit 2025",
+    en: "Registration and Pass Purchase Form – Africa IT Summit 2025",
+  };
+  const descriptionForm = {
+    fr: "Remarque importante :Le paiement pour l’achat des pass se fait exclusivement par carte bancaire (Visa, MasterCard, ou autre paiement bancaire international).",
+    en: "Important Notice: Payment for pass purchases is exclusively made via bank card (Visa, MasterCard, or any other internationally accepted bank payment method)",
+  };
+
   return (
     <section className="bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5]">
       {/* Title and description */}
@@ -39,6 +48,15 @@ export default function GetYourPass() {
       <Pass />
       <FormPassProvider>
         <section className="h-screen bg-white">
+          <SectionHeader
+            headerInfo={{
+              title: "",
+              subtitle: titleForm[language],
+              description: descriptionForm[language],
+            }}
+            subtitleColor={["#D34FAC", "#0796F5", "#562196"]}
+            descriptionColor="gray"
+          />
           <MultiStepFormPass />
         </section>
       </FormPassProvider>

@@ -41,6 +41,7 @@ export default function FintechFinancial() {
   };
   return (
     <ParticleAnimation>
+      {" "}
       <section className="bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5]">
         <ScrollTitle text={title[language]} />
         {/* Title and description */}
