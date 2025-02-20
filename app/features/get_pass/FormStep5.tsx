@@ -113,6 +113,7 @@ export default function FormStep5() {
           {language === "fr" ? "Précédent" : "Previous"}
         </button>
         <button
+          disabled={tickets?.length ? false : true}
           onClick={handleClik}
           type="button"
           className="rounded-full bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] px-6 py-2 text-sm text-white hover:from-[#4486b6]  hover:via-[#8125c8] hover:to-[#f050c2]"
