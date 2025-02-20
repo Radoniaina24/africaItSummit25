@@ -4,14 +4,35 @@ import React from "react";
 
 export default function FormStep3() {
   const passOptions: PassType[] = [
-    { type: "Attendee – Standard", priceEarly: 130 },
-    { type: "Startup Pass", priceEarly: 250 },
-    { type: "Attendee – Business", priceEarly: 450 },
-    { type: "Exposant Pass", priceEarly: 500 },
-    { type: "Investor Pass", priceEarly: 700 },
+    {
+      type: "Attendee – Standard",
+      priceEarly: 130,
+      quantity: 1,
+    },
+    {
+      type: "Startup Pass",
+      priceEarly: 250,
+      quantity: 1,
+    },
+    {
+      type: "Attendee – Business",
+      priceEarly: 450,
+      quantity: 1,
+    },
+    {
+      type: "Exposant Pass",
+      priceEarly: 500,
+      quantity: 1,
+    },
+    {
+      type: "Investor Pass",
+      priceEarly: 700,
+      quantity: 1,
+    },
     {
       type: "Dîner de Gala ",
       priceEarly: 120,
+      quantity: 1,
     },
   ];
   const { language } = useLanguageContext();

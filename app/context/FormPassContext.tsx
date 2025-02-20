@@ -3,6 +3,7 @@ import React, { createContext, useContext, useState } from "react";
 export interface PassType {
   type: string;
   priceEarly: number;
+  quantity: number;
 }
 interface FormData {
   name: string;
@@ -14,9 +15,11 @@ interface FormData {
   postalCode: string;
   city: string;
   country: string;
+  cardType: string;
   cardNumber: string;
   expirationDate: string;
   cvv: string;
+  totalAmount: number;
 }
 
 const FormPassContext = createContext<any | null>(null);
@@ -32,11 +35,13 @@ function FormPassProvider({ children }: { children: React.ReactNode }) {
     postalCode: "",
     city: "",
     country: "",
+    cardType: "",
     cardNumber: "",
     expirationDate: "",
     cvv: "",
+    totalAmount: 0,
   });
-  console.log(formData);
+  // console.log(formData);
   return (
     <FormPassContext.Provider
       value={{

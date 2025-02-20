@@ -10,6 +10,7 @@ export default function FormStep4() {
   const { language } = useLanguageContext();
   const { setStep, setFormData, step, formData } = useFormPassContext();
   const initialvalues = {
+    cardType: formData.cardType as string,
     cardNumber: formData.cardNumber as string,
     expirationDate: formData.expirationDate as string,
     cvv: formData.cvv as string,
@@ -18,6 +19,11 @@ export default function FormStep4() {
   const formik = useFormik({
     initialValues: initialvalues,
     validationSchema: Yup.object({
+      cardType: Yup.string().required(
+        language === "fr"
+          ? "Veuillez sélectionner une carte bancaire"
+          : "Please select a payment card.",
+      ),
       cardNumber: Yup.string().required(
         language === "fr"
           ? "Le numéro de la carte est requis"
@@ -46,6 +52,38 @@ export default function FormStep4() {
       className="space-y-4"
       autoComplete="off"
     >
+      <h2
+        className={`text-md mb-0  ${
+          formik.touched.cardType && formik.errors.cardType
+            ? "text-red-500"
+            : "text-black"
+        } `}
+      >
+        {language === "fr" ? "Carte bancaire" : "Bank card"}
+      </h2>
+      <div className="space-y-2">
+        {["Visa", "MasterCard", "Autres cartes bancaires internationales"].map(
+          (option) => (
+            <label
+              key={option}
+              className="flex cursor-pointer items-center space-x-2 rounded-lg border p-2 text-sm  hover:bg-gray-100"
+            >
+              <input
+                type="radio"
+                name="cardType"
+                value={option}
+                checked={formik.values.cardType === option}
+                onChange={formik.handleChange}
+                className="accent-blue-600"
+              />
+              <span>{option}</span>
+            </label>
+          ),
+        )}
+      </div>
+      {formik.touched.cardType && formik.errors.cardType && (
+        <p className="mt-2 text-sm text-red-500">{formik.errors.cardType}</p>
+      )}
       <InputFormik
         label={language === "fr" ? "Numéro de la carte" : "Card Number"}
         type="text"
