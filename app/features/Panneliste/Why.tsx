@@ -87,7 +87,7 @@ export default function Why() {
   };
 
   return (
-    <section className="bg-gradient-to-r from-[#a261d4] via-[#63b6f1] to-[#e575c5] py-20">
+    <section className="bg-white py-20">
       <div className="container mx-auto">
         <SectionHeader
           headerInfo={{
@@ -96,7 +96,7 @@ export default function Why() {
             description: description[language],
           }}
           subtitleColor={["#D34FAC", "#0796F5", "#562196"]}
-          descriptionColor="white"
+          descriptionColor="gray"
         />
         <div className="mt-12 flex flex-wrap justify-center gap-10 p-4">
           {speakerOpportunities[language].map((item, index) => (

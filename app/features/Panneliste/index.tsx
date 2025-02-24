@@ -19,20 +19,18 @@ export default function index() {
   };
   return (
     <section className="bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5]">
-      <div
-        className={` sticky left-1/2 top-30 z-50 sm:top-24 md:top-24 lg:top-24 xl:top-24  `}
-      >
-        <div className="mx-auto max-w-4xl rounded-lg bg-transparent px-5  text-center text-2xl font-semibold text-blue-600  backdrop-blur-sm  sm:text-2xl md:text-4xl lg:text-4xl">
-          <div className="bg-gradient-to-br from-[#337dae]  via-[#562196] to-[#e722ac] bg-clip-text text-transparent">
-            {title[language]}
-          </div>
-        </div>
-      </div>
       {/* Title and description */}
       <div className="relative h-[500px]  bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] py-36">
         {/* <ScrollTitle text={title[language]} /> */}
         <div className="  ">
           <div className="mx-auto text-center">
+            <div className={``}>
+              <div className="mx-auto mb-10 max-w-4xl rounded-lg bg-transparent px-5 text-center text-2xl font-semibold text-blue-600  backdrop-blur-sm  sm:text-2xl md:text-4xl lg:text-4xl">
+                <div className="bg-gradient-to-br from-[#337dae]  via-[#562196] to-[#e722ac] bg-clip-text text-transparent">
+                  {title[language]}
+                </div>
+              </div>
+            </div>
             <p className="mx-auto text-white md:w-4/5 lg:w-3/5 xl:w-[46%]">
               {description[language]}
             </p>
