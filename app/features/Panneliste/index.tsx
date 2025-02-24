@@ -42,9 +42,10 @@ export default function index() {
           <FrameDecoration />
         </div>
       </div>
-      <Why />
+
       <Biography />
       <FormPanelist />
+      <Why />
     </section>
   );
 }
