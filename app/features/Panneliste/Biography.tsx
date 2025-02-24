@@ -65,7 +65,7 @@ export default function Why() {
                 viewport={{ once: true }}
                 className="animate_right md:w-3/5 lg:w-1/2"
               >
-                <div className="rounded-lg bg-white pt-5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-blacksection">
+                <div className="rounded-lg bg-white  shadow-solid-8 ">
                   <h2 className="mx-auto mb-4 bg-gradient-to-r from-[#63b6f1] via-[#a261d4] to-[#e575c5] bg-clip-text text-center text-2xl font-bold text-transparent ">
                     {biography[language]}
                   </h2>

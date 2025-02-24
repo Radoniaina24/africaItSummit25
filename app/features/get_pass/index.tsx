@@ -6,6 +6,7 @@ import SectionHeader from "@/components/Common/SectionHeader";
 import MultiStepFormPass from "./FromPass";
 import { FormPassProvider } from "@/app/context/FormPassContext";
 import Pass from "./Pass";
+import Condition from "./Condition";
 
 export default function GetYourPass() {
   const { language } = useLanguageContext();
@@ -45,6 +46,7 @@ export default function GetYourPass() {
           <FrameDecoration />
         </div>
       </div>
+      <Condition />
       <Pass />
       <FormPassProvider>
         <section className="h-screen bg-white">
