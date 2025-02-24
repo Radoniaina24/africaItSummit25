@@ -4,6 +4,8 @@ import FrameDecoration from "@/components/Framedecoration/Framedecoration";
 import ScrollTitle from "@/components/Scroll/ScrollTitle";
 import React from "react";
 import FormPanelist from "./FormPanelist";
+import Why from "./Why";
+import Biography from "./Biography";
 
 export default function index() {
   const { language } = useLanguageContext();
@@ -17,7 +19,15 @@ export default function index() {
   };
   return (
     <section className="bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5]">
-      <ScrollTitle text={title[language]} />
+      <div
+        className={` sticky left-1/2 top-30 z-50 sm:top-24 md:top-24 lg:top-24 xl:top-24  `}
+      >
+        <div className="mx-auto max-w-4xl rounded-lg bg-transparent px-5  text-center text-2xl font-semibold text-blue-600  backdrop-blur-sm  sm:text-2xl md:text-4xl lg:text-4xl">
+          <div className="bg-gradient-to-br from-[#337dae]  via-[#562196] to-[#e722ac] bg-clip-text text-transparent">
+            {title[language]}
+          </div>
+        </div>
+      </div>
       {/* Title and description */}
       <div className="relative h-[500px]  bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] py-36">
         {/* <ScrollTitle text={title[language]} /> */}
@@ -32,6 +42,8 @@ export default function index() {
           <FrameDecoration />
         </div>
       </div>
+      <Why />
+      <Biography />
       <FormPanelist />
     </section>
   );

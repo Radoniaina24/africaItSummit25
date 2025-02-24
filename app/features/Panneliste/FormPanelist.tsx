@@ -7,7 +7,6 @@ import InputFormik from "../get_pass/Componnents/InputFormik";
 import InputFile from "../get_pass/Componnents/InputFile";
 import TextArea from "../get_pass/Componnents/TextArea";
 import Checkbox from "../get_pass/Componnents/CheckBox";
-import { check } from "prettier";
 
 export default function FormPanelist() {
   const { language } = useLanguageContext();
@@ -66,13 +65,18 @@ export default function FormPanelist() {
     },
   });
   return (
-    <section className=" bg-white pt-10">
-      <div className="mx-auto max-w-4xl px-10">
+    <section className=" bg-white pb-10">
+      <div className="mx-auto max-w-c-1235 px-10 md:px-0">
         <form
           onSubmit={formik.handleSubmit}
           className="space-y-4"
           autoComplete="off"
         >
+          <h2 className="bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] bg-clip-text text-xl  text-transparent">
+            {language === "fr"
+              ? "Informations Personnelles "
+              : " Personal Information "}
+          </h2>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             <InputFormik
               label={language === "fr" ? "Nom Complet" : "FullName"}
@@ -155,6 +159,12 @@ export default function FormPanelist() {
               touched={formik.touched.country}
             />
           </div>
+
+          <h2 className="bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] bg-clip-text text-xl  text-transparent">
+            {language === "fr"
+              ? "Documents à soumettre "
+              : "Documents to Submit "}
+          </h2>
           <InputFormik
             label={
               language === "fr"
@@ -198,10 +208,11 @@ export default function FormPanelist() {
             }
             formik={undefined}
           />
-          <div className="flex justify-end">
+
+          <div className="grid grid-cols-1">
             <button
               type="submit"
-              className="rounded-full bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] px-6 py-2 text-sm text-white hover:from-[#4486b6]  hover:via-[#8125c8] hover:to-[#f050c2]"
+              className="mt-5 rounded-full bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] px-6 py-2 text-sm text-white hover:from-[#4486b6]  hover:via-[#8125c8] hover:to-[#f050c2]"
             >
               {language === "fr" ? "Soumettre" : "Submit"}
             </button>
