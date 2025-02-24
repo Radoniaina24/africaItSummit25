@@ -3,6 +3,7 @@ import { useLanguageContext } from "@/app/context/LanguageContext";
 import FrameDecoration from "@/components/Framedecoration/Framedecoration";
 import ScrollTitle from "@/components/Scroll/ScrollTitle";
 import React from "react";
+import FormPanelist from "./FormPanelist";
 
 export default function index() {
   const { language } = useLanguageContext();
@@ -31,6 +32,7 @@ export default function index() {
           <FrameDecoration />
         </div>
       </div>
+      <FormPanelist />
     </section>
   );
 }
