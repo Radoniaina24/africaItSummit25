@@ -1,9 +1,6 @@
 "use client";
-import Footer from "@/components/Footer";
 import { Montserrat } from "next/font/google";
 import Header from "@/components/Header";
-import Lines from "@/components/Lines";
-import ScrollToTop from "@/components/ScrollToTop";
 import { ThemeProvider } from "next-themes";
 import "../globals.css";
 const inter = Montserrat({
@@ -14,6 +11,7 @@ const inter = Montserrat({
 
 import ToasterContext from "../context/ToastContext";
 import { LanguageProvider } from "../context/LanguageContext";
+import { StoreProvider } from "../StoreProvider";
 
 export default function RootLayout({
   children,
@@ -33,20 +31,22 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         {/* <!-- End Google Tag Manager (noscript) --> */}
-        <ThemeProvider
-          enableSystem={false}
-          attribute="class"
-          defaultTheme="light"
-        >
-          <LanguageProvider>
-            {/* <Lines /> */}
-            <Header />
-            <ToasterContext />
-            {children}
-            {/* <Footer /> */}
-            {/* <ScrollToTop /> */}
-          </LanguageProvider>
-        </ThemeProvider>
+        <StoreProvider>
+          <ThemeProvider
+            enableSystem={false}
+            attribute="class"
+            defaultTheme="light"
+          >
+            <LanguageProvider>
+              {/* <Lines /> */}
+              <Header />
+              <ToasterContext />
+              {children}
+              {/* <Footer /> */}
+              {/* <ScrollToTop /> */}
+            </LanguageProvider>
+          </ThemeProvider>
+        </StoreProvider>
       </body>
     </html>
   );
