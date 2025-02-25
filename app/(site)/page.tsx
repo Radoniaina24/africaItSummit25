@@ -20,6 +20,7 @@ import ThemeAfricaSummit from "@/components/ThemeAfricaSummit/ThemeAfricaSummit"
 import HeroBanner from "@/components/HeroBanner";
 import InfoAfricaItSummit from "../features/Information";
 import Mission from "../features/Mission";
+import Partnership from "../features/partnership";
 
 export const metadata: Metadata = {
   title: "Africa It Summit",
@@ -53,6 +54,7 @@ export default function Home() {
         {/* <Testimonial /> */}
         {/* <Pricing /> */}
         <Mission />
+        {/* <Partnership /> */}
         <InfoAfricaItSummit />
         <Contact />
       </ParticleAnimation>
