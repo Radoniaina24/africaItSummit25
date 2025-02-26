@@ -70,38 +70,53 @@ const menuGroups = [
       //   label: "Users",
       //   route: "/admin/users",
       // },
+      // {
+      //   icon: (
+      //     <svg
+      //       xmlns="http://www.w3.org/2000/svg"
+      //       fill="none"
+      //       viewBox="0 0 24 24"
+      //       strokeWidth="1.5"
+      //       stroke="currentColor"
+      //       width="18"
+      //       height="18"
+      //     >
+      //       <path
+      //         strokeLinecap="round"
+      //         strokeLinejoin="round"
+      //         d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
+      //       />
+      //     </svg>
+      //   ),
+      //   label: "Students",
+      //   route: "#",
+      //   children: [
+      //     {
+      //       icon: <ListSudentSvg />,
+      //       label: "List students",
+      //       route: "/admin/student",
+      //     },
+      //     {
+      //       icon: <AddStudentSvg />,
+      //       label: "Add student",
+      //       route: "/admin/student/add",
+      //     },
+      //   ],
+      // },
       {
         icon: (
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
+            className="fill-current"
             width="18"
             height="18"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
-            />
+            <path d="M9 12c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm6 0c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-9 2c-2.67 0-8 1.34-8 4v2h10v-2c0-2.66-5.33-4-8-4zm12 0c-.29 0-.62.02-.97.05 1.16.84 1.97 2.04 1.97 3.45v2h6v-2c0-2.66-5.33-4-8-4z" />
           </svg>
         ),
-        label: "Students",
-        route: "#",
-        children: [
-          {
-            icon: <ListSudentSvg />,
-            label: "List students",
-            route: "/admin/student",
-          },
-          {
-            icon: <AddStudentSvg />,
-            label: "Add student",
-            route: "/admin/student/add",
-          },
-        ],
+        label: "Panelist",
+        route: "/admin/panelist",
       },
       // {
       //   icon: (
@@ -219,12 +234,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   return (
     <ClickOutside onClick={() => setSidebarOpen(false)}>
       <aside
-        className={`z-9999 fixed left-0 top-0 flex h-screen w-72 flex-col overflow-y-hidden bg-black duration-300 ease-linear lg:translate-x-0 ${
+        className={`fixed left-0 top-0 z-9999 flex h-screen w-72 flex-col overflow-y-hidden bg-black duration-300 ease-linear lg:translate-x-0 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         {/* <!-- SIDEBAR HEADER --> */}
-        <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
+        <div className="flex items-center justify-center gap-2 px-6 py-5.5 lg:py-6.5">
           <Link href="/admin">
             <Image
               width={176}
@@ -259,10 +274,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
 
         <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
           {/* <!-- Sidebar Menu --> */}
-          <nav className="mt-5 px-4 py-4 lg:mt-9 lg:px-6">
+          <nav className="mt-2 px-4 py-4  lg:px-6">
             {menuGroups.map((group, groupIndex) => (
               <div key={groupIndex}>
-                <h3 className="text-bodydark2 mb-4 ml-4 text-sm font-semibold">
+                <h3 className="mb-4 ml-4 text-sm font-semibold text-bodydark2">
                   {group.name}
                 </h3>
 

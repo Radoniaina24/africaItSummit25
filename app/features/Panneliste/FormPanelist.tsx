@@ -66,7 +66,7 @@ export default function FormPanelist() {
   });
   return (
     <section className=" bg-white pb-10">
-      <div className="mx-auto max-w-c-1235 px-10 md:px-0">
+      <div className="mx-auto max-w-c-1235 px-10 md:px-5">
         <form
           onSubmit={formik.handleSubmit}
           className="space-y-4"

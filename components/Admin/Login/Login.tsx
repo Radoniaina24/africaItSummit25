@@ -38,7 +38,7 @@ export default function Login() {
       const userData = await login(values).unwrap();
       dispatch(setCredentials({ token: userData?.token })); // Sauvegarder token  dans Redux et user dans redux
       localStorage.setItem("user", JSON.stringify(userData?.user));
-      navigation.push("/");
+      navigation.push("/admin");
     } catch (err) {
       showSnackbar("Mots de passe ou email incorrecte", "error");
     }
@@ -104,7 +104,7 @@ export default function Login() {
           />
         </div>
 
-        <div className="w-100 mx-5">
+        <div className="mx-5 w-100">
           <div className="mb-4">
             <label className="mb-2.5 block font-medium text-black ">
               Email
@@ -138,7 +138,7 @@ export default function Login() {
               </span>
             </div>
             {errors.email && touched.email ? (
-              <p className="mt-2 text-sm ">
+              <p className="mt-2 text-sm text-red-600">
                 <span className="font-medium"></span> {errors.email}
               </p>
             ) : (
@@ -182,7 +182,7 @@ export default function Login() {
               type="submit"
               className={`w-full cursor-pointer rounded-lg border ${
                 isLoading ? " bg-primary bg-opacity-90" : "bg-primary"
-              }  border-primary bg-primary p-3 text-white transition hover:bg-opacity-90`}
+              }  bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] p-3 text-white transition hover:bg-opacity-90`}
             >
               <div className="flex items-center justify-center gap-2">
                 Se connecter{" "}

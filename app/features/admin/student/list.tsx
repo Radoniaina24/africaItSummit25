@@ -27,7 +27,7 @@ export default function ListStudent() {
     return (
       <div>
         <Breadcrumb pageName={"List students"} />
-        <div className=" shadow-default dark:bg-boxdark rounded-sm border border-stroke bg-white  px-5 py-5 dark:border-strokedark">
+        <div className=" rounded-sm border border-stroke bg-white px-5 py-5  shadow-default dark:border-strokedark dark:bg-boxdark">
           <div className="flex h-screen items-center justify-center bg-white dark:bg-black">
             <div
               className="relative rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700"
@@ -52,21 +52,21 @@ export default function ListStudent() {
   return (
     <div>
       <Breadcrumb pageName={"List students"} />
-      <div className=" shadow-default dark:bg-boxdark rounded-sm border border-stroke bg-white  px-5 py-5 dark:border-strokedark">
+      <div className=" rounded-sm border border-stroke bg-white px-5 py-5  shadow-default dark:border-strokedark dark:bg-boxdark">
         <button
           type="submit"
-          className="dark:border-form-strokedark mb-3 cursor-pointer rounded  border border-stroke bg-primary px-4 py-1 text-white outline-none transition hover:bg-opacity-90"
+          className="mb-3 cursor-pointer rounded border  border-stroke bg-primary px-4 py-1 text-white outline-none transition hover:bg-opacity-90 dark:border-form-strokedark"
         >
-          <Link href="/student/add">Ajouter</Link>
+          <Link href="/admin/student/add">Ajouter</Link>
         </button>
         <div className="mb-3 flex flex-wrap items-center justify-between">
           <SearchBar query={search} onQuery={setSearch} />
           <Limit setLimit={setLimit} limit={limit} />
         </div>
         <div className="relative h-screen overflow-x-auto overflow-y-auto">
-          <table className="w-full text-left text-sm text-gray-500 rtl:text-right dark:text-gray-400">
+          <table className="w-full text-left text-sm text-gray-500 dark:text-gray-400 rtl:text-right">
             <thead className="sticky top-0">
-              <tr className=" bg-gray-2 dark:bg-meta-4 text-left dark:text-white">
+              <tr className=" bg-gray-2 text-left dark:bg-meta-4 dark:text-white">
                 <th scope="col" className="px-6 py-3">
                   Photo
                 </th>
