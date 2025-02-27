@@ -6,6 +6,7 @@ import "@/app/globals.css";
 import { LanguageProvider } from "@/app/context/LanguageContext";
 import ToasterContext from "@/app/context/ToastContext";
 import { StoreProvider } from "@/app/StoreProvider";
+import SnackbarProvider from "@/lib/context/SnackbarContext";
 const inter = Montserrat({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -37,10 +38,13 @@ export default function ClientLayout({
             defaultTheme="light"
           >
             <LanguageProvider>
+              <SnackbarProvider>
+                <Header />
+                <ToasterContext />
+                {children}
+              </SnackbarProvider>
               {/* <Lines /> */}
-              <Header />
-              <ToasterContext />
-              {children}
+
               {/* <Footer /> */}
               {/* <ScrollToTop /> */}
             </LanguageProvider>

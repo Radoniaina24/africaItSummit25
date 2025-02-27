@@ -25,7 +25,7 @@ export default function DeleteButton({ id }: { id: string }) {
         <Delete />
       </button>
       <Modal open={open} onClose={() => setOpen(false)}>
-        <div className="w-67 text-center">
+        <div className="mx-auto w-67 text-center">
           <div className="mx-auto my-4 w-48">
             <h3 className="font-black/20 text-lg text-gray-800">
               Confirm deletion

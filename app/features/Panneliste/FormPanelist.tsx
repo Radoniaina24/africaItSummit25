@@ -7,9 +7,15 @@ import InputFormik from "../get_pass/Componnents/InputFormik";
 import InputFile from "../get_pass/Componnents/InputFile";
 import TextArea from "../get_pass/Componnents/TextArea";
 import Checkbox from "../get_pass/Componnents/CheckBox";
+import { useAddPanelistMutation } from "@/lib/api/panelistApi";
+import { useSnackbar } from "@/lib/context/SnackbarContext";
+import Panelist from "@/app/interface/Panelist";
+import { Loader2 } from "lucide-react";
 
 export default function FormPanelist() {
+  const { showSnackbar } = useSnackbar();
   const { language } = useLanguageContext();
+  const [addPanelist] = useAddPanelistMutation();
 
   const initialvalues = {
     photo: "",
@@ -60,8 +66,29 @@ export default function FormPanelist() {
       ),
       check: Yup.string().required(),
     }),
-    onSubmit: (values) => {
-      console.log("Form Submitted", values);
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
+      const formData = new FormData();
+      Object.entries(values).forEach(([key, value]: any) => {
+        if (value !== undefined && value !== "") {
+          formData.append(key, value instanceof File ? value : String(value));
+        }
+      });
+
+      setSubmitting(true);
+
+      try {
+        const response = await addPanelist(formData).unwrap();
+        showSnackbar(response?.message, "success"); // message, type(error, success)
+        resetForm();
+      } catch (error: any) {
+        if (error?.data?.message) {
+          showSnackbar(error?.data?.message, "error");
+        } else {
+          showSnackbar("Verifier votre connexion internet", "error");
+        }
+      } finally {
+        setSubmitting(false);
+      }
     },
   });
   return (
@@ -181,6 +208,7 @@ export default function FormPanelist() {
           />
           <TextArea
             id={"summary"}
+            value={formik.values.summary}
             label={
               language === "fr"
                 ? "Présentation de votre sujet (si disponible) : Un résumé de votre intervention ou sujet proposé."
@@ -211,10 +239,26 @@ export default function FormPanelist() {
 
           <div className="grid grid-cols-1">
             <button
+              disabled={formik.isSubmitting}
               type="submit"
-              className="mt-5 rounded-full bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] px-6 py-2 text-sm text-white hover:from-[#4486b6]  hover:via-[#8125c8] hover:to-[#f050c2]"
+              className={`relative mt-5 flex items-center justify-center gap-2 rounded-full px-6 py-2 text-sm font-medium text-white 
+      transition-all duration-300 ease-in-out 
+      ${
+        formik.isSubmitting
+          ? "cursor-not-allowed bg-gray-400"
+          : "bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] hover:from-[#4486b6] hover:via-[#8125c8] hover:to-[#f050c2]"
+      }`}
             >
-              {language === "fr" ? "Soumettre" : "Submit"}
+              {formik.isSubmitting ? (
+                <>
+                  {language === "fr" ? "Traitement..." : "Processing..."}
+                  <Loader2 className="h-5 w-5 animate-spin" />
+                </>
+              ) : language === "fr" ? (
+                "Soumettre"
+              ) : (
+                "Submit"
+              )}
             </button>
           </div>
         </form>

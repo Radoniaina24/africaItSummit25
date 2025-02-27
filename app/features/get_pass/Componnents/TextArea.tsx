@@ -5,7 +5,7 @@ interface TextAreaProps {
   label: string;
   placeholder?: string;
   rows?: number;
-  value?: string;
+  value: string;
   onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
   className?: string;
 }

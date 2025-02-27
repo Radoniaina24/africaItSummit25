@@ -332,13 +332,13 @@ export default function FormStudent({
           <div className="mt-5 flex justify-center gap-5">
             <button
               type="submit"
-              className="bg-success dark:border-form-strokedark cursor-pointer rounded-lg  border border-stroke px-4 py-2 text-white outline-none transition hover:bg-opacity-90"
+              className="cursor-pointer rounded-lg border border-stroke  bg-success px-4 py-2 text-white outline-none transition hover:bg-opacity-90 dark:border-form-strokedark"
             >
               Modifier
             </button>
             <button
               type="button"
-              className="bg-warning dark:border-form-strokedark cursor-pointer rounded-lg  border border-stroke px-4 py-2 text-white outline-none transition hover:bg-opacity-90"
+              className="cursor-pointer rounded-lg border border-stroke  bg-warning px-4 py-2 text-white outline-none transition hover:bg-opacity-90 dark:border-form-strokedark"
               onClick={() => navigation.push("/student")}
             >
               Annuler
@@ -348,7 +348,7 @@ export default function FormStudent({
           <div className="mt-5 grid">
             <button
               type="submit"
-              className="bg-success dark:border-form-strokedark cursor-pointer rounded-lg  border border-stroke px-4 py-2 text-white outline-none transition hover:bg-opacity-90"
+              className="cursor-pointer rounded-lg border border-stroke  bg-success px-4 py-2 text-white outline-none transition hover:bg-opacity-90 dark:border-form-strokedark"
             >
               Enregistrer
             </button>

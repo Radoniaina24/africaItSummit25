@@ -9,5 +9,5 @@ export default interface Panelist {
   country: string;
   linkedIn: string;
   summary: string;
-  check: string;
+  check: Boolean;
 }
