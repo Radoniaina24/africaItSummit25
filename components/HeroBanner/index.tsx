@@ -38,7 +38,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       <div className="relative z-10 mx-auto max-w-7xl text-center">
         {/* Titre principal */}
         <h2
-          className=" mb-4 text-xl font-extrabold text-white md:text-4xl"
+          className=" mx-auto mb-4 max-w-lg text-xl font-extrabold text-white md:text-2xl"
           data-aos="fade-up"
           style={getSubtitleStyle()}
         >
