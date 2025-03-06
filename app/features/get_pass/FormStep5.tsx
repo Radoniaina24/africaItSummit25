@@ -59,7 +59,7 @@ export default function FormStep5() {
                   </th>
 
                   <th scope="col" className="rounded-e-lg px-6 py-3">
-                    {language === "fr" ? "Prix Unitaire (€)" : "Unit Price (€)"}
+                    {language === "fr" ? "Prix Unitaire" : "Unit Price"}
                   </th>
                   <th scope="col" className="px-6 py-3 text-center">
                     {language === "fr" ? "Qté" : "Qty"}

@@ -29,7 +29,7 @@ export default function FormStep6() {
                 </th>
 
                 <th scope="col" className="rounded-e-lg px-6 py-3">
-                  {language === "fr" ? "Prix Unitaire (€)" : "Unit Price (€)"}
+                  {language === "fr" ? "Prix Unitaire" : "Unit Price"}
                 </th>
                 <th scope="col" className="px-6 py-3 ">
                   {language === "fr" ? "Qté" : "Qty"}

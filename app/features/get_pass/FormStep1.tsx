@@ -6,6 +6,7 @@ import { useFormPassContext } from "@/app/context/FormPassContext";
 import { useLanguageContext } from "@/app/context/LanguageContext";
 import FormikErrorMessage from "./Componnents/FormikErrorMessage";
 import InputFormik from "./Componnents/InputFormik";
+import InputPhone from "./Componnents/InputPhone";
 export default function FormStep1() {
   const { language } = useLanguageContext();
   const { setStep, setFormData, step, formData } = useFormPassContext();
@@ -38,7 +39,7 @@ export default function FormStep1() {
       setStep(1);
     },
   });
-
+  console.log(formik.values.phone);
   return (
     <form
       onSubmit={formik.handleSubmit}
@@ -66,11 +67,19 @@ export default function FormStep1() {
         error={formik.errors.email}
         touched={formik.touched.email}
       />
-      <InputFormik
+      {/* <InputFormik
         label={language === "fr" ? "Numéro de téléphone" : "Phone number"}
         type="text"
         id="phone"
         placeholder={language === "fr" ? "Numéro de téléphone" : "Phone number"}
+        value={formik.values.phone}
+        onChange={formik.handleChange}
+        error={formik.errors.phone}
+        touched={formik.touched.phone}
+      /> */}
+      <InputPhone
+        name="phone"
+        label={language === "fr" ? "Numéro de téléphone" : "Phone number"}
         value={formik.values.phone}
         onChange={formik.handleChange}
         error={formik.errors.phone}
