@@ -67,19 +67,19 @@ export default function ListPanelist() {
           <table className="w-full text-left text-sm text-gray-500 dark:text-gray-400 rtl:text-right">
             <thead className="sticky top-0">
               <tr className=" bg-gray-2 text-left dark:bg-meta-4 dark:text-white">
-                <th scope="col" className="hidden px-3 py-3 md:block">
+                <th scope="col" className="hidden px-2 py-3 md:block">
                   Photo
                 </th>
-                <th scope="col" className="px-3 py-3">
+                <th scope="col" className="px-2 py-3">
                   FullName
                 </th>
-                <th scope="col" className="px-3 py-4">
+                <th scope="col" className="px-2 py-4">
                   Email
                 </th>
-                <th scope="col" className="px-3 py-4">
+                <th scope="col" className="px-2 py-4">
                   Organization
                 </th>
-                <th scope="col" className="px-3 py-4">
+                <th scope="col" className="px-2 py-4">
                   Action
                 </th>
               </tr>
@@ -89,7 +89,7 @@ export default function ListPanelist() {
                 <tr className="">
                   <td
                     rowSpan={8}
-                    colSpan={4}
+                    colSpan={5}
                     className="text-center"
                     style={{ height: "250px" }}
                   >

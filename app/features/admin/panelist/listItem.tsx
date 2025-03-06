@@ -1,7 +1,6 @@
 import React from "react";
 
 import DeleteButton from "./DeleteButton";
-import Image from "next/image";
 import Panelist from "@/app/interface/Panelist";
 import ViewPanelist from "./ViewPanelist";
 
@@ -10,7 +9,7 @@ export default function ListItem({ panelist }: { panelist: Panelist }) {
     <img
       src={panelist.photo}
       alt={"photo"}
-      className="h-15 w-15 rounded-full border-4 border-gray-200 object-cover "
+      className="h-10 w-10 rounded-full border-4 border-gray-200 object-cover "
     />
   ) : (
     ""
@@ -19,23 +18,23 @@ export default function ListItem({ panelist }: { panelist: Panelist }) {
     <tr className="hover:bg-gray cursor-pointer bg-white dark:bg-boxdark  dark:text-white dark:hover:bg-gray-600">
       <th
         scope="row"
-        className="hidden whitespace-nowrap border-b border-[#eee] px-6 py-4 font-medium text-gray-900 dark:border-strokedark dark:text-white md:block"
+        className="hidden whitespace-nowrap border-b border-[#eee] px-2 py-1 font-medium text-gray-900 dark:border-strokedark dark:text-white md:block"
       >
         {photo}
       </th>
       <th
         scope="row"
-        className="whitespace-nowrap border-b border-[#eee] px-6 py-4 font-medium text-gray-900 dark:border-strokedark dark:text-white"
+        className="whitespace-nowrap border-b border-[#eee] px-2 py-1 font-medium text-gray-900 dark:border-strokedark dark:text-white"
       >
         {panelist.name}
       </th>
-      <td className="border-b border-[#eee] px-6 py-4 dark:border-strokedark">
+      <td className="border-b border-[#eee] px-2 py-1 dark:border-strokedark">
         {panelist.email}
       </td>
-      <td className="border-b border-[#eee] px-6 py-4 dark:border-strokedark">
+      <td className="border-b border-[#eee] px-2 py-1 dark:border-strokedark">
         {panelist.organization}
       </td>
-      <td className=" border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+      <td className=" border-b border-[#eee] px-2 py-1 dark:border-strokedark">
         <div className="flex items-center space-x-3.5">
           <ViewPanelist profile={panelist} />
           <DeleteButton id={panelist._id} />

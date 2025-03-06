@@ -13,7 +13,7 @@ export default function Dashboard() {
   const coutStudent = data?.allStudents ? data?.allStudents : 0;
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
-      <Link href={"/admin/student"}>
+      {/* <Link href={"/admin/student"}>
         <CardDataStats title="Students" total={coutStudent}>
           <Students_Svg />
         </CardDataStats>
@@ -29,7 +29,7 @@ export default function Dashboard() {
       </CardDataStats>
       <CardDataStats title="Earnings" total="30000">
         <Earnings_Svg />
-      </CardDataStats>
+      </CardDataStats> */}
     </div>
   );
 }

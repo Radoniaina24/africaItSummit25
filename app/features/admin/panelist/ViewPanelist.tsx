@@ -6,20 +6,6 @@ import { Mail, Phone, MapPin, Building2, Linkedin } from "lucide-react";
 import Panelist from "@/app/interface/Panelist";
 export default function ViewPanelist({ profile }: { profile: Panelist }) {
   const [open, setOpen] = useState<boolean>(false);
-  // const profile = {
-  //   photo:
-  //     "https://res.cloudinary.com/dx3xhdaym/image/upload/v1740632216/panelist/ftjqu0ydurmtjj0nyfcn",
-  //   name: "Radoniaina",
-  //   position: "Développeur Web",
-  //   organization: "E-media",
-  //   email: "radoniaina@gmail.com",
-  //   phone: "0329190796",
-  //   country: "Madagascar",
-  //   linkedIn: "https://www.linkedin.com/in/radoniaina",
-  //   description:
-  //     "Passionné par le développement web et les nouvelles technologies, j'aime créer des applications performantes et intuitives.",
-  // };
-
   return (
     <div>
       <button onClick={() => setOpen(true)}>
@@ -27,16 +13,19 @@ export default function ViewPanelist({ profile }: { profile: Panelist }) {
       </button>
       <Modal open={open} onClose={() => setOpen(false)}>
         <div className="mx-auto max-w-sm overflow-hidden rounded-2xl border bg-white p-6 shadow-lg">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center justify-items-center">
             {/* Photo de profil */}
             <img
               src={profile.photo}
               alt={profile.name}
               className="h-32 w-32 rounded-full border-4 border-gray-200 object-cover"
             />
-            <h2 className="mt-4 text-xl font-semibold text-gray-800">
-              {profile.name}
-            </h2>
+            <div className="text-center">
+              <h2 className="mt-4 text-xl font-semibold text-gray-800">
+                {profile.name}
+              </h2>
+            </div>
+
             <p className="text-gray-600">
               {profile.position} @ {profile.organization}
             </p>

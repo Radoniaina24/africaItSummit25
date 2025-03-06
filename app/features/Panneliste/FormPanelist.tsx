@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useLanguageContext } from "@/app/context/LanguageContext";
@@ -16,7 +16,13 @@ export default function FormPanelist() {
   const { showSnackbar } = useSnackbar();
   const { language } = useLanguageContext();
   const [addPanelist] = useAddPanelistMutation();
+  const inputFileRef = useRef<HTMLInputElement>(null);
 
+  const resetFileInputPhoto = () => {
+    if (inputFileRef.current) {
+      inputFileRef.current.value = "";
+    }
+  };
   const initialvalues = {
     photo: "",
     name: "",
@@ -80,6 +86,7 @@ export default function FormPanelist() {
         const response = await addPanelist(formData).unwrap();
         showSnackbar(response?.message, "success"); // message, type(error, success)
         resetForm();
+        resetFileInputPhoto();
       } catch (error: any) {
         if (error?.data?.message) {
           showSnackbar(error?.data?.message, "error");
@@ -224,6 +231,7 @@ export default function FormPanelist() {
             name="photo"
             error={formik.errors.photo}
             touched={formik.touched.photo}
+            inputRef={inputFileRef}
           />
           <Checkbox
             id={"check"}
