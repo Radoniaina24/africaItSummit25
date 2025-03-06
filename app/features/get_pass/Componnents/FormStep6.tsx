@@ -38,7 +38,7 @@ export default function FormStep6() {
                 {language === "fr" ? "Quantité" : "Quantity"}
               </th>
               <th className="p-2 text-center">
-                {language === "fr" ? "Total (€)" : "Total"}
+                {language === "fr" ? "Total (€)" : "Total(€)"}
               </th>
             </tr>
           </thead>
@@ -57,11 +57,13 @@ export default function FormStep6() {
             ))}
           </tbody>
           <tfoot>
-            <tr className="bg-gray-200 font-semibold">
-              <td className="p-2 text-right" colSpan={3}>
-                {language === "fr" ? "Total Général :" : "Grand Total :"}
+            <tr className="bg-primary font-semibold text-white">
+              <td className="p-2 text-left">
+                {language === "fr" ? "Total" : "Total"}
               </td>
-              <td className="p-2 text-center">{totalAmount} €</td>
+              <td className="p-2 pr-2 text-end sm:pr-6 lg:pr-11" colSpan={3}>
+                {totalAmount} €
+              </td>
             </tr>
           </tfoot>
         </table>
@@ -79,10 +81,13 @@ export default function FormStep6() {
           {language === "fr" ? "Précédent" : "Previous"}
         </button>
         <button
+          onClick={() => setStep(6)}
           type="button"
-          className="rounded-full bg-green-600 px-4 py-2 text-sm text-white hover:bg-green-700"
+          className="rounded-full bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] px-6 py-2 text-sm text-white hover:from-[#4486b6]  hover:via-[#8125c8] hover:to-[#f050c2]"
         >
-          {language === "fr" ? "Soumettre" : "Submit"}
+          {language === "fr"
+            ? "Procéder au paiement"
+            : "Proceed to the payment "}
         </button>
       </div>
     </div>

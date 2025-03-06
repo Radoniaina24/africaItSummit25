@@ -33,7 +33,7 @@ export default function FormStep1() {
       ),
     }),
     onSubmit: (values) => {
-      console.log("Form Submitted", values);
+      // console.log("Form Submitted", values);
       setFormData((prev) => ({ ...prev, ...values }));
       setStep(1);
     },

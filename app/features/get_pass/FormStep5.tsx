@@ -9,22 +9,29 @@ export default function FormStep5() {
   const { language } = useLanguageContext();
   const { setStep, setFormData, step, formData } = useFormPassContext();
   const [tickets, setTickets] = useState<PassType[]>();
-
+  const hiddenBtnNext = tickets?.length ? false : true;
   useEffect(() => {
     setTickets(formData.passTypes);
   }, [formData]);
 
   const updateQuantity = (index: number, change: number) => {
-    setTickets(
-      (prevTickets) =>
-        prevTickets
-          ?.map((ticket, i) =>
-            i === index
-              ? { ...ticket, quantity: ticket.quantity + change }
-              : ticket,
-          )
-          .filter((ticket) => ticket.quantity > 0), // Supprime les tickets à 0
-    );
+    setTickets((prevTickets) => {
+      const updatedTickets = prevTickets
+        ?.map((ticket, i) =>
+          i === index
+            ? { ...ticket, quantity: ticket.quantity + change }
+            : ticket,
+        )
+        .filter((ticket) => ticket.quantity > 0); // Supprime les tickets ayant quantity <= 0
+
+      // Met à jour formData pour que la suppression soit aussi répercutée globalement
+      setFormData((prevData) => ({
+        ...prevData,
+        passTypes: updatedTickets,
+      }));
+
+      return updatedTickets;
+    });
   };
 
   const totalAmount = tickets?.reduce(
@@ -91,18 +98,31 @@ export default function FormStep5() {
             ))}
           </tbody>
           <tfoot>
-            <tr className="bg-gray-200 font-semibold">
-              <td className="p-2 text-right" colSpan={3}>
-                {language === "fr" ? "Total Général :" : "Grand Total :"}
+            <tr className="bg-primary font-semibold text-white">
+              <td className="p-2 text-left">
+                {language === "fr" ? "Total" : "Total"}
               </td>
-              <td className="p-2 text-center">{totalAmount} €</td>
+              <td className="p-2 pr-2 text-end sm:pr-6 lg:pr-11" colSpan={3}>
+                {totalAmount} €
+              </td>
             </tr>
           </tfoot>
         </table>
       ) : (
-        <p className="text-center text-gray-500">
-          {language === "fr" ? "Aucun pass sélectionné" : "No pass selected"}
-        </p>
+        <div className="space-y-3 text-center">
+          <p className="text-center text-gray-500">
+            {language === "fr" ? "Aucun pass sélectionné" : "No pass selected"}
+          </p>
+          <button
+            onClick={() => setStep(1)}
+            type="button"
+            className="rounded-full bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] px-4 py-2 text-xs text-white hover:from-[#4486b6]  hover:via-[#8125c8] hover:to-[#f050c2]"
+          >
+            {language === "fr"
+              ? "Cliquer ici pour selectionner"
+              : "Click here to select pass"}
+          </button>
+        </div>
       )}
 
       <div className="mt-5 flex justify-between space-x-4">
@@ -116,7 +136,7 @@ export default function FormStep5() {
           disabled={tickets?.length ? false : true}
           onClick={handleClik}
           type="button"
-          className="rounded-full bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] px-6 py-2 text-sm text-white hover:from-[#4486b6]  hover:via-[#8125c8] hover:to-[#f050c2]"
+          className={` ${hiddenBtnNext ? "hidden" : ""} rounded-full bg-gradient-to-br from-[#63b6f1] via-[#a261d4] to-[#e575c5] px-6 py-2 text-sm text-white hover:from-[#4486b6]  hover:via-[#8125c8] hover:to-[#f050c2]`}
         >
           {language === "fr" ? "Suivant" : "Next"}
         </button>

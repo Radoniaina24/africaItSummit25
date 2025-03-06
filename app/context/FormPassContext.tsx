@@ -20,6 +20,7 @@ interface FormData {
   expirationDate: string;
   cvv: string;
   totalAmount: number;
+  fullNameOnCard: string;
 }
 
 const FormPassContext = createContext<any | null>(null);
@@ -40,8 +41,9 @@ function FormPassProvider({ children }: { children: React.ReactNode }) {
     expirationDate: "",
     cvv: "",
     totalAmount: 0,
+    fullNameOnCard: "",
   });
-  // console.log(formData);
+  console.log(formData);
   return (
     <FormPassContext.Provider
       value={{
@@ -55,6 +57,7 @@ function FormPassProvider({ children }: { children: React.ReactNode }) {
     </FormPassContext.Provider>
   );
 }
+
 function useFormPassContext() {
   const context = useContext(FormPassContext);
   if (context === undefined)

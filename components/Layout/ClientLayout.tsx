@@ -7,6 +7,7 @@ import { LanguageProvider } from "@/app/context/LanguageContext";
 import ToasterContext from "@/app/context/ToastContext";
 import { StoreProvider } from "@/app/StoreProvider";
 import SnackbarProvider from "@/lib/context/SnackbarContext";
+import { NextScript } from "next/document";
 const inter = Montserrat({
   subsets: ["latin"],
   weight: ["400", "700"],

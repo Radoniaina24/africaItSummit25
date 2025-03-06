@@ -41,7 +41,7 @@ export default function FormStep4() {
       ),
     }),
     onSubmit: (values) => {
-      console.log("Form Submitted", values);
+      // console.log("Form Submitted", values);
       setFormData((prev) => ({ ...prev, ...values }));
       setStep(4);
     },
@@ -59,7 +59,7 @@ export default function FormStep4() {
             : "text-black"
         } `}
       >
-        {language === "fr" ? "Carte bancaire" : "Bank card"}
+        {language === "fr" ? "Carte bancaire*" : "Bank card*"}
       </h2>
       <div className="space-y-2">
         {["Visa", "MasterCard", "Autres cartes bancaires internationales"].map(
@@ -85,36 +85,34 @@ export default function FormStep4() {
         <p className="mt-2 text-sm text-red-500">{formik.errors.cardType}</p>
       )}
       <InputFormik
-        label={language === "fr" ? "Numéro de la carte" : "Card Number"}
+        label={language === "fr" ? "Numéro de la carte*" : "Card Number*"}
         type="text"
         id="cardNumber"
-        // placeholder={language === "fr" ? "Numéro de la carte" : "Card Number"}
+        placeholder="xxxx-xxxx-xxxx-xxxx"
         value={formik.values.cardNumber}
         onChange={formik.handleChange}
         error={formik.errors.cardNumber}
         touched={formik.touched.cardNumber}
       />
       <InputFormik
-        label={language === "fr" ? "Date d’expiration" : "Expiration Date"}
-        type="text"
+        label={language === "fr" ? "Date d’expiration*" : "Expiration Date*"}
+        type="date"
         id="expirationDate"
-        // placeholder="Email"
         value={formik.values.expirationDate}
         onChange={formik.handleChange}
         error={formik.errors.expirationDate}
         touched={formik.touched.expirationDate}
       />
       <InputFormik
-        label={
-          language === "fr" ? "Code de sécurité (CVV) " : "Security Code (CVV)"
-        }
-        type="text"
+        label={language === "fr" ? "CVV*" : "CVV*"}
+        type="number"
         id="cvv"
         // placeholder={language === "fr" ? "Numéro de téléphone" : "Phone number"}
         value={formik.values.cvv}
         onChange={formik.handleChange}
         error={formik.errors.cvv}
         touched={formik.touched.cvv}
+        placeholder="•••"
       />
       <div className="mt-5 flex justify-between space-x-4">
         <button
