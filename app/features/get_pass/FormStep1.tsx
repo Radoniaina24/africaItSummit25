@@ -81,7 +81,7 @@ export default function FormStep1() {
         name="phone"
         label={language === "fr" ? "Numéro de téléphone" : "Phone number"}
         value={formik.values.phone}
-        onChange={formik.handleChange}
+        onChange={formik.setFieldValue}
         error={formik.errors.phone}
         touched={formik.touched.phone}
       />

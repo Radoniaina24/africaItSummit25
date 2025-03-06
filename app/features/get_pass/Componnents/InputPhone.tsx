@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 
@@ -17,6 +17,10 @@ function InputPhone({
   error: any;
   touched: any;
 }) {
+  const [values, setValue] = useState();
+  function handleChange(e) {
+    onChange(name, e);
+  }
   return (
     <div className="">
       <label
@@ -31,8 +35,8 @@ function InputPhone({
         <PhoneInput
           international
           defaultCountry="MG"
-          value={value}
-          onChange={() => onChange(name)}
+          value={values}
+          onChange={handleChange}
           className={`text-dark   ${error && touched ? "errorPhone" : ""} py-3 focus:border-none focus:outline-none`}
           placeholder="Inclure le code international"
         />
