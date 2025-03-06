@@ -1,25 +1,23 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { selectToken } from "@/lib/features/auth/authSlice";
-import { usePathname, useRouter } from "next/navigation";
-
-export default function AuthGuard({ children }: { children: React.ReactNode }) {
-  const token = useSelector(selectToken); // État d'authentification
-  const pathname = usePathname(); // Récupère l'URL actuelle
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useGetUserQuery } from "@/lib/api/authApi";
+import { selectIsAuthenticated, setUser } from "@/lib/features/auth/authSlice";
+import { useRouter } from "next/navigation";
+export const AuthGuard = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
-  const [tokenStorage, setTokenStorage] = useState(
-    localStorage.getItem("token") || null,
-  );
+  const dispatch = useDispatch();
+  const isAuth = useSelector(selectIsAuthenticated);
+
+  const { data, error } = useGetUserQuery("");
   useEffect(() => {
-    if (tokenStorage === undefined) {
-      return; // Attente de la résolution de l'état
+    if (data) {
+      dispatch(setUser(data));
     }
-    if (!tokenStorage && pathname !== "/login") {
+    if (error) {
       // Redirige les utilisateurs non authentifiés vers la page de connexion
       router.replace("/admin/login");
     }
-  }, [tokenStorage, pathname, router]);
-  if (!tokenStorage) return;
+  }, [data, error, dispatch]);
+  if (!isAuth) return;
   return <>{children}</>;
-}
+};

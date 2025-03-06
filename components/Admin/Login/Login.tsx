@@ -1,6 +1,5 @@
 "use client";
 import { useLoginMutation } from "@/lib/api/authApi";
-import { setCredentials } from "@/lib/features/auth/authSlice";
 import { useFormik } from "formik";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -36,8 +35,6 @@ export default function Login() {
   const Submit = async (values: { email: string; password: string }) => {
     try {
       const userData = await login(values).unwrap();
-      dispatch(setCredentials({ token: userData?.token })); // Sauvegarder token  dans Redux et user dans redux
-      localStorage.setItem("user", JSON.stringify(userData?.user));
       navigation.push("/admin");
     } catch (err) {
       showSnackbar("Mots de passe ou email incorrecte", "error");

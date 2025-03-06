@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, ReactNode } from "react";
-import AuthGuard from "../auth/authGuard";
+import React, { useState } from "react";
 import Sidebar from "../Sidebar";
 import Header from "../HeaderAdmin";
+import { AuthGuard } from "../auth/authGuard";
 
 export default function DefaultLayout({
   children,
