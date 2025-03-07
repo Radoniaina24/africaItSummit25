@@ -7,6 +7,7 @@ import { useLanguageContext } from "@/app/context/LanguageContext";
 import FormikErrorMessage from "./Componnents/FormikErrorMessage";
 import InputFormik from "./Componnents/InputFormik";
 import InputPhone from "./Componnents/InputPhone";
+import { isValidPhoneNumber } from "react-phone-number-input";
 export default function FormStep1() {
   const { language } = useLanguageContext();
   const { setStep, setFormData, step, formData } = useFormPassContext();
@@ -27,11 +28,19 @@ export default function FormStep1() {
         .required(
           language === "fr" ? "L'email est requis" : "Email is required",
         ),
-      phone: Yup.string().required(
-        language === "fr"
-          ? "Le numéro de téléphone est requis"
-          : "Phone number is required",
-      ),
+      phone: Yup.string()
+        .required(
+          language === "fr"
+            ? "Le numéro de téléphone est requis"
+            : "Phone number is required",
+        )
+        .test(
+          "is-valid-phone",
+          language === "fr"
+            ? "Le numéro de téléphone est invalide"
+            : "Invalid phone number",
+          (value) => (value ? isValidPhoneNumber(value) : false),
+        ),
     }),
     onSubmit: (values) => {
       // console.log("Form Submitted", values);
@@ -39,7 +48,7 @@ export default function FormStep1() {
       setStep(1);
     },
   });
-  console.log(formik.values.phone);
+
   return (
     <form
       onSubmit={formik.handleSubmit}
@@ -84,6 +93,7 @@ export default function FormStep1() {
         onChange={formik.setFieldValue}
         error={formik.errors.phone}
         touched={formik.touched.phone}
+        setFieldTouched={formik.setFieldTouched}
       />
       <div className="flex justify-end">
         <button

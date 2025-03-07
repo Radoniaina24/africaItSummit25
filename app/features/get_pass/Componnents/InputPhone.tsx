@@ -1,7 +1,11 @@
-import React, { useState } from "react";
-import PhoneInput from "react-phone-number-input";
+import { useLanguageContext } from "@/app/context/LanguageContext";
+import React, { useEffect, useState } from "react";
+import PhoneInput, {
+  isPossiblePhoneNumber,
+  isValidPhoneNumber,
+} from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-
+isPossiblePhoneNumber;
 function InputPhone({
   label,
   value,
@@ -9,40 +13,46 @@ function InputPhone({
   error,
   touched,
   name,
+  setFieldTouched,
 }: {
   name: string;
   label: string;
   value: string;
-  onChange: any;
-  error: any;
-  touched: any;
+  onChange: (field: string, value: string | undefined) => void;
+  error: string | undefined;
+  touched: boolean | undefined;
+  setFieldTouched: (field: string, touched?: boolean) => void;
 }) {
-  const [values, setValue] = useState();
-  function handleChange(e) {
-    onChange(name, e);
+  const { language } = useLanguageContext();
+  const [phoneError, setPhoneError] = useState<string | null>(null);
+  function handleChange(phone: string | undefined) {
+    onChange(name, phone);
+    if (!phone) {
+      setFieldTouched(name, true); // Marquer comme touché si vidé
+    }
   }
+  const hasError = error && touched;
   return (
     <div className="">
       <label
         htmlFor="phone"
-        className={`mb-2.5 block text-sm font-medium  ${error && touched ? "text-red-500" : "text-gray-700"}`}
+        className={`mb-2.5 block text-sm font-medium  ${hasError ? "text-red-500" : "text-gray-700"}`}
       >
         {label}
       </label>
       <div
-        className={`rounded  border border-gray-300 px-5 ${error && touched ? "border-red-500" : "border-gray-300"}`}
+        className={`rounded  border border-gray-300 px-5 ${hasError ? "border-red-500" : "border-gray-300"}`}
       >
         <PhoneInput
-          international
-          defaultCountry="MG"
-          value={values}
+          onBlur={() => setFieldTouched(name, true)}
+          value={value}
           onChange={handleChange}
-          className={`text-dark   ${error && touched ? "errorPhone" : ""} py-3 focus:border-none focus:outline-none`}
-          placeholder="Inclure le code international"
+          className={`text-dark   ${hasError ? "errorPhone" : ""} py-3 focus:border-none focus:outline-none`}
+          placeholder="Include the international dialing code"
         />
       </div>
 
-      {error && touched ? (
+      {hasError ? (
         <p className="mt-2 text-sm text-red-600 dark:text-red-500">
           <span className="font-medium"></span> {error}
         </p>
