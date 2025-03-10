@@ -5,6 +5,8 @@ import { useFormik } from "formik";
 import React from "react";
 import * as Yup from "yup";
 import InputFormik from "./Componnents/InputFormik";
+import InputCountry from "./Componnents/InputCountry";
+import InputCity from "./Componnents/InputCity";
 export default function FormStep2() {
   const { language } = useLanguageContext();
   const { setStep, setFormData, formData } = useFormPassContext();
@@ -78,27 +80,26 @@ export default function FormStep2() {
         error={billingFormik.errors.postalCode}
         touched={billingFormik.touched.postalCode}
       />
-
-      <InputFormik
-        label={language === "fr" ? "Ville" : "City"}
-        type="text"
-        id="city"
-        placeholder={language === "fr" ? "Ville" : "City"}
-        value={billingFormik.values.city}
-        onChange={billingFormik.handleChange}
-        error={billingFormik.errors.city}
-        touched={billingFormik.touched.city}
-      />
-      <InputFormik
+      <InputCountry
         label={language === "fr" ? "Pays" : "Country"}
-        type="text"
         id="country"
         placeholder={language === "fr" ? "Pays" : "Country"}
         value={billingFormik.values.country}
-        onChange={billingFormik.handleChange}
+        onChange={billingFormik.setFieldValue}
         error={billingFormik.errors.country}
         touched={billingFormik.touched.country}
       />
+      <InputCity
+        label={language === "fr" ? "Ville" : "City"}
+        id="city"
+        placeholder={language === "fr" ? "Ville" : "City"}
+        value={billingFormik.values.city}
+        onChange={billingFormik.setFieldValue}
+        error={billingFormik.errors.city}
+        touched={billingFormik.touched.city}
+        country={billingFormik.values.country}
+      />
+
       <div className="flex justify-between space-x-4">
         <button
           onClick={() => setStep(1)}

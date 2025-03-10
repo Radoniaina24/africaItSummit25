@@ -13,7 +13,7 @@ import Panelist from "@/app/interface/Panelist";
 import { Loader2 } from "lucide-react";
 import InputPhone from "../get_pass/Componnents/InputPhone";
 import { isValidPhoneNumber } from "react-phone-number-input";
-import InputCountryRegion from "../get_pass/Componnents/InputCountryRegion";
+import InputCountryRegion from "../get_pass/Componnents/InputCountry";
 
 export default function FormPanelist() {
   const { showSnackbar } = useSnackbar();

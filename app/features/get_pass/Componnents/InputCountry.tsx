@@ -1,6 +1,6 @@
 import React from "react";
 import { CountryDropdown } from "react-country-region-selector";
-export default function InputCountryRegion({
+export default function InputCountry({
   label,
   id,
   value,
