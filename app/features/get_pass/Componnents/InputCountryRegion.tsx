@@ -1,8 +1,7 @@
 import React from "react";
-
-export default function InputFormik({
+import { CountryDropdown } from "react-country-region-selector";
+export default function InputCountryRegion({
   label,
-  type,
   id,
   value,
   onChange,
@@ -11,16 +10,18 @@ export default function InputFormik({
   placeholder,
   fullWidth = true,
 }: {
-  type: string;
   id: string;
   placeholder?: string;
   label: string;
   value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (field: string, value: string | undefined) => void;
   error: any;
   touched: any;
   fullWidth?: boolean;
 }) {
+  function handleChange(country: string | undefined) {
+    onChange(id, country);
+  }
   const classNameInput =
     error && touched
       ? "bg-red-50 border outline-none border-red-500 text-red-500 placeholder-red-500 text-sm rounded focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-full px-5 py-3   "
@@ -30,19 +31,18 @@ export default function InputFormik({
   const classNameLabel =
     error && touched
       ? "block mb-2 text-sm font-medium text-red-500 dark:text-red-500"
-      : "mb-2.5 block text-sm font-medium text-black dark:text-white";
+      : "mb-2 block text-sm font-medium text-black dark:text-white";
+  //   console.log(value);
   return (
     <div className="">
       <label htmlFor={id} className={classNameLabel}>
         {label}
       </label>
-      <input
-        type={type}
-        id={id}
+      <CountryDropdown
         value={value}
-        onChange={onChange}
+        id={id}
+        onChange={handleChange}
         className={classNameInput}
-        placeholder={placeholder}
       />
       {error && touched ? (
         <p className="mt-2 text-sm text-red-600 dark:text-red-500">

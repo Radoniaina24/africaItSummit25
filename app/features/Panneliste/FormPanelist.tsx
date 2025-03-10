@@ -13,6 +13,7 @@ import Panelist from "@/app/interface/Panelist";
 import { Loader2 } from "lucide-react";
 import InputPhone from "../get_pass/Componnents/InputPhone";
 import { isValidPhoneNumber } from "react-phone-number-input";
+import InputCountryRegion from "../get_pass/Componnents/InputCountryRegion";
 
 export default function FormPanelist() {
   const { showSnackbar } = useSnackbar();
@@ -177,18 +178,7 @@ export default function FormPanelist() {
               error={formik.errors.email}
               touched={formik.touched.email}
             />
-            {/* <InputFormik
-              label={language === "fr" ? "Numéro de téléphone" : "Phone number"}
-              type="text"
-              id="phone"
-              placeholder={
-                language === "fr" ? "Numéro de téléphone" : "Phone number"
-              }
-              value={formik.values.phone}
-              onChange={formik.handleChange}
-              error={formik.errors.phone}
-              touched={formik.touched.phone}
-            /> */}
+
             <InputPhone
               name="phone"
               label={language === "fr" ? "Numéro de téléphone" : "Phone number"}
@@ -198,17 +188,16 @@ export default function FormPanelist() {
               touched={formik.touched.phone}
               setFieldTouched={formik.setFieldTouched}
             />
-            <InputFormik
+            <InputCountryRegion
               label={
                 language === "fr" ? "Pays de résidence" : "Country of Residence"
               }
-              type="text"
               id="country"
               placeholder={
                 language === "fr" ? "Pays de résidence" : "Country of Residence"
               }
               value={formik.values.country}
-              onChange={formik.handleChange}
+              onChange={formik.setFieldValue}
               error={formik.errors.country}
               touched={formik.touched.country}
             />
