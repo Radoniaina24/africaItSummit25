@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import { useFormik } from "formik";
+import { useFormik, validateYupSchema } from "formik";
 import * as Yup from "yup";
 import { useLanguageContext } from "@/app/context/LanguageContext";
 import InputFormik from "../get_pass/Componnents/InputFormik";
@@ -11,6 +11,8 @@ import { useAddPanelistMutation } from "@/lib/api/panelistApi";
 import { useSnackbar } from "@/lib/context/SnackbarContext";
 import Panelist from "@/app/interface/Panelist";
 import { Loader2 } from "lucide-react";
+import InputPhone from "../get_pass/Componnents/InputPhone";
+import { isValidPhoneNumber } from "react-phone-number-input";
 
 export default function FormPanelist() {
   const { showSnackbar } = useSnackbar();
@@ -50,11 +52,19 @@ export default function FormPanelist() {
         .required(
           language === "fr" ? "L'email est requis" : "Email is required",
         ),
-      phone: Yup.string().required(
-        language === "fr"
-          ? "Le numéro de téléphone est requis"
-          : "Phone number is required",
-      ),
+      phone: Yup.string()
+        .required(
+          language === "fr"
+            ? "Le numéro de téléphone est requis"
+            : "Phone number is required",
+        )
+        .test(
+          "is-valid-phone",
+          language === "fr"
+            ? "Le numéro de téléphone est invalide"
+            : "Invalid phone number",
+          (value) => (value ? isValidPhoneNumber(value) : false),
+        ),
       position: Yup.string().required(
         language === "fr"
           ? "Le titre / fonction est requis"
@@ -74,6 +84,7 @@ export default function FormPanelist() {
     }),
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       const formData = new FormData();
+      // console.log(values);
       Object.entries(values).forEach(([key, value]: any) => {
         if (value !== undefined && value !== "") {
           formData.append(key, value instanceof File ? value : String(value));
@@ -166,7 +177,7 @@ export default function FormPanelist() {
               error={formik.errors.email}
               touched={formik.touched.email}
             />
-            <InputFormik
+            {/* <InputFormik
               label={language === "fr" ? "Numéro de téléphone" : "Phone number"}
               type="text"
               id="phone"
@@ -177,6 +188,15 @@ export default function FormPanelist() {
               onChange={formik.handleChange}
               error={formik.errors.phone}
               touched={formik.touched.phone}
+            /> */}
+            <InputPhone
+              name="phone"
+              label={language === "fr" ? "Numéro de téléphone" : "Phone number"}
+              value={formik.values.phone}
+              onChange={formik.setFieldValue}
+              error={formik.errors.phone}
+              touched={formik.touched.phone}
+              setFieldTouched={formik.setFieldTouched}
             />
             <InputFormik
               label={
