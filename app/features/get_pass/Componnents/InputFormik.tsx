@@ -30,7 +30,7 @@ export default function InputFormik({
   const classNameLabel =
     error && touched
       ? "block mb-2 text-sm font-medium text-red-500 dark:text-red-500"
-      : "mb-2.5 block text-sm font-medium text-black dark:text-white";
+      : "mb-2 block text-sm font-medium text-black dark:text-white";
   return (
     <div className="">
       <label htmlFor={id} className={classNameLabel}>

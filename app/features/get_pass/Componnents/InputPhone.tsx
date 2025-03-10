@@ -36,7 +36,7 @@ function InputPhone({
     <div className="">
       <label
         htmlFor="phone"
-        className={`mb-2.5 block text-sm font-medium  ${hasError ? "text-red-500" : "text-gray-700"}`}
+        className={`mb-2 block text-sm font-medium  ${hasError ? " text-red-500" : " text-gray-700"}`}
       >
         {label}
       </label>
@@ -47,7 +47,7 @@ function InputPhone({
           onBlur={() => setFieldTouched(name, true)}
           value={value}
           onChange={handleChange}
-          className={`text-dark   ${hasError ? "errorPhone" : ""} py-3 focus:border-none focus:outline-none`}
+          className={`text-dark   ${hasError ? "errorPhone" : ""} py-2.5 focus:border-none focus:outline-none`}
           placeholder="Include the international dialing code"
         />
       </div>
